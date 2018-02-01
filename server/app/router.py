@@ -40,6 +40,8 @@ api.add_resource(extend, '/extend')
 from app.json.personal import personal 
 api.add_resource(personal, '/personal')
 
+
+
 # 方案接口--GET POST PUT DELETE
 from app.json.plan import plan 
 api.add_resource(plan, '/plan')
@@ -54,7 +56,7 @@ api.add_resource(planRestaurant, '/plan/restaurant')
 
 # 方案宾馆接口--PUT
 from app.json.planHotel import planHotel 
-api.add_resource(planHotel, '/plan/hotel')
+api.add_resource(planHotel, '/plan/hotel/<int:plan_id>')
 
 # 方案纪念品接口--PUT
 from app.json.planSouvenir import planSouvenir 

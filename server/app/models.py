@@ -142,4 +142,3 @@ class participantChoosePersonal(db.Model):
     id = db.Column(primary_key=True)
     participant_wechat = db.Column()
     personal = db.Column()
-
