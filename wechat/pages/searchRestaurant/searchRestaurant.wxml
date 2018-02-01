@@ -1,0 +1,9 @@
+<!--pages/searchRestaurant/searchRestaurant.wxml-->
+<view class='search'>
+    <view class='border'>
+        <input class="searchBar" placeholder="请输入餐厅名称"></input>
+        <icon type='search' size="31" color='#09b2f0' class='icon-search' bindtap='search'></icon>
+    </view>
+</view>
+<view class='searchItems'>
+</view>
