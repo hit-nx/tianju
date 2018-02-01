@@ -1,27 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/person/person"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "主页",
-      "iconPath": "./images/icon-png/主页(未选中).png",
-      "selectedIconPath": "./images/icon-png/主页(选中).png"
-    },
-    {
-        "pagePath": "pages/person/person",
-        "text": "个人中心",
-        "iconPath": "./images/icon-png/个人中心(未选中).png",
-        "selectedIconPath": "./images/icon-png/个人中心(选中).png"
-    }]
   }
 }
