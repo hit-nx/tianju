@@ -2,11 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-<<<<<<< HEAD
-    "pages/searchRestaurant/searchRestaurant"
-=======
+    "pages/searchRestaurant/searchRestaurant",
     "pages/person/person"
->>>>>>> 1e608c490b3bdc9bb4adeae0640a684eb4e18018
+
   ],
   "window":{
     "backgroundTextStyle":"light",
