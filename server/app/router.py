@@ -4,7 +4,7 @@ from app import api
 from app.json.user import user
 api.add_resource(user, '/user/<string:wechat>')
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # # 管理员用户接口--GET POST PUT
 # from app.json.adminUser import adminUser
 # api.add_resource(adminUser, '/adminUser/<string:wechat>')
@@ -78,7 +78,7 @@ api.add_resource(planParticipant, '/plan/participant/<int:plan>/<string:wechat>'
 # # 方案个人需要接口--PUT
 # from app.json.planPersonal import planPersonal
 # api.add_resource(planPersonal, '/plan/personal')
-=======
+# =======
 # 管理员用户接口--GET POST DELETE
 from app.json.adminUser import adminUser
 api.add_resource(adminUser, '/adminUser/<string:wechat>')
@@ -100,8 +100,8 @@ from app.json.hotel import hotel
 api.add_resource(hotel, '/hotel/<int:id>')
 
 # 宾馆房间接口--GET POST PUT DELETE
-from app.json.room import room
-api.add_resource(room, '/room')
+from app.json.hotelRoom import hotelRoom
+api.add_resource(hotelRoom, '/room')
 
 # 纪念品接口--GET POST PUT DELETE
 from app.json.souvenir import souvenir
@@ -117,9 +117,9 @@ api.add_resource(personal, '/personal')
 
 
 
-# 方案接口--GET POST PUT DELETE
-from app.json.plan import plan
-api.add_resource(plan, '/plan')
+# # 方案接口--GET POST PUT DELETE
+# from app.json.plan import plan
+# api.add_resource(plan, '/plan')
 
 # 方案活动接口--PUT
 from app.json.planActivity import planActivity
@@ -145,11 +145,11 @@ api.add_resource(planExtend, '/plan/extend')
 from app.json.planParticipant import planParticipant
 api.add_resource(planParticipant, '/plan/participant')
 
-# 方案房间需要接口--PUT
-from app.json.planRoom import planRoom
-api.add_resource(planRoom, '/plan/room')
+# # 方案房间需要接口--PUT
+# from app.json.planRoom import planRoom
+# api.add_resource(planRoom, '/plan/room')
 
-# 方案个人需要接口--PUT
-from app.json.planPersonal import planPersonal
-api.add_resource(planPersonal, '/plan/personal')
->>>>>>> a8d80dd9e5bd0451ffc165503aeaaa11b52bc0ff
+# # 方案个人需要接口--PUT
+# from app.json.planPersonal import planPersonal
+# api.add_resource(planPersonal, '/plan/personal')
+# >>>>>>> a8d80dd9e5bd0451ffc165503aeaaa11b52bc0ff
