@@ -101,19 +101,19 @@ api.add_resource(hotel, '/hotel/<int:id>')
 
 # 宾馆房间接口--GET POST PUT DELETE
 from app.json.hotelRoom import hotelRoom
-api.add_resource(hotelRoom, '/room')
+api.add_resource(hotelRoom, '/hotelRoom/<int:id>')
 
 # 纪念品接口--GET POST PUT DELETE
 from app.json.souvenir import souvenir
-api.add_resource(souvenir, '/souvenir')
+api.add_resource(souvenir, '/souvenir/<int:id>')
 
 # 其他需要接口--GET POST PUT DELETE
 from app.json.extend import extend
-api.add_resource(extend, '/extend')
+api.add_resource(extend, '/extend/<int:id>')
 
 # 个人需要接口--GET POST PUT DELETE
 from app.json.personal import personal
-api.add_resource(personal, '/personal')
+api.add_resource(personal, '/personal/<int:id>')
 
 
 
