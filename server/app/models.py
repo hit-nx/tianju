@@ -13,7 +13,7 @@ class user(db.Model):
     plan_id = db.Column()
 
 
-class userAdmin(db.Model):
+class adminUser(db.Model):
     __tablename__ = 'user_admin'
     wechat = db.Column(primary_key=True)
 
@@ -31,12 +31,12 @@ class activityTemplet(db.Model):
     id = db.Column(primary_key=True)
     name = db.Column()
     introduce = db.Column()
-    activityOne = db.Column()
-    activityTwo = db.Column()
-    activityThree = db.Column()
-    activityFour = db.Column()
-    activityFive = db.Column()
-    activitySix = db.Column()
+    activity_one = db.Column()
+    activity_two = db.Column()
+    activity_three = db.Column()
+    activity_four = db.Column()
+    activity_five = db.Column()
+    activity_six = db.Column()
 
 
 class restaurant(db.Model):
@@ -96,17 +96,17 @@ class plan(db.Model):
     key = db.Column()
     date = db.Column()
     wechat = db.Column()
-    activityOne = db.Column()
-    activityTwo = db.Column()
-    activityThree = db.Column()
-    activityFour = db.Column()
-    activityFive = db.Column()
-    activitySix = db.Column()
+    activity_one = db.Column()
+    activity_two = db.Column()
+    activity_three = db.Column()
+    activity_four = db.Column()
+    activity_five = db.Column()
+    activity_six = db.Column()
     hotel = db.Column()
-    restaurantOne = db.Column()
-    restaurantTwo = db.Column()
-    restaurantThree = db.Column()
-    restaurantFour = db.Column()
+    restaurant_one = db.Column()
+    restaurant_two = db.Column()
+    restaurant_three = db.Column()
+    restaurant_four = db.Column()
 
 
 class planSouvenir(db.Model):
