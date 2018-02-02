@@ -1,6 +1,22 @@
 /**index.wxss**/
+page{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  background-color: #e3e0e0;
+}
+
+.photo{
+  height: 35%;
+  width: 100%;
+}
+
 .selection{
-  height: 715rpx;
+  height: 100%;
+  width: 100%;
   background-color: #e3e0e0
 }
 
