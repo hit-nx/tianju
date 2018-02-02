@@ -1,15 +1,16 @@
 <!--index.wxml-->
-<view class='container'>
-  <view class='photo'>
+<view >
+
+  <view>
     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
       <block wx:for="{{imgUrls}}" wx:key="key">
         <swiper-item>
-          <image src="{{item}}" class="slide-image" width="355" height="100" />
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
         </swiper-item>
       </block>
     </swiper>
-    <!-- <image src='../../images/photos/首页.jpg' /> -->
   </view>
+  
   <view class='selection'>
 
     <view class='content'>
@@ -29,7 +30,7 @@
         <text class='four'>个人需求</text>
       </view>
 
-    </view>
+    </view>  
 
     <view class='content'>
       <view class='item'>
