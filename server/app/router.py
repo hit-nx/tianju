@@ -66,9 +66,9 @@ api.add_resource(user, '/user/<string:wechat>')
 # from app.json.planExtend import planExtend
 # api.add_resource(planExtend, '/plan/extend')
 #
-# # 方案参与人员接口--PUT DELETE
-# from app.json.planParticipant import planParticipant
-# api.add_resource(planParticipant, '/plan/participant')
+# 方案参与人员接口--PUT DELETE
+from app.json.planParticipant import planParticipant
+api.add_resource(planParticipant, '/plan/participant/<int:plan>/<string:wechat>')
 #
 # # 方案房间需要接口--PUT
 # from app.json.planRoom import planRoom
