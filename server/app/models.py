@@ -138,6 +138,8 @@ class participantChooseRoom(db.Model):
     plan = db.Column()
     participant_wechat = db.Column()
     room = db.Column()
+    date_in = db.Column()
+    date_out = db.Column()
 
 
 class participantChoosePersonal(db.Model):

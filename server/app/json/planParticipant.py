@@ -1,11 +1,47 @@
 from app import db, models
 from flask_restful import Resource, Api, reqparse, abort
 
-
 # 参数初始化
 parse = reqparse.RequestParser()
 parse.add_argument('participant_wechat')
 parse.add_argument('plan')
+
+
+def deleteInfoByWechatAndPlan():
+    args = parse.parse_args()
+
+    planParticipant = models.planParticipant.query.filter_by(plan=args.plan,
+                                                             participant_wechat=args.participant_wechat).first()
+    personalChoose = models.participantChoosePersonal.query.filter_by(plan=args.plan,
+                                                                      participant_wechat=args.participant_wechat).first()
+    roomChoose = models.participantChooseRoom.query.filter_by(plan=args.plan,
+                                                              participant_wechat=args.participant_wechat).first()
+
+    if planParticipant:
+        try:
+            if personalChoose:
+                # 循环删除个人需求
+                while models.participantChoosePersonal.query.filter_by(plan=args.plan,
+                                                                       participant_wechat=args.participant_wechat).first():
+                    db.session.delete(models.participantChoosePersonal.query.filter_by(plan=args.plan,
+                                                                                       participant_wechat=args.participant_wechat).first())
+
+            if roomChoose:
+                # 删除个人房间需求
+                db.session.delete(roomChoose)
+            # 删除该用户在该方案中的记录
+            db.session.delete(planParticipant)
+            db.session.commit()
+
+            return {"message": True}
+
+        except Exception as e:
+            db.session.rollback()
+            abort(500)
+    else:
+        return {
+            abort(404, message="{} doesn't exist".format(id))
+        }
 
 
 class planParticipant(Resource):
@@ -39,3 +75,8 @@ class planParticipant(Resource):
                 print(e)
                 db.session.rollback()
                 abort(500)
+
+    # 删除方案参与人员接口（包括与该参与者相关的所有信息）
+    def delete(self):
+        result = deleteInfoByWechatAndPlan()
+        return result
