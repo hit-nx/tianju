@@ -13,16 +13,16 @@ from app.json.activity import activity
 api.add_resource(activity, '/activity/<int:id>')
 
 # 活动模板接口--GET POST PUT DELETE
-from app.json.activityTemplet import activityTemplet
-api.add_resource(activityTemplet, '/activityTemplet/<int:id>')
+from app.json.activityTmplet import activityTmplet
+api.add_resource(activityTmplet, '/activityTmplet/<int:id>')
 
 # 酒店接口--GET POST PUT DELETE
 from app.json.restaurant import restaurant
-api.add_resource(restaurant, '/restaurant/<int:id>')
+api.add_resource(restaurant, '/restaurant')
 
 # 宾馆接口--GET POST PUT DELETE
 from app.json.hotel import hotel
-api.add_resource(hotel, '/hotel/<int:id>')
+api.add_resource(hotel, '/hotel')
 
 # # 宾馆房间接口--GET POST PUT DELETE
 # from app.json.room import room
