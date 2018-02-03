@@ -39,7 +39,7 @@ def deleteInfoByWechatAndPlan(plan, participant_wechat):
             abort(500)
     else:
         return {
-            abort(404, message="{} doesn't exist".format(id))
+            abort(400, message="{} doesn't exist".format(id))
         }
 
 
