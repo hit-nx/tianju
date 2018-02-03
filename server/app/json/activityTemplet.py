@@ -121,4 +121,7 @@ class activityTemplet(Resource):
         else:
             return {
                 abort(404, message="{} doesn't exist".format(id))
+
             }
+
+
