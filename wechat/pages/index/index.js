@@ -5,7 +5,6 @@ Page({
    */
   data: {
 <<<<<<< HEAD
-<<<<<<< HEAD
     
   },
 
@@ -76,8 +75,6 @@ Page({
       })
   }
 =======
-=======
->>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -87,8 +84,5 @@ Page({
     secondbtn:"取消参与活动",
   },
   
-<<<<<<< HEAD
->>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
-=======
 >>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
 })
