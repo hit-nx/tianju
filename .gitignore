@@ -1,2 +1,5 @@
 
 *.pyc
+server/.idea/misc.xml
+server/.idea/server.iml
+server/.idea/workspace.xml
