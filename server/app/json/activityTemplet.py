@@ -18,8 +18,8 @@ parse.add_argument('activity_six')
 class activityTemplet(Resource):
     # 查询户模板信息
     def get(self, id):
-    	# 若id为-1，返回整个列表
-        if id==-1:
+    	# 若id为0，返回整个列表
+        if id==0:
             activityTemplets = models.activityTemplet.query.all() #返回的activities是一个列表，其中每个元素都是一个 activity 类型的对象
             d = {}
             d["activityTemplet"] = []

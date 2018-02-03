@@ -13,8 +13,8 @@ class restaurant(Resource):
 
 	# 查询酒店信息
     def get(self,id):
-		# 若id为-1，返回整个列表
-        if id==-1:
+		# 若id为0，返回整个列表
+        if id==0:
             restaurants = models.restaurant.query.all() #返回的restaurants是一个列表，其中每个元素都是一个 restaurant 类型的对象
             d = {}
             d["restaurant"] = []

@@ -13,8 +13,8 @@ class hotel(Resource):
 
 	# 查询宾馆信息
     def get(self, id):
-		# 若id为-1，返回整个列表
-        if id==-1:
+		# 若id为0，返回整个列表
+        if id==0:
             hotels = models.hotel.query.all() #返回的hotels是一个列表，其中每个元素都是一个 hotel 类型的对象
             d = {}
             d["hotel"] = []

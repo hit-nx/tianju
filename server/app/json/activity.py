@@ -12,8 +12,8 @@ parse.add_argument('picture')
 class activity(Resource):
     # 查询活动信息
     def get(self, id):
-        # 若id为-1，返回整个列表
-        if id==-1:
+        # 若id为0，返回整个列表
+        if id==0:
             activities = models.activity.query.all() #返回的activities是一个列表，其中每个元素都是一个 activity 类型的对象
             d = {}
             d["activity"] = []
