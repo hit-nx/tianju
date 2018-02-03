@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <view class='title'>
+    <text>接站需求</text>
+  </view>
+
+  <view class='display'>
+    <view class='switch-need' style='background:{{switchNeed}}' bindtap='need'>
+      <text style='color:{{needText}}'>需要</text>
+    </view>
+    <view class='switch-ineed' style='background:{{switchIneed}}' bindtap='ineed'>
+      <text style='color:{{ineedText}}'>不需要</text>
+    </view>
+  </view>
+
+  <view class='display'>
+
+  </view>
+
+  <view class='display'>
+
+  </view>
+
+</view>

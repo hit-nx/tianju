@@ -1,9 +1,36 @@
 <!--pages/searchRestaurant/searchRestaurant.wxml-->
+<view style='height:10px'></view>
 <view class='search'>
     <view class='border'>
         <input class="searchBar" placeholder="请输入餐厅名称"></input>
         <icon type='search' size="31" color='#09b2f0' class='icon-search' bindtap='search'></icon>
     </view>
 </view>
-<view class='searchItems'>
+<view class='searchItems' bindtap='details'>
+    <image src="{{items}}" class='restaurant'></image>
+    <view class='restaurantName'>
+        <text class='name'>{{restaurantName}}</text>
+        <text class='address'>{{restaurantAddress}}></text>
+    </view>
+</view>
+<view class='searchItems' bindtap='details'>
+    <image src="{{items}}" class='restaurant'></image>
+    <view class='restaurantName'>
+        <text class='name'>{{restaurantName}}</text>
+        <text class='address'>{{restaurantAddress}}></text>
+    </view>
+</view>
+<view class='searchItems' bindtap='details'>
+    <image src="{{items}}" class='restaurant'></image>
+    <view class='restaurantName'>
+        <text class='name'>{{restaurantName}}</text>
+        <text class='address'>{{restaurantAddress}}></text>
+    </view>
+</view>
+<view class='searchItems' bindtap='details'>
+    <image src="{{items2}}" class='restaurant'></image>
+    <view class='restaurantName'>
+        <text class='name'>{{restaurantName}}</text>
+        <text class='address'>{{restaurantAddress}}></text>
+    </view>
 </view>

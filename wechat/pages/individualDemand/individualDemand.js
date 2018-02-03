@@ -1,11 +1,13 @@
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
-    
+    switchNeed:'#09b2f0',
+    needText:'#ffffff',
+    switchIneed:'#ffffff',
+    ineedText:'#09b2f0'
   },
 
   /**
@@ -63,26 +65,29 @@ Page({
   onShareAppMessage: function () {
     
   },
-
-  searchRestaurant: function () {
-      wx.navigateTo({
-          url: '../searchRestaurant/searchRestaurant',
-      })
+  /**
+   * switch选择
+   */
+  need: function(){
+    var bgColor = this.data.switchNeed == '#ffffff' ? '#09b2f0' : '#ffffff';
+    // 设置背景颜色数据
+    this.setData({
+      switchNeed: bgColor
+    });
+    var textColor = this.data.needText == '#09b2f0' ? '#ffffff' : '#09b2f0';
+    this.setData({
+      needText: textColor
+    });
   },
-  selectRestaurant: function(){
-      wx.navigateTo({
-          url: '../selectRestaurant/selectRestaurant',
-      })
+  ineed: function(){
+    var bgColor = this.data.switchIneed == '#ffffff' ? '#09b2f0' : '#ffffff';
+    // 设置背景颜色数据
+    this.setData({
+      switcIneed: bgColor
+    });
+    var textColor = this.data.ineedText == '#09b2f0' ? '#ffffff' : '#09b2f0';
+    this.setData({
+      ineedText: textColor
+    });
   }
-=======
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
-    firstbtn:"分享给好友",
-    secondbtn:"取消参与活动",
-  },
-  
->>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
 })

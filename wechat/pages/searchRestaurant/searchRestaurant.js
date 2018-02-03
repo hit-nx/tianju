@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    items:"../../images/photos/餐厅.jpg",
+    items2:"../../images/photos/酒店.jpg",
+    restaurantName:"我是餐厅名字\n",
+    restaurantAddress:"我是餐厅地址"
   },
 
   /**
