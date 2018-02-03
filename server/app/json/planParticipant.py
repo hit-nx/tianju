@@ -11,10 +11,12 @@ parse.add_argument('plan')
 class planParticipant(Resource):
 
     # 增加方案参与人员接口
-    def post(self, plan, wechat):
+    def post(self):
+
+        args = parse.parse_args()
 
         # 判断用户是否已经存在于该方案中
-        if models.planParticipant.query.filter_by(plan=plan, participant_wechat=wechat).all():
+        if models.planParticipant.query.filter_by(plan=args.plan, participant_wechat=args.participant_wechat).all():
             return {
                 abort(400, message="您已加入该方案，不可重复加入！")
             }
@@ -22,8 +24,10 @@ class planParticipant(Resource):
         else:
             # 创建用户参与条目
             planParticipant = models.planParticipant()
-            args = parse.parse_args()
+            max = models.planParticipant.query.order_by(db.desc(models.planParticipant.id)).first()
+            id = max.id + 1 if max else 1
             # 将参数传入条目中
+            planParticipant.id = id
             planParticipant.plan = args.plan
             planParticipant.participant_wechat = args.participant_wechat
             # 将条目存入数据库
