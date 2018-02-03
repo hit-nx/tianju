@@ -40,10 +40,10 @@ api.add_resource(extend, '/extend/<int:id>')
 from app.json.personal import personal
 api.add_resource(personal, '/personal/<int:id>')
 
+
 # 方案接口--GET POST PUT DELETE
 from app.json.plan import plan
 api.add_resource(plan, '/plan')
-
 
 # 方案活动接口--PUT
 from app.json.planActivity import planActivity
