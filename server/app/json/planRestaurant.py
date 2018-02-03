@@ -14,7 +14,7 @@ class planRestaurant(Resource):
     def put(self, wechat):
         plan = models.plan.query.get(wechat)
         args = parse.parse_args()
-        # 判断用户是否存在
+        # 判断plan是否存在
         if plan:
             plan.restaurant_one = args.restaurant_one if args.restaurant_one else plan.restaurant_one
             plan.restaurant_two = args.restaurant_two if args.restaurant_two else plan.restaurant_two
