@@ -7,24 +7,23 @@ parse.add_argument('participant_wechat')
 parse.add_argument('plan')
 
 
-def deleteInfoByWechatAndPlan():
-    args = parse.parse_args()
+def deleteInfoByWechatAndPlan(plan, participant_wechat):
 
-    planParticipant = models.planParticipant.query.filter_by(plan=args.plan,
-                                                             participant_wechat=args.participant_wechat).first()
-    personalChoose = models.participantChoosePersonal.query.filter_by(plan=args.plan,
-                                                                      participant_wechat=args.participant_wechat).first()
-    roomChoose = models.participantChooseRoom.query.filter_by(plan=args.plan,
-                                                              participant_wechat=args.participant_wechat).first()
+    planParticipant = models.planParticipant.query.filter_by(plan=plan,
+                                                             participant_wechat=participant_wechat).first()
+    personalChoose = models.participantChoosePersonal.query.filter_by(plan=plan,
+                                                                      participant_wechat=participant_wechat).first()
+    roomChoose = models.participantChooseRoom.query.filter_by(plan=plan,
+                                                              participant_wechat=participant_wechat).first()
 
     if planParticipant:
         try:
             if personalChoose:
                 # 循环删除个人需求
-                while models.participantChoosePersonal.query.filter_by(plan=args.plan,
-                                                                       participant_wechat=args.participant_wechat).first():
-                    db.session.delete(models.participantChoosePersonal.query.filter_by(plan=args.plan,
-                                                                                       participant_wechat=args.participant_wechat).first())
+                while models.participantChoosePersonal.query.filter_by(plan=plan,
+                                                                       participant_wechat=participant_wechat).first():
+                    db.session.delete(models.participantChoosePersonal.query.filter_by(plan=plan,
+                                                                                       participant_wechat=participant_wechat).first())
 
             if roomChoose:
                 # 删除个人房间需求
@@ -78,5 +77,8 @@ class planParticipant(Resource):
 
     # 删除方案参与人员接口（包括与该参与者相关的所有信息）
     def delete(self):
-        result = deleteInfoByWechatAndPlan()
+
+        args = parse.parse_args()
+
+        result = deleteInfoByWechatAndPlan(args.plan, args.participant_wechat)
         return result
