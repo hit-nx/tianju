@@ -87,6 +87,7 @@ class activityTemplet(Resource):
                 abort(404, message="{} doesn't exist".format(id))
             }
 
+
     # 删除模板信息
     def delete(self, id):
         activityTemplet = models.activityTemplet.query.get(id)
@@ -98,4 +99,7 @@ class activityTemplet(Resource):
         else:
             return {
                 abort(404, message="{} doesn't exist".format(id))
+
             }
+
+
