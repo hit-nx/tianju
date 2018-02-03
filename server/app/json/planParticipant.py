@@ -16,7 +16,7 @@ class planParticipant(Resource):
         # 判断用户是否已经存在于该方案中
         if models.planParticipant.query.filter_by(plan=plan, participant_wechat=wechat).all():
             return {
-                abort(404, message="您已加入该方案，不可重复加入！")
+                abort(400, message="您已加入该方案，不可重复加入！")
             }
         # 创建参与记录
         else:
