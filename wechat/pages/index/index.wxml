@@ -1,10 +1,13 @@
 <!--index.wxml-->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <view>
   <button bindtap='searchRestaurant'>跳转到餐厅搜索</button>
   <button bindtap='selectRestaurant'>跳转到餐厅选择</button>
 </view>
 =======
+=======
+>>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
 <view class='container'>
   <view class='photo'>
     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
@@ -69,5 +72,9 @@
 
   </view>
 
+<<<<<<< HEAD
+</view>
+>>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
+=======
 </view>
 >>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
