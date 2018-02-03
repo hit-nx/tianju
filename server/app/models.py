@@ -135,7 +135,6 @@ class planParticipant(db.Model):
 class partucipantChooseRoom(db.Model):
     __tablename__ = 'participant_choose_room'
     id = db.Column(primary_key=True)
-    plan = db.Column()
     participant_wechat = db.Column()
     room = db.Column()
 
@@ -143,6 +142,5 @@ class partucipantChooseRoom(db.Model):
 class participantChoosePersonal(db.Model):
     __tablename__ = 'participant_choose_personal'
     id = db.Column(primary_key=True)
-    plan = db.Column()
     participant_wechat = db.Column()
     personal = db.Column()
