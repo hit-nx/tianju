@@ -7,7 +7,6 @@ parse.add_argument("wechat")
 parse.add_argument("id")
 parse.add_argument('hotel')
 
-
 class planHotel(Resource):
     # 修改
     def put(self):
@@ -20,8 +19,8 @@ class planHotel(Resource):
                 db.session.commit()
                 return {"message": True}
             else:
-                return {"message":"please call the source"}
+                return {"message":"Please call the source"}
         else:
             return {
-                abort(404, message="{} doesn't exist".format(plan.wechat))
+                abort(404, message="It doesn't exist")
             }

@@ -10,7 +10,6 @@ parse.add_argument('restaurant_two')
 parse.add_argument('restaurant_three')
 parse.add_argument('restaurant_four')
 
-
 class planRestaurant(Resource):
     # 修改
     def put(self):
@@ -27,9 +26,9 @@ class planRestaurant(Resource):
                 return {"message": True}
             else:
                 return{
-                    "message":"please call the source"
+                    "message":"Please call the source"
                 }
         else:
             return {
-                abort(404, message="{} doesn't exist".format(plan.wechat))
+                abort(404, message="It doesn't exist")
             }

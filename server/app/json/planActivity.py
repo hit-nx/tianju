@@ -29,8 +29,8 @@ class planActivity(Resource):
                 db.session.commit()
                 return {"message": True}
             else:
-                return {"message":"please call the source"}
+                return {"message":"Please call the source"}
         else:
             return {
-                abort(404, message="{} doesn't exist".format(args.wechat))
+                abort(404, message="It doesn't exist")
             }
