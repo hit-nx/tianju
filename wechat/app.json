@@ -1,22 +1,6 @@
 {
-<<<<<<< HEAD
-    "pages": [
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/person/person",
-        "pages/searchRestaurant/searchRestaurant",
-        "pages/selectRestaurant/selectRestaurant"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
-=======
   "pages":[
     "pages/index/index",
-    "pages/individualDemand/individualDemand",
-    
     "pages/logs/logs",
     "pages/searchRestaurant/searchRestaurant",
     "pages/person/person"
@@ -34,22 +18,12 @@
       "text": "主页",
       "iconPath": "./images/icon-png/主页(未选中).png",
       "selectedIconPath": "./images/icon-png/主页(选中).png"
->>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
     },
-    "tabBar": {
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "主页",
-                "iconPath": "./images/icon-png/主页(未选中).png",
-                "selectedIconPath": "./images/icon-png/主页(选中).png"
-            },
-            {
-                "pagePath": "pages/person/person",
-                "text": "个人中心",
-                "iconPath": "./images/icon-png/个人中心(未选中).png",
-                "selectedIconPath": "./images/icon-png/个人中心(选中).png"
-            }
-        ]
-    }
+    {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "./images/icon-png/个人中心(未选中).png",
+        "selectedIconPath": "./images/icon-png/个人中心(选中).png"
+    }]
+  }
 }

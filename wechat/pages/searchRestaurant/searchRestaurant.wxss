@@ -1,7 +1,9 @@
 /* pages/searchRestaurant/searchRestaurant.wxss */
 .search{
     width: 100%;
-    height: 45px;
+    height: 55px;
+    position: absolute;
+    top: 10px;
 }
 .border{
     width: 80%;
@@ -19,31 +21,4 @@
 .icon-search{
     width: 31px;
     height: 31px;
-}
-.searchItems{
-    width: 90%;
-    height:70px;
-    margin: 10px auto;
-    border-radius: 15px;
-}
-.restaurant{
-    width: 30%;
-    height: 70px;
-    float: left;
-    border-radius: 15px 0 0 15px;
-}
-.restaurantName{
-    width: 70%;
-    height: 70px;
-    border-radius: 0 15px 15px 0;
-    float: right;
-}
-.name{
-    font-size: 1em;
-    padding: 10px;
-}
-.address{
-    color: #9e9e9e;
-    font-size: 0.8em;
-    padding: 10px;
 }

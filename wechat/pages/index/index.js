@@ -1,10 +1,11 @@
+//index.js
+//获取应用实例
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
     
   },
 
@@ -68,21 +69,5 @@ Page({
       wx.navigateTo({
           url: '../searchRestaurant/searchRestaurant',
       })
-  },
-  selectRestaurant: function(){
-      wx.navigateTo({
-          url: '../selectRestaurant/selectRestaurant',
-      })
   }
-=======
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
-    firstbtn:"分享给好友",
-    secondbtn:"取消参与活动",
-  },
-  
->>>>>>> f8e433f40226bd2c78d8a3d1b06a793948e9eebf
 })
