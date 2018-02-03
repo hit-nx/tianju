@@ -17,32 +17,52 @@ parse.add_argument('activity_six')
 class activityTemplet(Resource):
     # 查询户模板信息
     def get(self, id):
-        activityTemplet = models.activityTemplet.query.get(id)
-        # 判断模板是否存在
-        if activityTemplet:
-            return {
-                       "id": activityTemplet.id,
-                       "name": activityTemplet.name,
-                       "introduce": activityTemplet.introduce,
-                       "picture": activityTemplet.picture,
-                       "activity_one": activityTemplet.activity_one,
-                       "activity_two": activityTemplet.activity_two,
-                       "activity_three": activityTemplet.activity_three,
-                       "activity_four": activityTemplet.activity_four,
-                       "activity_five": activityTemplet.activity_five,
-                       "activity_six": activityTemplet.activity_six,
-                   }, 200
+    	# 若id为0，返回整个列表
+        if id==0:
+            activityTemplets = models.activityTemplet.query.all() #返回的activities是一个列表，其中每个元素都是一个 activity 类型的对象
+            d = {}
+            d["activityTemplet"] = []
+            for activityTemplet in activityTemplets:
+                dic = {}
+                dic["id"] = activityTemplet.id
+                dic["name"] = activityTemplet.name
+                dic["introduce"] = activityTemplet.introduce
+                dic["picture"] = activityTemplet.picture
+                dic["activity_one"] = activityTemplet.activity_one
+                dic["activity_two"] = activityTemplet.activity_two
+                dic["activity_three"] = activityTemplet.activity_three
+                dic["activity_four"] = activityTemplet.activity_four
+                dic["activity_five"] = activityTemplet.activity_five
+                dic["activity_six"] = activityTemplet.activity_six
+                item = json.dumps(dic)
+                #print(item)
+                d["activityTemplet"].append(item)
+            return d,200
         else:
-            return {
-                abort(404, message="{} doesn't exist".format(id))
-            }
+	        activityTemplet = models.activityTemplet.query.get(id)
+	        # 判断模板是否存在
+	        if activityTemplet:
+	            return {
+	                       "id": activityTemplet.id,
+	                       "name": activityTemplet.name,
+	                       "introduce": activityTemplet.introduce,
+	                       "picture": activityTemplet.picture,
+	                       "activity_one": activityTemplet.activity_one,
+	                       "activity_two": activityTemplet.activity_two,
+	                       "activity_three": activityTemplet.activity_three,
+	                       "activity_four": activityTemplet.activity_four,
+	                       "activity_five": activityTemplet.activity_five,
+	                       "activity_six": activityTemplet.activity_six,
+	                   }, 200
+	        else:
+	            return {
+	                abort(404, message="{} doesn't exist".format(id))
+	            }
 
     # 添加模板信息
-    def post(self, id):
-        # 判断模板是否存在
-        if models.activityTemplet.query.get(id):
-            abort(400, message="{} existed".format(id))
-        # 创建模板
+    def post(self):
+        max = models.activityTemplet.query.order_by(db.desc(models.activityTemplet.id)).first()
+        id = max.id+1 if max else 1
         activityTemplet = models.activityTemplet()
         activityTemplet.id = id
         args = parse.parse_args()
