@@ -15,6 +15,10 @@ api.add_resource(activity, '/activity/<int:id>')
 # 活动模板接口--GET POST PUT DELETE
 from app.json.activityTemplet import activityTemplet
 api.add_resource(activityTemplet, '/activityTemplet/<int:id>')
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0b315ac39b64fa6df3113968886b6890271c0ef1
 
 # 酒店接口--GET POST PUT DELETE
 from app.json.restaurant import restaurant
@@ -22,27 +26,40 @@ api.add_resource(restaurant, '/restaurant/<int:id>')
 
 # 宾馆接口--GET POST PUT DELETE
 from app.json.hotel import hotel
+<<<<<<< HEAD
+api.add_resource(hotel, '/hotel')
+=======
 api.add_resource(hotel, '/hotel/<int:id>')
+>>>>>>> 0b315ac39b64fa6df3113968886b6890271c0ef1
 
 # 宾馆房间接口--GET POST PUT DELETE
-from app.json.room import room
-api.add_resource(room, '/room')
+from app.json.hotelRoom import hotelRoom
+api.add_resource(hotelRoom, '/hotelRoom/<int:id>')
 
 # 纪念品接口--GET POST PUT DELETE
 from app.json.souvenir import souvenir
-api.add_resource(souvenir, '/souvenir')
+api.add_resource(souvenir, '/souvenir/<int:id>')
 
 # 其他需要接口--GET POST PUT DELETE
 from app.json.extend import extend
-api.add_resource(extend, '/extend')
+api.add_resource(extend, '/extend/<int:id>')
 
 # 个人需要接口--GET POST PUT DELETE
 from app.json.personal import personal
+<<<<<<< HEAD
+api.add_resource(personal, '/personal/<int:id>')
+
+=======
 api.add_resource(personal, '/personal')
+>>>>>>> 0b315ac39b64fa6df3113968886b6890271c0ef1
 
 # 方案接口--GET POST PUT DELETE
 from app.json.plan import plan
 api.add_resource(plan, '/plan')
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0b315ac39b64fa6df3113968886b6890271c0ef1
 
 # 方案活动接口--PUT
 from app.json.planActivity import planActivity
