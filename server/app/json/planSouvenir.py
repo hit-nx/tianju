@@ -3,17 +3,18 @@ from flask_restful import Resource, Api, reqparse, abort
 
 # 参数初始化
 parse = reqparse.RequestParser()
-parse.add_argument('souvenir')
+parse.add_argument('id')
 
 
 class planSouvenir(Resource):
     # 修改
     def put(self, wechat):
-        planSouvenir = models.planSouvenir.query.get(wechat)
+        plan=models.plan.query.get(wechat)
+        planSouvenir = models.planSouvenir.query.get(plan.id)
         args = parse.parse_args()
-        # 判断用户是否存在
+        # 判断planSouvenir是否存在
         if planSouvenir:
-            planSouvenir.date = args.souvenir if args.souvenir else planSouvenir.souvenir
+            planSouvenir.id = args.id if args.id else planSouvenir.id
             db.session.commit()
             return {"message": True}
         else:
