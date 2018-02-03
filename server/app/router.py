@@ -65,7 +65,7 @@ api.add_resource(planSouvenir, '/plan/souvenir')
 from app.json.planExtend import planExtend
 api.add_resource(planExtend, '/plan/extend')
 
-# 方案参与人员接口--PUT DELETE
+# 方案参与人员接口--POST DELETE
 from app.json.planParticipant import planParticipant
 api.add_resource(planParticipant, '/plan/participant')
 
