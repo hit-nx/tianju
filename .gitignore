@@ -1,7 +1,12 @@
 
 *.pyc
+*.xml
 server/.idea/misc.xml
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4dd6ceb102a34c8d212217a41f669671d3f33f3
 server/.idea/server.iml
 
 server/.idea/workspace.xml
