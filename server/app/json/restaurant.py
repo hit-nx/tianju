@@ -1,4 +1,3 @@
-import json
 from app import db, models
 from flask_restful import Resource, Api, reqparse, abort
 
@@ -28,8 +27,7 @@ class restaurant(Resource):
                 item = json.dumps(dic)
                 #print(item)
                 d["restaurant"].append(item)
-            json_str = json.dumps(d)
-            return json_str
+            return d,200
         else:
             restaurant=models.restaurant.query.get(id)
             if restaurant:
