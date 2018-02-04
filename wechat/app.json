@@ -1,6 +1,8 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/participants/participants",
+        "pages/activity/activity",
         "pages/selectRestaurant/selectRestaurant",
         "pages/searchRestaurant/searchRestaurant",
         "pages/hotelShow/hotelShow",

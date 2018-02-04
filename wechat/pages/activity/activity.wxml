@@ -1,0 +1,160 @@
+<view class='head'>
+    <view class='ID'>活动ID</view>
+    <text class='text'>2018</text>
+</view>
+<view class='time'>
+    2017-8-10
+</view>
+<view class='model'>
+    <view class='act'>
+    上午
+    </view>
+    <view class='title'>
+    参观校园
+    </view>
+    <view class='add'>
+    地点：校训石
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    午餐
+    </view>
+    <view class='title'>
+    学子餐厅午餐
+    </view>
+    <view class='add'>
+    地点：学子餐厅四楼
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    中午
+    </view>
+    <view class='title'>
+    午间休息
+    </view>
+    <view class='add'>
+    地点：酒店
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    下午
+    </view>
+    <view class='title'>
+    班会
+    </view>
+    <view class='add'>
+    地点：大学生活动中心
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    下午
+    </view>
+    <view class='title'>
+    班会
+    </view>
+    <view class='add'>
+    地点：大学生活动中心
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+<view class='time'>
+    2017-8-11
+</view>
+<view class='model'>
+    <view class='act'>
+    上午
+    </view>
+    <view class='title'>
+    参观校园
+    </view>
+    <view class='add'>
+    地点：校训石
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    午餐
+    </view>
+    <view class='title'>
+    学子餐厅午餐
+    </view>
+    <view class='add'>
+    地点：学子餐厅四楼
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    中午
+    </view>
+    <view class='title'>
+    午间休息
+    </view>
+    <view class='add'>
+    地点：酒店
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    下午
+    </view>
+    <view class='title'>
+    班会
+    </view>
+    <view class='add'>
+    地点：大学生活动中心
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<view class='model'>
+    <view class='act'>
+    下午
+    </view>
+    <view class='title'>
+    班会
+    </view>
+    <view class='add'>
+    地点：大学生活动中心
+    </view>
+    <view class='else'>
+    备注：无备注
+    </view>
+</view>
+
+<button class='save'>保存</button>
