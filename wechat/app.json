@@ -1,15 +1,15 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/selectRestaurant/selectRestaurant",
+        "pages/searchRestaurant/searchRestaurant",
         "pages/hotelShow/hotelShow",
         "pages/addsouvenir/addsouvenir",
         "pages/souvenir/souvenir",
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
         "pages/logs/logs",   
-        "pages/person/person", 
-        "pages/searchRestaurant/searchRestaurant",
-        "pages/selectRestaurant/selectRestaurant"
+        "pages/person/person"
     ],
     "window": {
         "backgroundTextStyle": "light",

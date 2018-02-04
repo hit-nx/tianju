@@ -1,5 +1,4 @@
 <!--pages/selectRestaurant/selectRestaurant.wxml-->
-<view class='container'>
     <view style='width:90%;margin:0 auto;'>
         <view style='height:5px;'></view>
         <view class='date'>
@@ -66,4 +65,3 @@
         </view>
         <button class='save' bindtap='save'>保存</button>
     </view> 
-</view>

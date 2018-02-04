@@ -1,4 +1,9 @@
 /* pages/souvenir/souvenir.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #e3e0e0;
+}
 .souvenir{
     height: 150px;
     margin: 10px 0;
@@ -14,7 +19,7 @@
     width: 90%;
     height: 30px;
     float: left;
-    background-color: #09b2f0;
+    background-color: #7ad5f7;
     border-radius: 0 0 0 15px;
     position: absolute;
     top: 120px;
@@ -41,9 +46,4 @@
 .addImg{
     height: 70px;
     width: 70px;
-}
-.container{
-  height: 100%;
-  width: 100%;
-  background-color: #e3e0e0;
 }
