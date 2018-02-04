@@ -1,0 +1,14 @@
+/* pages/selectRestaurant/selectRestaurant.wxss */
+.date{
+    width: 35%;
+    height: 25px;
+    background-color: #09b2f0;
+    border-radius: 15px;
+    padding: 5px;
+}
+.dateItems{
+    line-height: 25px;
+    margin: 0 auto;
+    position: relative;
+    left: 10%;
+}

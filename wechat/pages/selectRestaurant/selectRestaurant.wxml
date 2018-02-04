@@ -1,0 +1,7 @@
+<!--pages/selectRestaurant/selectRestaurant.wxml-->
+<view style='width:90%;margin:0 auto;'>
+    <view style='height:20px;'></view>
+    <view class='date'>
+        <text class='dateItems'>{{date}}</text>    
+    </view>
+</view> 

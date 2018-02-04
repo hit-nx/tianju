@@ -1,4 +1,5 @@
 <!--index.wxml-->
 <view>
   <button bindtap='searchRestaurant'>跳转到餐厅搜索</button>
+  <button bindtap='selectRestaurant'>跳转到添加餐厅</button>
 </view>
