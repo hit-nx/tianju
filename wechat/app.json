@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/newActivity/newActivity",
         "pages/participants/participants",
         "pages/activity/activity",
         "pages/selectRestaurant/selectRestaurant",

@@ -1,0 +1,77 @@
+<view class='container'>
+
+  <scroll-view scroll-y='true' class='scroll'>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/活动流程.png' />
+      </view>
+      <text>活动方案</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/右箭头.png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/住宿.png' />
+      </view>
+      <text>住宿地点</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/右箭头.png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/用餐.png' />
+      </view>
+      <text>用餐地点</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/右箭头.png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/纪念品.png' />
+      </view>
+      <text>纪念品选择</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/右箭头.png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/主页-个人需求.png' />
+      </view>
+      <text>个人需求</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/右箭头.png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/航拍.png' />
+      </view>
+      <text>航拍需求</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/选择(未选中).png' />
+      </view>
+    </view>
+
+    <view class='display'>
+      <view class='icon'>
+        <image src='../../images/icon-png/服装定制需求.png' />
+      </view>
+      <text>集体定制服装需求</text>
+      <view class='pulldown'>
+        <image src='../../images/icon-png/确认.png' />
+      </view>
+    </view>
+
+  </scroll-view>
+
+</view>
