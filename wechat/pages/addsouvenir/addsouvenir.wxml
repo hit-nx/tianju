@@ -1,5 +1,4 @@
 <!--pages/addsouvenir/addsouvenir.wxml-->
-<view class='container'>
     <view style='width:90%;margin:0 auto;'>
         <view style='height:5px;'></view>
         <view class='souvenir'>
@@ -33,4 +32,3 @@
             </view>
         </view>
     </view>
-</view>
