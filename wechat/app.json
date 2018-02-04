@@ -1,10 +1,13 @@
 {
-<<<<<<< HEAD
     "pages": [
         "pages/index/index",
+        "pages/addsouvenir/addsouvenir",
+        "pages/souvenir/souvenir" ,
+        "pages/accommodation/accommodation",
+        "pages/individualDemand/individualDemand",
         "pages/logs/logs",
-        "pages/searchRestaurant/searchRestaurant",
         "pages/person/person",
+        "pages/searchRestaurant/searchRestaurant",
         "pages/selectRestaurant/selectRestaurant"
     ],
     "window": {
@@ -12,29 +15,6 @@
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black"
-=======
-  "pages":[
-    "pages/index/index",
-    "pages/accommodation/accommodation",
-    "pages/individualDemand/individualDemand",
-    "pages/logs/logs",
-    "pages/searchRestaurant/searchRestaurant",
-    "pages/person/person"
-
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "主页",
-      "iconPath": "./images/icon-png/主页(未选中).png",
-      "selectedIconPath": "./images/icon-png/主页(选中).png"
->>>>>>> b5ed13cf2e23f1485898f89425a933f1d3940b04
     },
     "tabBar": {
         "list": [

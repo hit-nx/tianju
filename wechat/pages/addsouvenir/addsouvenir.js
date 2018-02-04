@@ -1,14 +1,11 @@
-// pages/selectRestaurant/selectRestaurant.js
+// pages/addsouvenir/addsouvenir.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    date:"2017-1-27",
-    date2:"2017-1-29",
-    title:"我是酒店名称",
-    address:"我是餐厅地点"
+    name:"我是纪念品的名字"
   },
 
   /**
