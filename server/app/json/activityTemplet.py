@@ -34,9 +34,8 @@ class activityTemplet(Resource):
                 dic["activity_four"] = activityTemplet.activity_four
                 dic["activity_five"] = activityTemplet.activity_five
                 dic["activity_six"] = activityTemplet.activity_six
-                item = json.dumps(dic)
                 #print(item)
-                d["activityTemplet"].append(item)
+                d["activityTemplet"].append(dic)
             return d,200
         else:
 	        activityTemplet = models.activityTemplet.query.get(id)

@@ -14,7 +14,7 @@ class user(db.Model):
     plan_id = db.Column()
 
 
-class userAdmin(db.Model):
+class adminUser(db.Model):
     __tablename__ = 'user_admin'
     wechat = db.Column(primary_key=True)
 

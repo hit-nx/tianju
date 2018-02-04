@@ -24,9 +24,8 @@ class restaurant(Resource):
                 dic["introduce"] = restaurant.introduce
                 dic["picture"] = restaurant.picture
                 dic["address"] = restaurant.address
-                item = json.dumps(dic)
                 #print(item)
-                d["restaurant"].append(item)
+                d["restaurant"].append(dic)
             return d,200
         else:
             restaurant=models.restaurant.query.get(id)

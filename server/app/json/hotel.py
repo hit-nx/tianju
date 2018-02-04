@@ -23,10 +23,8 @@ class hotel(Resource):
                 dic["name"] = hotel.name
                 dic["introduce"] = hotel.introduce
                 dic["picture"] = hotel.picture
-                dic["address"] = hotel.address
-                item = json.dumps(dic)
                 #print(item)
-                d["hotel"].append(item)
+                d["hotel"].append(dic)
             return d,200
         else:
             hotel=models.hotel.query.get(id)
