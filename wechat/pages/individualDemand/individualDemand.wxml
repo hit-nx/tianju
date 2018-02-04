@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <view class='title'>
+    <text>接站需求</text>
+  </view>
+
+  <view class='display'>
+    <view class='switch-need' style='background:{{switchNeed}}' bindtap='need'>
+      <text style='color:{{needText}}'>需要</text>
+    </view>
+    <view class='switch-ineed' style='background:{{switchIneed}}' bindtap='ineed'>
+      <text style='color:{{ineedText}}'>不需要</text>
+    </view>
+  </view>
+
+  <view class='seconddisplay'>
+    <view class='secondtitle'>
+      <text>酒店入住时间</text>
+    </view>
+    <text class='content'>2017-1-29</text>
+  </view>
+
+  <view class='seconddisplay'>
+    <view class='secondtitle'>
+      <text>酒店离店时间</text>
+    </view>
+    <text class='content'>2017-2-1</text>
+  </view>
+
+  <view class='seconddisplay'>
+    <view class='secondtitle'>
+      <text>酒店户型选择</text>
+    </view>
+    <view class='pulldown' bindtap='pullDown'>
+      <image src='{{pullDown}}' />
+    </view>
+  </view>
+
+  <view class="pulldisplay" style='display:{{showView}}' >
+
+    <view class='house'>
+      <view class='housesize'>
+        <text>标准间26平方米</text>
+      </view>
+
+      <view class='choose'>
+        <image src='{{firstchoose}}' />
+      </view>
+    </view>
+
+    <view class='house'>
+      <view class='housesize'>
+        <text>大床房26平方米</text>
+      </view>
+
+      <view class='choose'>
+        <image src='{{secondchoose}}' />
+      </view>
+    </view>
+
+    <view class='house'>
+      <view class='housesize'>
+        <text>家庭房26平方米</text>
+      </view>
+
+      <view class='choose'>
+        <image src='{{threechoose}}' />
+      </view>
+    </view>
+
+    <view class='house'>
+      <view class='housesize'>
+        <text>单人房18平方米</text>
+      </view>
+
+      <view class='choose'>
+        <image src='{{fourchoose}}' />
+      </view>
+    </view>
+
+  </view>
+
+  <button class='btn'>保存</button>
+
+</view>

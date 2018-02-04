@@ -55,7 +55,7 @@ api.add_resource(planRestaurant, '/plan/restaurant')
 
 # 方案宾馆接口--PUT
 from app.json.planHotel import planHotel
-api.add_resource(planHotel, '/plan/hotel/<int:plan_id>')
+api.add_resource(planHotel, '/plan/hotel')
 
 # 方案纪念品接口--POST DELETE
 from app.json.planSouvenir import planSouvenir

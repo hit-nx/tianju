@@ -75,5 +75,10 @@ Page({
       wx.navigateTo({
           url: '../searchRestaurant/searchRestaurant',
       })
+  },
+  selectRestaurant: function(){
+      wx.navigateTo({
+          url: '../selectRestaurant/selectRestaurant',
+      })
   }
 })

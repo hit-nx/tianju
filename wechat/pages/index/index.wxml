@@ -1,3 +1,4 @@
+<!--index.wxml-->
 <view class='container'>
 
   <view class='photo'>
@@ -65,3 +66,4 @@
   </view>
 
 </view>
+>>>>>>> b5ed13cf2e23f1485898f89425a933f1d3940b04
