@@ -4,7 +4,6 @@ page{
   width: 100%;
   background-color: #e3e0e0;
 }
-
 .souvenir{
     height: 150px;
     margin: 10px 0;
@@ -39,9 +38,4 @@ page{
     width: 25px;
     height: 25px;
     margin: 2px;
-}
-.container{
-  height: 100%;
-  width: 100%;
-  background-color: #e3e0e0;
 }

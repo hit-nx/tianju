@@ -1,5 +1,4 @@
 <!--pages/souvenir/souvenir.wxml-->
-<view class='container'>
     <view style='width:90%;margin:0 auto;'>
         <view style='height:5px;'></view>
         <view class='souvenir'>
@@ -36,4 +35,3 @@
             <image class='addImg' src='../../images/icon-png/添加.png'></image>
         </view>
     </view>
-</view>
