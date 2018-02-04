@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  add: function(){
+      wx.navigateTo({
+          url: '../addsouvenir/addsouvenir',
+      })
   }
 })
