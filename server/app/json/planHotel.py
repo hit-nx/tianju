@@ -17,9 +17,9 @@ class planHotel(Resource):
             if args.wechat==plan.wechat:
                 plan.hotel = args.hotel if args.hotel else plan.hotel
                 db.session.commit()
-                return {"message": True}
+                return {"message": True},200
             else:
-                return {"message":"Please call the source"}
+                return {"message":"Please call the source"},200
         else:
             return {
                 abort(404, message="It doesn't exist")

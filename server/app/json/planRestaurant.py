@@ -23,11 +23,9 @@ class planRestaurant(Resource):
                 plan.restaurant_three = args.restaurant_three if args.restaurant_three else plan.restaurant_three
                 plan.restaurant_four = args.restaurant_four if args.restaurant_four else plan.restaurant_four
                 db.session.commit()
-                return {"message": True}
+                return {"message": True},200
             else:
-                return{
-                    "message":"Please call the source"
-                }
+                return{"message":"Please call the source"},200
         else:
             return {
                 abort(404, message="It doesn't exist")
