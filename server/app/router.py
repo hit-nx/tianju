@@ -57,11 +57,11 @@ api.add_resource(planRestaurant, '/plan/restaurant')
 from app.json.planHotel import planHotel
 api.add_resource(planHotel, '/plan/hotel/<int:plan_id>')
 
-# 方案纪念品接口--PUT
+# 方案纪念品接口--POST DELETE
 from app.json.planSouvenir import planSouvenir
 api.add_resource(planSouvenir, '/plan/souvenir')
 
-# 方案其他需要接口--PUT
+# 方案其他需要接口--POST DELETE
 from app.json.planExtend import planExtend
 api.add_resource(planExtend, '/plan/extend')
 
@@ -73,6 +73,6 @@ api.add_resource(planParticipant, '/plan/participant')
 from app.json.planRoom import planRoom
 api.add_resource(planRoom, '/plan/room')
 
-# 方案个人需要接口--PUT
+# 方案个人需要接口--POST DELETE
 from app.json.planPersonal import planPersonal
 api.add_resource(planPersonal, '/plan/personal')
