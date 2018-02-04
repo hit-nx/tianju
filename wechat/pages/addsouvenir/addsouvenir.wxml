@@ -1,0 +1,34 @@
+<!--pages/addsouvenir/addsouvenir.wxml-->
+    <view style='width:90%;margin:0 auto;'>
+        <view style='height:5px;'></view>
+        <view class='souvenir'>
+            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
+            <view class='name'></view>
+            <view class='name'>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
+            </view>
+            <view class='add'>
+                <image class='addImg' src='../../images/icon-png/选择(选中).png'></image>
+            </view>
+        </view>
+        <view class='souvenir'>
+            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
+            <view class='name'></view>
+            <view class='name'>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
+            </view>
+            <view class='add'>
+                <image class='addImg' src='../../images/icon-png/选择(未选中).png'></image>
+            </view>
+        </view>
+        <view class='souvenir'>
+            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
+            <view class='name'></view>
+            <view class='name'>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
+            </view>
+            <view class='add'>
+                <image class='addImg' src='../../images/icon-png/选择(选中).png'></image>
+            </view>
+        </view>
+    </view>

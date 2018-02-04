@@ -1,14 +1,11 @@
-// pages/searchRestaurant/searchRestaurant.js
+// pages/souvenir/souvenir.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    items:"../../images/photos/餐厅.jpg",
-    items2:"../../images/icon-png/餐厅-餐厅搜索.png",
-    title:"我是餐厅名称",
-    address:"我是餐厅地址"
+    name:"我是纪念品的名字"
   },
 
   /**
@@ -43,9 +40,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.navigateBack({
-        delta: 1,
-    })
+  
   },
 
   /**
@@ -69,7 +64,9 @@ Page({
   
   },
 
-  search: function(){
-      
+  add: function(){
+      wx.navigateTo({
+          url: '../addsouvenir/addsouvenir',
+      })
   }
 })

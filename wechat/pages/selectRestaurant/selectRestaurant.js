@@ -1,14 +1,14 @@
-// pages/searchRestaurant/searchRestaurant.js
+// pages/selectRestaurant/selectRestaurant.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    items:"../../images/photos/餐厅.jpg",
-    items2:"../../images/icon-png/餐厅-餐厅搜索.png",
-    title:"我是餐厅名称",
-    address:"我是餐厅地址"
+    date:"2017-1-27",
+    date2:"2017-1-29",
+    title:"我是酒店名称",
+    address:"我是餐厅地点"
   },
 
   /**
@@ -43,9 +43,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.navigateBack({
-        delta: 1,
-    })
+  
   },
 
   /**
@@ -67,9 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  search: function(){
-      
   }
 })

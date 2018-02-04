@@ -22,9 +22,8 @@ class activity(Resource):
                 dic["name"] = activity.name
                 dic["introduce"] = activity.introduce
                 dic["picture"] = activity.picture
-                item = json.dumps(dic)
                 #print(item)
-                d["activity"].append(item)
+                d["activity"].append(dic)
             return d,200
         else:
             activity = models.activity.query.get(id)
