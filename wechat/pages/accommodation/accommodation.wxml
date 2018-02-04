@@ -1,4 +1,5 @@
 <view class='container'>
+<scroll-view scroll-y='true' class='scroll'>
   
   <view class='photo'>
     <image src='../../images/photos/酒店.jpg' />
@@ -23,6 +24,12 @@
 
   </view>
 
+  <view class='pulldisplay' style='display:{{showView}}'>
+    <view >
+      <text>{{introduce}}</text>
+    </view>
+  </view>
+
   <view class='display'>
     <view class='title'>
       <text>酒店地点</text>
@@ -33,5 +40,8 @@
   <view class='location'>
     <image src='../../images/photos/地图.png' />
   </view>
- 
+
+  <button class='btn'>确认</button>
+
+</scroll-view>
 </view>
