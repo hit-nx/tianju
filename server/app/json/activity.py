@@ -41,7 +41,7 @@ class activity(Resource):
                 }
 
     # 添加活动信息
-    def post(self):
+    def post(self, id):
         max = models.activity.query.order_by(db.desc(models.activity.id)).first()
         id = max.id+1 if max else 1
         activity = models.activity()

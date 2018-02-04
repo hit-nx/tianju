@@ -43,9 +43,10 @@ class restaurant(Resource):
                 }
 
 	# 添加酒店信息
-    def post(self):
+    def post(self, id):
         max = models.restaurant.query.order_by(db.desc(models.restaurant.id)).first()
         id = max.id+1 if max else 1
+        restaurant = models.restaurant()
         restaurant.id=id
         args=parse.parse_args()
         restaurant.name=args.name
@@ -63,6 +64,7 @@ class restaurant(Resource):
 	# 修改酒店信息
     def put(self,id):
         restaurant=models.restaurant.query.get(id)
+        args = parse.parse_args()
         if restaurant:
             restaurant.name=args.name if args.name else restaurant.name
             restaurant.introduce=args.introduce if args.introduce else restaurant.introduce
@@ -79,8 +81,13 @@ class restaurant(Resource):
     def delete(self,id):
         restaurant=models.restaurant.query.get(id)
         if restaurant:
-            db.session.delete(restaurant)
-            db.session.commit()
+            try:
+                db.session.delete(restaurant)
+                db.session.commit()
+                return {"message": True}
+            except Exception as e:
+                db.session.rollback()
+                abort(500)
         else:
             return {
                 abort(404, message="{} doesn't exist".format(id))

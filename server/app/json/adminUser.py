@@ -13,7 +13,7 @@ class adminUser(Resource):
         # 判断管理员是否存在
         if adminUser:
             return {
-                       "wechat": adminUser.wechat,
+                       "wechat": adminUser.wechat
                    }, 200
         else:
             return {

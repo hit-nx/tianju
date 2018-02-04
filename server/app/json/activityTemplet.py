@@ -5,7 +5,6 @@ from flask_restful import Resource, Api, reqparse, abort
 parse = reqparse.RequestParser()
 parse.add_argument('name')
 parse.add_argument('introduce')
-parse.add_argument('picture')
 parse.add_argument('activity_one')
 parse.add_argument('activity_two')
 parse.add_argument('activity_three')
@@ -27,7 +26,6 @@ class activityTemplet(Resource):
                 dic["id"] = activityTemplet.id
                 dic["name"] = activityTemplet.name
                 dic["introduce"] = activityTemplet.introduce
-                dic["picture"] = activityTemplet.picture
                 dic["activity_one"] = activityTemplet.activity_one
                 dic["activity_two"] = activityTemplet.activity_two
                 dic["activity_three"] = activityTemplet.activity_three
@@ -45,7 +43,6 @@ class activityTemplet(Resource):
 	                       "id": activityTemplet.id,
 	                       "name": activityTemplet.name,
 	                       "introduce": activityTemplet.introduce,
-	                       "picture": activityTemplet.picture,
 	                       "activity_one": activityTemplet.activity_one,
 	                       "activity_two": activityTemplet.activity_two,
 	                       "activity_three": activityTemplet.activity_three,
@@ -59,7 +56,7 @@ class activityTemplet(Resource):
 	            }
 
     # 添加模板信息
-    def post(self):
+    def post(self, id):
         max = models.activityTemplet.query.order_by(db.desc(models.activityTemplet.id)).first()
         id = max.id+1 if max else 1
         activityTemplet = models.activityTemplet()
@@ -68,7 +65,6 @@ class activityTemplet(Resource):
         # 将传入参数加入到activityTemplet中
         activityTemplet.name = args.name
         activityTemplet.introduce = args.introduce
-        activityTemplet.picture = args.picture
         activityTemplet.activity_one = args.activity_one
         activityTemplet.activity_two = args.activity_two
         activityTemplet.activity_three = args.activity_three
@@ -92,7 +88,6 @@ class activityTemplet(Resource):
         if activityTemplet:
             activityTemplet.name = args.name if args.name else activityTemplet.name
             activityTemplet.introduce = args.introduce if args.introduce else activityTemplet.introduce
-            activityTemplet.picture = args.picture if args.picture else activityTemplet.picture
             activityTemplet.activity_one = args.activity_one if args.activity_one else activityTemplet.activity_one
             activityTemplet.activity_two = args.activity_two if args.activity_two else activityTemplet.activity_two
             activityTemplet.activity_three = args.activity_three if args.activity_three else activityTemplet.activity_three
