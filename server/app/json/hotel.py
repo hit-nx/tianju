@@ -23,10 +23,8 @@ class hotel(Resource):
                 dic["name"] = hotel.name
                 dic["introduce"] = hotel.introduce
                 dic["picture"] = hotel.picture
-                dic["address"] = hotel.address
-                item = json.dumps(dic)
                 #print(item)
-                d["hotel"].append(item)
+                d["hotel"].append(dic)
             return d,200
         else:
             hotel=models.hotel.query.get(id)
@@ -44,7 +42,7 @@ class hotel(Resource):
                 }
 
 # 添加宾馆信息
-    def post(self):
+    def post(self, id):
         max = models.hotel.query.order_by(db.desc(models.hotel.id)).first()
         id = max.id+1 if max else 1
         hotel=models.hotel()
@@ -65,6 +63,7 @@ class hotel(Resource):
 # 修改宾馆信息
     def put(self, id):
         hotel=models.hotel.query.get(id)
+        args = parse.parse_args()
         if hotel:
             hotel.name=args.name if args.name else hotel.name
             hotel.introduce=args.introduce if args.introduce else hotel.introduce

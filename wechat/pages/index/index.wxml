@@ -4,7 +4,7 @@
   <view class='photo'>
      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
       <block wx:for="{{imgUrls}}" wx:key="key">
-        <swiper-item>
+        <swiper-item class='swiperitem'>
           <image src="{{item}}" class="slide-image" width="355" height="150" />
         </swiper-item>
       </block>
@@ -26,7 +26,7 @@
         <text class='five'>活动参与人</text>
       </view>
 
-      <view class='item'>
+      <view class='item' bindtap='individualDemand'>
         <image src='../../images/icon-png/主页-个人需求.png' />
         <text class='four'>个人需求</text>
       </view>
@@ -44,7 +44,7 @@
         <text class='two'>用餐</text>
       </view>
 
-      <view class='item'>
+      <view class='item' bindtap='souvenir'>
         <image src='../../images/icon-png/纪念品.png' />
         <text class='three'>纪念品</text>
       </view>
@@ -66,4 +66,3 @@
   </view>
 
 </view>
->>>>>>> b5ed13cf2e23f1485898f89425a933f1d3940b04

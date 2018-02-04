@@ -1,0 +1,70 @@
+page{
+    height: 100%;
+  width: 100%;
+  background-color: #E3E0E0;
+}
+
+.head{
+  margin-top: 15rpx; 
+  height: 70rpx;
+  background-color: #fff;
+}
+.ID{
+  text-align: center;
+  width: 250rpx;
+  height: 70rpx;
+  background-color: #09B2F0;
+  line-height: 70rpx;
+  position: relative;
+  left: 50rpx;
+  color: #fff;
+  border-radius:20px;
+}
+.text{
+  position: relative;
+  left: 350rpx;
+  top: -60rpx;
+}
+
+.time{
+  text-align: center;
+  width: 250rpx;
+  height: 70rpx;
+  background-color: #09B2F0;
+  line-height: 70rpx;
+  position: relative;
+  left: 50rpx;
+  top: 15rpx;
+  color: #fff;
+  border-radius:20px;
+}
+
+.model{
+  margin: 0 auto;
+  margin-top: 30rpx;
+  height: 250rpx;
+  width: 90%;
+  background-color: #fff;
+}
+
+.act{
+  height: 60rpx;
+  background-color: #09B2F0;
+  padding-left: 40rpx;
+}
+.title{
+  padding-left: 80rpx;
+}
+.add{
+  padding-left: 80rpx;
+}
+.else{
+  padding-left: 80rpx;
+}
+.save{
+  width: 600rpx;
+  background-color: #09B2F0;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  color: #fff;
+}

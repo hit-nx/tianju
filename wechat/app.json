@@ -1,14 +1,17 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/participants/participants",
+        "pages/activity/activity",
+        "pages/selectRestaurant/selectRestaurant",
+        "pages/searchRestaurant/searchRestaurant",
+        "pages/hotelShow/hotelShow",
         "pages/addsouvenir/addsouvenir",
-        "pages/souvenir/souvenir" ,
+        "pages/souvenir/souvenir",
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
-        "pages/logs/logs",
-        "pages/person/person",
-        "pages/searchRestaurant/searchRestaurant",
-        "pages/selectRestaurant/selectRestaurant"
+        "pages/logs/logs",   
+        "pages/person/person"
     ],
     "window": {
         "backgroundTextStyle": "light",

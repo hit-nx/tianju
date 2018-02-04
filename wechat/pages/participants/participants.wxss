@@ -1,0 +1,72 @@
+/**index.wxss**/
+page{
+    height: 100%;
+  width: 100%;
+  background-color: #E3E0E0;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  padding: 0rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.init{
+  height:75rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 15rpx;
+}
+
+.part1{
+  height:75rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx;
+  margin: 15rpx;
+}
+.part2{
+  height:75rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx;
+   margin: 15rpx;
+}
+.part3{
+  height:75rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx;
+   margin: 15rpx;
+}
+.part4{
+  height:75rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx;
+   margin: 15rpx;
+
+}
+.user{
+  height: 75rpx;
+  position: relative;
+  left: 80rpx;
+  top: -25rpx;
+}
+
+.small{
+  position: relative;
+  left: 400rpx;
+  top: -25rpx;
+  color: #8B8B8B;
+}
+
+image{
+  position: relative;
+  left: 40rpx;
+  top: -5rpx;
+
+}
