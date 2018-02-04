@@ -12,9 +12,15 @@
   </view>
 
   <view class='display'>
+
     <view class='title'>
       <text>酒店简介</text>
     </view>
+    
+     <view class='pulldown' bindtap='pullDown'>
+      <image src='{{pullDown}}' />
+    </view> 
+
   </view>
 
   <view class='display'>
