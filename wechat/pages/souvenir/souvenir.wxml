@@ -6,7 +6,7 @@
             <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
             <view class='name'></view>
             <view class='name'>
-                <text style='color:#fff;padding:0 10px;'>{{name}}</text>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
             <view class='delete'>
                 <image class='deleteImg' src='../../images/icon-png/删除-垃圾桶.png'></image>
@@ -16,7 +16,7 @@
             <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
             <view class='name'></view>
             <view class='name'>
-                <text style='color:#fff;padding:0 10px;'>{{name}}</text>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
             <view class='delete'>
                 <image class='deleteImg' src='../../images/icon-png/删除-垃圾桶.png'></image>
@@ -26,7 +26,7 @@
             <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
             <view class='name'></view>
             <view class='name'>
-                <text style='color:#fff;padding:0 10px;'>{{name}}</text>
+                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
             <view class='delete'>
                 <image class='deleteImg' src='../../images/icon-png/删除-垃圾桶.png'></image>
