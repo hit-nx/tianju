@@ -1,0 +1,52 @@
+<view class='container'>
+
+  <scroll-view class='scroll'>
+
+    <view class='item'>
+      <view class='photo'>
+        <image src='../../images/photos/酒店.jpg' />
+      </view>
+
+      <view class='text'>
+        <text class='name'>我是酒店名称</text>
+        <text class='location'>我是酒店地点</text>
+      </view>
+
+      <view class='choose'>
+        <image src='../../images/icon-png/确认.png' />
+      </view>
+    </view>
+
+     <view class='item'>
+      <view class='nophoto'>
+        <image src='../../images/icon-png/酒店搜索+添加餐厅(无图片).png'/>
+      </view>
+
+      <view class='text'>
+        <text class='name'>我是酒店名称</text>
+        <text class='location'>我是酒店地点</text>
+      </view>
+
+      <view class='choose'>
+        <image src='../../images/icon-png/确认.png' />
+      </view>
+    </view>
+
+     <view class='item'>
+      <view class='photo'>
+        <image src='../../images/photos/酒店.jpg' />
+      </view>
+
+      <view class='text'>
+        <text class='name'>我是酒店名称</text>
+        <text class='location'>我是酒店地点</text>
+      </view>
+
+      <view class='choose'>
+        <image src='../../images/icon-png/确认.png' />
+      </view>
+    </view>
+
+  </scroll-view>
+
+</view>

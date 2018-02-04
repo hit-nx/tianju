@@ -1,12 +1,13 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/hotelShow/hotelShow",
         "pages/addsouvenir/addsouvenir",
-        "pages/souvenir/souvenir" ,
+        "pages/souvenir/souvenir",
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
-        "pages/logs/logs",
-        "pages/person/person",
+        "pages/logs/logs",   
+        "pages/person/person", 
         "pages/searchRestaurant/searchRestaurant",
         "pages/selectRestaurant/selectRestaurant"
     ],
