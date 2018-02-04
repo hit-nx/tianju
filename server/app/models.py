@@ -4,6 +4,7 @@ from app import db
 class user(db.Model):
     __tablename__ = 'user'
     wechat = db.Column(primary_key=True)
+    name = db.Column()
     phone = db.Column()
     grade = db.Column()
     college = db.Column()
@@ -93,20 +94,21 @@ class personal(db.Model):
 class plan(db.Model):
     __tablename__ = 'plan'
     id = db.Column(primary_key=True)
+    name = db.Column()
     key = db.Column()
     date = db.Column()
     wechat = db.Column()
-    activityOne = db.Column()
-    activityTwo = db.Column()
-    activityThree = db.Column()
-    activityFour = db.Column()
-    activityFive = db.Column()
-    activitySix = db.Column()
+    activity_one = db.Column()
+    activity_two = db.Column()
+    activity_three = db.Column()
+    activity_four = db.Column()
+    activity_five = db.Column()
+    activity_six = db.Column()
     hotel = db.Column()
-    restaurantOne = db.Column()
-    restaurantTwo = db.Column()
-    restaurantThree = db.Column()
-    restaurantFour = db.Column()
+    restaurant_one = db.Column()
+    restaurant_two = db.Column()
+    restaurant_three = db.Column()
+    restaurant_four = db.Column()
 
 
 class planSouvenir(db.Model):
@@ -127,18 +129,22 @@ class planParticipant(db.Model):
     __tablename__ = 'plan_participant'
     id = db.Column(primary_key=True)
     plan = db.Column()
-    participantWechat = db.Column()
+    participant_wechat = db.Column()
 
 
-class partucipantChooseRoom(db.Model):
+class participantChooseRoom(db.Model):
     __tablename__ = 'participant_choose_room'
     id = db.Column(primary_key=True)
+    plan = db.Column()
     participant_wechat = db.Column()
     room = db.Column()
+    date_in = db.Column()
+    date_out = db.Column()
 
 
 class participantChoosePersonal(db.Model):
     __tablename__ = 'participant_choose_personal'
     id = db.Column(primary_key=True)
+    plan = db.Column()
     participant_wechat = db.Column()
     personal = db.Column()

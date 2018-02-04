@@ -1,0 +1,31 @@
+<view class='container'>
+  
+  <view class='photo'>
+    <image src='../../images/photos/酒店.jpg' />
+  </view>
+
+  <view class='display'>
+    <view class='title'>
+      <text>酒店名称</text>
+    </view>
+    <text class='content'>我是酒店名称</text>
+  </view>
+
+  <view class='display'>
+    <view class='title'>
+      <text>酒店简介</text>
+    </view>
+  </view>
+
+  <view class='display'>
+    <view class='title'>
+      <text>酒店地点</text>
+    </view>
+    <text class='content'>我是酒店地点</text>
+  </view>
+
+  <view class='location'>
+    <image src='../../images/photos/地图.png' />
+  </view>
+ 
+</view>

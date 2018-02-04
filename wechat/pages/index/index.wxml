@@ -1,5 +1,75 @@
+<<<<<<< HEAD
 <!--index.wxml-->
 <view>
   <button bindtap='searchRestaurant'>跳转到餐厅搜索</button>
   <button bindtap='selectRestaurant'>跳转到添加餐厅</button>
 </view>
+=======
+<view class='container'>
+
+  <view class='photo'>
+     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper> 
+    <!-- <image src='../../images/photos/首页.jpg' /> -->
+  </view>
+  
+  <view class='selection'>
+
+    <view class='content'>
+
+      <view class='item'>
+        <image src='../../images/icon-png/活动流程.png' />
+        <text class='four'>活动流程</text>
+      </view>
+
+      <view class='item'>
+        <image src='../../images/icon-png/活动参与人.png' />
+        <text class='five'>活动参与人</text>
+      </view>
+
+      <view class='item'>
+        <image src='../../images/icon-png/主页-个人需求.png' />
+        <text class='four'>个人需求</text>
+      </view>
+
+    </view>  
+
+    <view class='content'>
+      <view class='item'>
+        <image src='../../images/icon-png/住宿.png' />
+        <text class='two'>住宿</text>
+      </view>
+
+      <view class='item'>
+        <image src='../../images/icon-png/用餐.png' />
+        <text class='two'>用餐</text>
+      </view>
+
+      <view class='item'>
+        <image src='../../images/icon-png/纪念品.png' />
+        <text class='three'>纪念品</text>
+      </view>
+
+    </view>
+
+    <view class='btn'>
+
+      <view class='firstbtn'>
+        <button> {{firstbtn}} </button>
+      </view>
+
+      <view class='secondbtn'>
+        <button> {{secondbtn}} </button>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+>>>>>>> b5ed13cf2e23f1485898f89425a933f1d3940b04
