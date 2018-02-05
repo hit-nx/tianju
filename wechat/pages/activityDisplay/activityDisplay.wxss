@@ -1,0 +1,72 @@
+/* pages/activityDisplay/activityDisplay.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    background-color: #e3e0e0;
+}
+.activity{
+    height: 85px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+.activityIcon{
+    height: 85px;
+    width: 23%;
+    float: left;
+    background-color: #09b2f0;
+    border-radius: 15px 0 0 15px;
+    position: relative;
+}
+.activityIconImg{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 17px;
+    left: 15px;
+}
+.details{
+    height: 85px;
+    width: 67%;
+    float: left;
+}
+.name{
+    height: 25px;
+    font-size: 0.9em;
+    margin: 15px 10px;
+}
+.address{
+    line-height: 20px;
+    font-size: 0.8em;
+    color: #9e9e9e;
+    padding: 15px 10px;
+}
+.remarks{
+    line-height: 20px;
+    font-size: 0.7em;
+    color: #e3e0e0;
+    padding: 15px 10px;
+}
+.decide{
+    width: 10%;
+    height: 85px;
+    float: right;
+    border-radius: 0 15px 15px 0;
+    background-color: #09b2f0;
+    position: relative;
+}
+.decideIcon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 27px;
+}
+.decideAdd{
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30px;
+    background-color: #09b2f0;
+    font-size: 0.8em;
+    color: #fff;
+}

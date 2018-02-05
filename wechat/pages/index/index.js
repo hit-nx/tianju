@@ -13,6 +13,7 @@ Page({
     ],
     firstbtn: "分享给好友",
     secondbtn: "取消参与活动",
+    showModal: false,
   },
   /**
    * 点击个人需求
@@ -29,5 +30,26 @@ Page({
     wx.navigateTo({
       url: '../souvenir/souvenir',
     })
+  },
+
+  /**
+   * 点击无活动
+   */
+  noActivity: function(){
+      this.setData({
+          showModal: true
+      })
+  },
+  hideModal: function () {
+      this.setData({
+          showModal: false
+      });
+  },
+  onCancel: function () {
+      this.hideModal();
+  },
+   onConfirm: function () {
+      this.hideModal();
   }
+
 })

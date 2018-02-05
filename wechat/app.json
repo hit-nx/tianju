@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/activityDisplay/activityDisplay",
         "pages/selectRestaurant/selectRestaurant",
         "pages/searchRestaurant/searchRestaurant",
         "pages/hotelShow/hotelShow",
@@ -8,7 +9,7 @@
         "pages/souvenir/souvenir",
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
-        "pages/logs/logs",   
+        "pages/logs/logs",
         "pages/person/person"
     ],
     "window": {
