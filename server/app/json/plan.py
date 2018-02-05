@@ -132,7 +132,7 @@ class plan(Resource):
 			user.plan_id = id
 		else:
 			return {
-				abort(400, message="plan {} doesn't exist".format(args.wechat))
+				abort(400, message="user {} doesn't exist".format(args.wechat))
 			}
 		# 生成识别码
 		try:
@@ -150,7 +150,6 @@ class plan(Resource):
 		if plan :
 			plan.name = args.name if args.name else plan.name
 			plan.date = args.date if args.date else plan.date
-			plan.wechat = args.wechat if args.wechat else plan.wechat
 			db.session.commit()
 			return {"message": True}
 		else :
@@ -162,6 +161,7 @@ class plan(Resource):
 		args = parse.parse_args()
 		plan = models.plan.query.get(args.id)
 		if plan:
+			models.user.query.get(plan.wechat).plan_id = 0
 			try:
 				# 循环删除方案其他需要
 				while models.planExtend.query.filter_by(plan=plan.id).first():
