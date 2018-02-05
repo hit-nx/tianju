@@ -12,6 +12,20 @@
       </view>
     </view>
 
+    <view class='content'>
+      <view class='activity'>
+      </view>
+      <view class='activity'>
+      </view>
+      <view class='activity'>
+      </view>
+      <view class='activity'>
+      </view>
+      <view class='activity'>
+      </view>
+      <button bindtap='showDialogBtn'>自定义</button>
+    </view>
+
     <view class='display'>
       <view class='icon'>
         <image src='../../images/icon-png/住宿.png' />
@@ -69,6 +83,21 @@
       <text>集体定制服装需求</text>
       <view class='pulldown'>
         <image src='../../images/icon-png/确认.png' />
+      </view>
+    </view>
+
+    <!--弹窗-->
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+      <view class="modal-title">自定义活动方案</view>
+      <view class="modal-content">
+        <view class="modal-input">
+          <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入活动方案的名称"></input>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
       </view>
     </view>
 
