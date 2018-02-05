@@ -61,7 +61,7 @@ class plan(Resource):
 
 					# 参与人员的房间需求
 					participantRoomList = []
-					participantRoom = models.participantChooseRoom.query.filter_by(participant_wechat=item.participant_wechat).all()
+					participantRoom = models.participantChooseRoom.query.filter_by(plan=id, participant_wechat=item.participant_wechat).all()
 					if participantRoom:
 						for roomItem in participantRoom:
 							participantRoomList.append({
@@ -70,9 +70,9 @@ class plan(Resource):
 								"date_in" : roomItem.date_in,
 								"date_out" : roomItem.date_out,
 								})
-					# 参与人员的房间需求
+					# 参与人员的个人需要
 					participantPersonalList = []
-					participantPersonal = models.participantChoosePersonal.query.filter_by(participant_wechat=item.participant_wechat).all()
+					participantPersonal = models.participantChoosePersonal.query.filter_by(plan=id, participant_wechat=item.participant_wechat).all()
 					if participantPersonal:
 						for personalItem in participantPersonal:
 							participantPersonalList.append({
