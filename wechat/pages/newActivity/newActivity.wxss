@@ -92,6 +92,10 @@ page{
   margin-left: 10%;
 }
 
+.activity text{
+  
+}
+
 
 .show-btn {
   margin-top: 100rpx;

@@ -2,16 +2,16 @@
 <view class='container'>
 
   <view class='photo'>
-     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
       <block wx:for="{{imgUrls}}" wx:key="key">
-        <swiper-item class='swiperitem'>
+        <swiper-item>
           <image src="{{item}}" class="slide-image" width="355" height="150" />
         </swiper-item>
       </block>
-    </swiper> 
+    </swiper>
     <!-- <image src='../../images/photos/首页.jpg' /> -->
   </view>
-  
+
   <view class='selection'>
 
     <view class='content'>
@@ -31,7 +31,7 @@
         <text class='four'>个人需求</text>
       </view>
 
-    </view>  
+    </view>
 
     <view class='content'>
       <view class='item'>
@@ -62,7 +62,19 @@
       </view>
 
     </view>
-
   </view>
 
+  <button bindtap='noActivity'>无活动</button>
+  <view class="modal-mask" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">
+      <text class='tips'>系统检测到您未加入或创建任何活动，</text>
+      <text class='tips'>请选择加入一个活动或创建一个活动</text>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">加入一个活动</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">创建一个活动</view>
+    </view>
+  </view>
 </view>

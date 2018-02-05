@@ -1,0 +1,42 @@
+<!--pages/activityDisplay/activityDisplay.wxml-->
+<view style='width:90%;margin:10px auto;'>
+    <view class='activity'>
+        <view class='activityIcon'>
+            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
+        </view>
+        <view class='details'>
+            <text class='name'>{{name}}\n</text>
+            <text class='address'>{{address}}\n</text>
+            <text class='remarks'>{{remarks}}</text>
+        </view>
+        <view class='decide'>
+            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
+        </view>
+    </view>
+     <view class='activity'>
+        <view class='activityIcon'>
+            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
+        </view>
+        <view class='details'>
+            <text class='name'>{{name}}\n</text>
+            <text class='address'>{{address}}\n</text>
+            <text class='remarks'>{{remarks}}</text>
+        </view>
+        <view class='decide'>
+            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
+        </view>
+    </view> <view class='activity'>
+        <view class='activityIcon'>
+            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
+        </view>
+        <view class='details'>
+            <text class='name'>{{name}}\n</text>
+            <text class='address'>{{address}}\n</text>
+            <text class='remarks'>{{remarks}}</text>
+        </view>
+        <view class='decide'>
+            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
+        </view>
+    </view>
+    <button class='decideAdd' bindtap='decideAdd'>确认添加</button>
+</view>
