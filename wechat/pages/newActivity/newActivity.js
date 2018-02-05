@@ -5,6 +5,8 @@ Page({
    */
   data: {
     showModal: false,
+    showView: 'none',
+    photoUrl: '../../images/icon-png/右箭头.png',
   },
   onLoad: function () {
   },
@@ -41,4 +43,15 @@ Page({
   onConfirm: function () {
     this.hideModal();
   },
+  /**
+   * 活动方案右箭头
+   */
+  pullDown: function () {
+    var photo = this.data.photoUrl == '../../images/icon-png/右箭头.png' ? '../../images/icon-png/下箭头.png' : '../../images/icon-png/右箭头.png'
+    var show = this.data.photoUrl == '../../images/icon-png/右箭头.png' ? 'block' : 'none'
+    this.setData({
+      photoUrl:photo,
+      showView:show
+    })
+  }
 })

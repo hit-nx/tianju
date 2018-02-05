@@ -7,24 +7,50 @@
         <image src='../../images/icon-png/活动流程.png' />
       </view>
       <text>活动方案</text>
-      <view class='pulldown'>
-        <image src='../../images/icon-png/右箭头.png' />
+      <view class='pulldown' bindtap='pullDown'>
+        <image src='{{photoUrl}}' />
       </view>
     </view>
 
-    <view class='content'>
+    <view class='content' style='display:{{showView}}'>
+
       <view class='activity'>
         <text>匆匆那年</text>
+        <view class='choose'>
+          <image src='../../images/icon-png/选择(选中).png' />
+        </view>
       </view>
+
       <view class='activity'>
+        <text>民俗</text>
+        <view class='choose'>
+          <image src='../../images/icon-png/选择(未选中).png' />
+        </view>
       </view>
+
       <view class='activity'>
+        <text>海洋之旅</text>
+        <view class='choose'>
+          <image src='../../images/icon-png/选择(未选中).png' />
+        </view>
       </view>
+
       <view class='activity'>
+        <text>联谊会</text>
+        <view class='choose'>
+          <image src='../../images/icon-png/选择(未选中).png' />
+        </view>
       </view>
+
       <view class='activity'>
+        <text>旅游</text>
+        <view class='choose'>
+          <image src='../../images/icon-png/选择(未选中).png' />
+        </view>
       </view>
+
       <button bindtap='showDialogBtn'>自定义</button>
+
     </view>
 
     <view class='display'>
@@ -85,6 +111,18 @@
       <view class='pulldown'>
         <image src='../../images/icon-png/确认.png' />
       </view>
+    </view>
+
+    <view class='btn'>
+
+      <view class='firstbtn'>
+        <button>保存</button>
+      </view>
+
+      <view class='secondbtn'>
+        <button>取消</button>
+      </view>
+
     </view>
 
     <!--弹窗-->
