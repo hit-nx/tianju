@@ -1,3 +1,4 @@
+#-*- coding: UTF-8 -*-
 from app import api
 
 # 用户信息接口--GET POST PUT
