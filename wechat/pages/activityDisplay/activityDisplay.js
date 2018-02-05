@@ -5,9 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"我是活动名称",
-    address:"我是活动地址",
-    remarks:"我是活动备注"
+    array:[{
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }, {
+      name: "我是活动名称",
+      address: "我是活动地址",
+      remarks: "我是活动备注",
+      decideIcon: '../../images/icon-png/选择(未选中).png'
+    }],   
   },
 
   /**
@@ -64,5 +97,21 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  /**
+   * 点击选择
+   */
+  choose:function (e) {
+    var up = "array[" + e.currentTarget.id + "].decideIcon";
+    if (this.data.array[e.currentTarget.id].decideIcon == '../../images/icon-png/选择(未选中).png'){
+      this.setData({
+        [up]:'../../images/icon-png/确认.png',
+      })
+    }
+    else{
+      this.setData({
+        [up]: '../../images/icon-png/选择(未选中).png',
+      })
+    }
   }
 })

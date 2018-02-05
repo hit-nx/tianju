@@ -1,42 +1,29 @@
 <!--pages/activityDisplay/activityDisplay.wxml-->
-<view style='width:90%;margin:10px auto;'>
-    <view class='activity'>
-        <view class='activityIcon'>
-            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
-        </view>
-        <view class='details'>
-            <text class='name'>{{name}}\n</text>
-            <text class='address'>{{address}}\n</text>
-            <text class='remarks'>{{remarks}}</text>
-        </view>
-        <view class='decide'>
-            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
-        </view>
+<view style='width:90%;margin:10px auto;height:100%'>
+<scroll-view scroll-y='true' style='width:100%;height:100%'>
+
+<block wx:for='{{array}}'>
+  <view class='activity'>
+
+    <view class='activityIcon'>
+      <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
     </view>
-     <view class='activity'>
-        <view class='activityIcon'>
-            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
-        </view>
-        <view class='details'>
-            <text class='name'>{{name}}\n</text>
-            <text class='address'>{{address}}\n</text>
-            <text class='remarks'>{{remarks}}</text>
-        </view>
-        <view class='decide'>
-            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
-        </view>
-    </view> <view class='activity'>
-        <view class='activityIcon'>
-            <image class='activityIconImg' src='../../images/icon-png/活动.png'></image>
-        </view>
-        <view class='details'>
-            <text class='name'>{{name}}\n</text>
-            <text class='address'>{{address}}\n</text>
-            <text class='remarks'>{{remarks}}</text>
-        </view>
-        <view class='decide'>
-            <image class='decideIcon' src='../../images/icon-png/确认.png'></image>
-        </view>
+
+    <view class='details'>
+      <text class='name'>{{item.name}}\n</text>
+      <text class='address'>{{item.address}}\n</text>
+      <text class='remarks'>{{item.remarks}}</text>
     </view>
-    <button class='decideAdd' bindtap='decideAdd'>确认添加</button>
+
+    <view class='decide' bindtap='choose' id='{{index}}'>
+      <image class='decideIcon' src='{{item.decideIcon}}'></image>
+    </view>
+
+  </view>
+</block>
+
+</scroll-view>
+<view class='decideAdd'>
+  <button bindtap='decideAdd'>确认添加</button>
+</view>
 </view>
