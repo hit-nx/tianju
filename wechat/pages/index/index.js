@@ -15,12 +15,67 @@ Page({
     secondbtn: "取消参与活动",
     showModal: false,
   },
+
+  /**
+   * 点击无活动
+   */
+  noActivity: function(){
+    this.setData({
+      showModal: true
+    })
+  },
+  hideModal: function () {
+    this.setData({
+      showModal: false
+    });
+  },
+  onCancel: function () {
+    this.hideModal();
+  },
+  onConfirm: function () {
+    wx.navigateTo({
+      url: '../newActivity/newActivity',
+    })
+    this.hideModal();
+  },
+  /**
+   * 点击活动流程
+   */
+  activity: function () {
+    wx.navigateTo({
+      url: '../activity/activity',
+    })
+  },
+  /**
+   * 点击活动参与人
+   */
+  participants: function () {
+    wx.navigateTo({
+      url: '../participants/participants',
+    })
+  },
   /**
    * 点击个人需求
    */
   individualDemand: function () {
     wx.navigateTo({
       url: '../individualDemand/individualDemand',
+    })
+  },
+  /**
+   * 点击住宿
+   */
+  accommodation: function () {
+    wx.navigateTo({
+      url: '../accommodation/accommodation',
+    })
+  },
+  /**
+   * 点击用餐
+   */
+  selectRestaurant: function () {
+    wx.navigateTo({
+      url: '../selectRestaurant/selectRestaurant',
     })
   },
   /**
@@ -31,25 +86,4 @@ Page({
       url: '../souvenir/souvenir',
     })
   },
-
-  /**
-   * 点击无活动
-   */
-  noActivity: function(){
-      this.setData({
-          showModal: true
-      })
-  },
-  hideModal: function () {
-      this.setData({
-          showModal: false
-      });
-  },
-  onCancel: function () {
-      this.hideModal();
-  },
-   onConfirm: function () {
-      this.hideModal();
-  }
-
 })

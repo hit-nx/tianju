@@ -1,0 +1,32 @@
+<image src="../../images/photos/餐厅.jpg" style="height:300rpx;width:100%" mode='scaleToFill'></image>
+
+<view class='model'>
+    <view class='title'>餐厅名称</view>
+    <text>我是餐厅名称</text>
+</view>
+
+<view class='model'>
+    <view class='title'>用餐日期</view>
+    <text>2017-9-10</text>
+</view>
+
+<view class='time'>
+    <view class='title'>用餐时间</view>
+    <view class='model'>
+        <view class='container'>
+          <view class='lunch'>午餐</view>
+          <view class='dinner'>晚餐</view>
+        </view>
+    </view>
+</view>
+
+<view class='model'>
+    <view class='title'>餐厅地点</view>
+    <text>我是餐厅地点</text>
+</view>
+
+<view class='GPS'>
+    <image src='../../images/photos/地图.png'  style='width:100%;height:400rpx;'></image>
+</view>
+
+<button class='sure' >确认</button>

@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/person/person",
         "pages/activityDisplay/activityDisplay",
         "pages/newActivity/newActivity",
         "pages/participants/participants",
@@ -13,7 +14,7 @@
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
         "pages/logs/logs",
-        "pages/person/person"
+        "pages/restaurant/restaurant"
     ],
     "window": {
         "backgroundTextStyle": "light",

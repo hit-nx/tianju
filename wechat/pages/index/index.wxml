@@ -16,12 +16,12 @@
 
     <view class='content'>
 
-      <view class='item'>
+      <view class='item' bindtap='activity'>
         <image src='../../images/icon-png/活动流程.png' />
         <text class='four'>活动流程</text>
       </view>
 
-      <view class='item'>
+      <view class='item' bindtap='participants'>
         <image src='../../images/icon-png/活动参与人.png' />
         <text class='five'>活动参与人</text>
       </view>
@@ -34,12 +34,12 @@
     </view>
 
     <view class='content'>
-      <view class='item'>
+      <view class='item' bindtap='accommodation'>
         <image src='../../images/icon-png/住宿.png' />
         <text class='two'>住宿</text>
       </view>
 
-      <view class='item'>
+      <view class='item' bindtap='selectRestaurant'>
         <image src='../../images/icon-png/用餐.png' />
         <text class='two'>用餐</text>
       </view>
@@ -57,14 +57,13 @@
         <button> {{firstbtn}} </button>
       </view>
 
-      <view class='secondbtn'>
+      <view class='secondbtn' bindtap='noActivity'>
         <button> {{secondbtn}} </button>
       </view>
 
     </view>
   </view>
 
-  <button bindtap='noActivity'>无活动</button>
   <view class="modal-mask" wx:if="{{showModal}}"></view>
   <view class="modal-dialog" wx:if="{{showModal}}">
     <view class="modal-title">提示</view>

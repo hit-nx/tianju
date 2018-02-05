@@ -11,6 +11,7 @@ page{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-size: 31rpx;
 }
 .init{
   height:75rpx;
@@ -19,6 +20,7 @@ page{
   padding: 20rpx;
   margin-top: 30rpx;
   margin-bottom: 15rpx;
+
 }
 
 .part1{
@@ -54,7 +56,7 @@ page{
   height: 75rpx;
   position: relative;
   left: 80rpx;
-  top: -25rpx;
+  top: -30rpx;
 }
 
 .small{

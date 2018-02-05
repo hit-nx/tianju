@@ -11,6 +11,7 @@ page{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-size: 31rpx;
 }
 .header{
   height: 250rpx;
@@ -24,12 +25,14 @@ page{
   padding-top: 100rpx;
 }
 .image{
+  border: 3px solid #fff;
   height: 200rpx;
   width: 200rpx;
   border-radius:100%; 
   overflow:hidden;
 }
 .wx{
+  font-size: 40rpx;
   color: #fff;
   width: 300rpx;
   height: 250rpx;
@@ -38,7 +41,7 @@ page{
 }
 .model{
   width: 100%;
-  height: 75rpx;
+  height: 65rpx;
   background-color: #fff; 
   margin: 15rpx;
   padding: 20rpx;
@@ -61,4 +64,5 @@ page{
   background-color: #09B2F0;
   color: #fff;
   width: 600rpx;
+  font-size: 35rpx;
 }
