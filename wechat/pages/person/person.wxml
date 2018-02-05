@@ -8,23 +8,27 @@
 
     <view class='model'>
       <text class='text'>姓名</text>
-      <text class='text_'>某某某</text>
+      <text class='text_' style='display:{{showText}}'>{{name}}</text>
+      <input class="input" value='{{name}}' style='display:{{showInput}}' bindinput='nameInput'></input>
     </view>
 
     <view class='model'>
       <text class='text'>姓别</text>
-      <text class='text_'>男</text>
+      <text class='text_' style='display:{{showText}}'>{{sex}}</text>
+      <input class="input" value='{{sex}}' style='display:{{showInput}}' maxlength='3' bindinput='sexInput'></input>
     </view>
 
     <view class='model'>
       <text class='text'>班级</text>
-      <text class='text_'>1211104</text>
+      <text class='text_' style='display:{{showText}}'>{{Class}}</text>
+      <input class="input" value='{{Class}}' style='display:{{showInput}}' type='number' maxlength='7' bindinput='classInput'></input>
     </view>
 
     <view class='model'>
       <text class='text'>工作单位</text>
-      <text class='text_'>哈尔滨工业大学</text>
+      <text class='text_' style='display:{{showText}}'>{{location}}</text>
+      <input class="input" value='{{location}}' style='display:{{showInput}}' bindinput='locationInput'></input>
     </view>
 
-    <button class='edit'>编辑个人信息</button>
+    <button class='edit' bindtap='edit'>{{btnText}}</button>
 </view>
