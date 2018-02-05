@@ -1,7 +1,13 @@
 {
     "pages": [
         "pages/index/index",
+<<<<<<< HEAD
         "pages/activityDisplay/activityDisplay",
+=======
+        "pages/newActivity/newActivity",
+        "pages/participants/participants",
+        "pages/activity/activity",
+>>>>>>> b5107a05c00350288284f73b02467c3b106233f3
         "pages/selectRestaurant/selectRestaurant",
         "pages/searchRestaurant/searchRestaurant",
         "pages/hotelShow/hotelShow",

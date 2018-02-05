@@ -1,0 +1,68 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #e3e0e0;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start
+}
+
+.scroll{
+  width: 100%;
+  height: 100%; 
+}
+
+.display{
+  width: 100%;
+  height: 7%;
+  background-color: #ffffff;
+  margin-top: 4%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon{
+  width: 12%;
+  height: 100%;
+  margin-left: 8%
+}
+
+.icon image{
+  width: 60%;
+  height: 70%;
+  margin-top: 12%;
+}
+
+.display text{
+  width: 40%;
+  height: 100%;
+  color: #303030;
+  font-size: 11px;
+  margin-top: 6%;
+  margin-left: 3%;
+}
+
+.pulldown{
+  width: 12%;
+  height: 100%;
+  background-color: #09b2f0;
+  margin-left: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulldown image{
+  width: 50%;
+  height: 50%
+}

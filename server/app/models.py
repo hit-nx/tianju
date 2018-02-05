@@ -14,7 +14,7 @@ class user(db.Model):
     plan_id = db.Column()
 
 
-class userAdmin(db.Model):
+class adminUser(db.Model):
     __tablename__ = 'user_admin'
     wechat = db.Column(primary_key=True)
 
@@ -32,12 +32,12 @@ class activityTemplet(db.Model):
     id = db.Column(primary_key=True)
     name = db.Column()
     introduce = db.Column()
-    activityOne = db.Column()
-    activityTwo = db.Column()
-    activityThree = db.Column()
-    activityFour = db.Column()
-    activityFive = db.Column()
-    activitySix = db.Column()
+    activity_one = db.Column()
+    activity_two = db.Column()
+    activity_three = db.Column()
+    activity_four = db.Column()
+    activity_five = db.Column()
+    activity_six = db.Column()
 
 
 class restaurant(db.Model):

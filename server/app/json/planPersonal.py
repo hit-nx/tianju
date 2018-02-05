@@ -15,7 +15,7 @@ class planPersonal(Resource):
                                                                         personal=args.personal).first()
         if planPersonal:
             return {
-                abort(400, message="has exicted!")
+                abort(400, message="has existed!")
             }
         else:
             newPlanPersonal = models.participantChoosePersonal()
@@ -31,7 +31,7 @@ class planPersonal(Resource):
                 db.session.add(newPlanPersonal)
                 db.session.commit()
                 return {
-                    "message":True
+                    "message": True
                 }
             except Exception as e:
                 print(e)

@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <view class='container'>
 
+<<<<<<< HEAD
     <view class='photo'>
         <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
             <block wx:for="{{imgUrls}}" wx:key="key">
@@ -11,6 +12,18 @@
         </swiper> 
         <!-- <image src='../../images/photos/首页.jpg' /> -->
     </view>
+=======
+  <view class='photo'>
+     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item class='swiperitem'>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper> 
+    <!-- <image src='../../images/photos/首页.jpg' /> -->
+  </view>
+>>>>>>> b5107a05c00350288284f73b02467c3b106233f3
   
     <view class='selection'>
 
@@ -65,6 +78,7 @@
     </view>
 
 
+<<<<<<< HEAD
 
     <button bindtap='noActivity'>无活动</button>  
     <view class="modal-mask" wx:if="{{showModal}}"></view>
@@ -80,3 +94,6 @@
         </view>
     </view>
 </view>
+=======
+</view>
+>>>>>>> b5107a05c00350288284f73b02467c3b106233f3

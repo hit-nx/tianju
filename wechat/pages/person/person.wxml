@@ -1,2 +1,30 @@
-<!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="container">
+    <view class='header'>
+        <view class='image'>
+       <image src='../../images/photos/timg.jpg' style='height:200rpx;width:200rpx;'></image>
+       </view>
+       <text class='wx'>我的微信昵称</text>
+    </view>
+
+    <view class='model'>
+      <text class='text'>姓名</text>
+      <text class='text_'>某某某</text>
+    </view>
+
+    <view class='model'>
+      <text class='text'>姓别</text>
+      <text class='text_'>男</text>
+    </view>
+
+    <view class='model'>
+      <text class='text'>班级</text>
+      <text class='text_'>1211104</text>
+    </view>
+
+    <view class='model'>
+      <text class='text'>工作单位</text>
+      <text class='text_'>哈尔滨工业大学</text>
+    </view>
+
+    <button class='edit'>编辑个人信息</button>
+</view>

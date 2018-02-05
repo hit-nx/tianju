@@ -13,6 +13,19 @@ page{
   width: 100%;
 }
 
+.swiperitem{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.swiperitem image{
+  height: 100%;
+  width: 100%;
+}
+
 .selection{
   height: 100%;
   width: 100%;

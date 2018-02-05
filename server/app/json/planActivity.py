@@ -27,9 +27,9 @@ class planActivity(Resource):
                 plan.activity_five = args.activity_five if args.activity_five else plan.activity_five
                 plan.activity_six = args.activity_six if args.activity_six else plan.activity_six
                 db.session.commit()
-                return {"message": True}
+                return {"message": True},200
             else:
-                return {"message":"Please call the source"}
+                return {"message":"Please call the source"},404
         else:
             return {
                 abort(404, message="It doesn't exist")
