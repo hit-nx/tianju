@@ -1,67 +1,55 @@
 <!--pages/selectRestaurant/selectRestaurant.wxml-->
-    <view style='width:90%;margin:0 auto;'>
-        <view style='height:5px;'></view>
-        <view class='date'>
-            <text class='dateItems'>{{date}}</text>    
+<view style='width:90%;height:100%;margin:0 auto;'>
+
+  <view style='height:3%;'></view>
+
+  <view class='date'>
+    <text class='dateItems'>{{firstdate}}</text>
+  </view>
+
+  <view style='overflow: auto'>
+    <block wx:for='{{firstDay}}'>
+
+      <image class='lunchImg' src='{{item.lunchImg}}'></image>
+      <view class='restaurant'>
+        <view class='meal'>
+          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.lunch}}</text>
         </view>
-        <view style='overflow: auto;'>
-            <image class='lunchImg' src='../../images/photos/餐厅.jpg'></image>
-            <view class='restaurant'>
-                <view class='meal'>
-                    <text style='font-size:0.8em;color:#fff;padding:5px;'>午餐</text>
-                </view>
-                <view class='delete'>
-                    <image class="trashCan"  src='../../images/icon-png/删除-垃圾桶.png'></image>
-                </view>
-                <view class='details'>
-                    <text class='title'>{{title}}\n</text>
-                    <text class='address'>{{address}}</text>
-                </view>
-            </view>
-            <image class='lunchImg' src='../../images/icon-png/酒店搜索+添加餐厅(无图片).png'></image>
-            <view class='restaurant'>
-                <view class='meal'>
-                    <text style='font-size:0.8em;color:#fff;padding:5px;'>晚餐</text>
-                </view>
-                <view class='delete'>
-                    <image class="trashCan"  src='../../images/icon-png/删除-垃圾桶.png'></image>
-                </view>
-                <view class='details'>
-                    <text class='title'>{{title}}\n</text>
-                    <text class='address'>{{address}}</text>
-                </view>
-            </view>
+        <view class='delete'>
+          <image class="trashCan" src='../../images/icon-png/删除-垃圾桶.png'></image>
         </view>
-        <view class='date'>
-            <text class='dateItems'>{{date2}}</text>    
+        <view class='details'>
+          <text class='title'>{{item.title}}\n</text>
+          <text class='address'>{{item.address}}</text>
         </view>
-        <view style='overflow: auto;'>
-            <image class='lunchImg' src='../../images/photos/餐厅.jpg'></image>
-            <view class='restaurant'>
-                <view class='meal'>
-                    <text style='font-size:0.8em;color:#fff;padding:5px;'>午餐</text>
-                </view>
-                <view class='delete'>
-                    <image class="trashCan"  src='../../images/icon-png/删除-垃圾桶.png'></image>
-                </view>
-                <view class='details'>
-                    <text class='title'>{{title}}\n</text>
-                    <text class='address'>{{address}}</text>
-                </view>
-            </view>
-            <image class='lunchImg' src='../../images/icon-png/酒店搜索+添加餐厅(无图片).png'></image>
-            <view class='restaurant'>
-                <view class='meal'>
-                    <text style='font-size:0.8em;color:#fff;padding:5px;'>晚餐</text>
-                </view>
-                <view class='delete'>
-                    <image class="trashCan"  src='../../images/icon-png/删除-垃圾桶.png'></image>
-                </view>
-                <view class='details'>
-                    <text class='title'>{{title}}\n</text>
-                    <text class='address'>{{address}}</text>
-                </view>
-            </view>
+      </view>
+
+    </block>
+  </view>
+
+  <view class='date'>
+    <text class='dateItems'>{{seconddate}}</text>
+  </view>
+  <view style='overflow: auto;'>
+    <block wx:for='{{secondDay}}'>
+
+      <image class='lunchImg' src='{{item.lunchImg}}'></image>
+      <view class='restaurant'>
+        <view class='meal'>
+          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.lunch}}</text>
         </view>
-        <button class='save' bindtap='save'>保存</button>
-    </view> 
+        <view class='delete'>
+          <image class="trashCan" src='../../images/icon-png/删除-垃圾桶.png'></image>
+        </view>
+        <view class='details'>
+          <text class='title'>{{item.title}}\n</text>
+          <text class='address'>{{item.address}}</text>
+        </view>
+      </view>
+
+    </block>
+  </view>
+
+  <button class='save' bindtap='save'>保存</button>
+
+</view>

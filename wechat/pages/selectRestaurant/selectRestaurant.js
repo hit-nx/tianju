@@ -5,10 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date:"2017-1-27",
-    date2:"2017-1-29",
-    title:"我是酒店名称",
-    address:"我是餐厅地点"
+    firstdate:"2017-1-27",
+    seconddate:"2017-1-29",
+    
+    firstDay:[{
+      lunchImg:'../../images/photos/餐厅.jpg',
+      lunch:'午餐',
+      title:'我是餐厅名称',
+      address:'我是餐厅地点'
+    }, {
+      lunchImg: '../../images/icon-png/酒店搜索+添加餐厅(无图片).png',
+      lunch: '晚餐',
+      title: '我是餐厅名称',
+      address: '我是餐厅地点'
+    }],
+
+    secondDay: [{
+      lunchImg: '../../images/photos/餐厅.jpg',
+      lunch: '午餐',
+      title: '我是餐厅名称',
+      address: '我是餐厅地点'
+    }, {
+      lunchImg: '../../images/icon-png/酒店搜索+添加餐厅(无图片).png',
+      lunch: '晚餐',
+      title: '我是餐厅名称',
+      address: '我是餐厅地点'
+    }]
   },
 
   /**
