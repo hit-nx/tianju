@@ -4,6 +4,7 @@ page{
   width: 100%;
   background-color: #E3E0E0;
 }
+
 .container{
   height: 100%;
   width: 100%;
@@ -13,62 +14,33 @@ page{
   justify-content: flex-start;
   font-size: 31rpx;
 }
+
 .init{
-  height:75rpx;
+  height:9%;
   width: 100%;
   background-color: #fff;
-  padding: 20rpx;
-  margin-top: 30rpx;
-  margin-bottom: 15rpx;
-
+  margin-top: 4%;
 }
 
-.part1{
-  height:75rpx;
-  width: 100%;
-  background-color: #fff;
-  padding: 20rpx;
-  margin: 15rpx;
+.init image{
+  width:10%; 
+  height:75%;
+  margin-top: 2%;
+  margin-left: 6%;
 }
-.part2{
-  height:75rpx;
-  width: 100%;
-  background-color: #fff;
-  padding: 20rpx;
-   margin: 15rpx;
-}
-.part3{
-  height:75rpx;
-  width: 100%;
-  background-color: #fff;
-  padding: 20rpx;
-   margin: 15rpx;
-}
-.part4{
-  height:75rpx;
-  width: 100%;
-  background-color: #fff;
-  padding: 20rpx;
-   margin: 15rpx;
 
-}
 .user{
-  height: 75rpx;
+  height: 100%;
   position: relative;
-  left: 80rpx;
-  top: -30rpx;
+  left: 10%;
+  top: -30%;
+  color: #303030;
 }
 
 .small{
+  height: 100%;
   position: relative;
-  left: 400rpx;
-  top: -25rpx;
-  color: #8B8B8B;
-}
-
-image{
-  position: relative;
-  left: 40rpx;
-  top: -5rpx;
-
+  margin-left: 50%;
+  top: -30%;
+  color: #959595;
 }
