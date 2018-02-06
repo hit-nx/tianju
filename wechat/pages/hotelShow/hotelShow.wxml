@@ -1,52 +1,25 @@
 <view class='container'>
 
   <scroll-view class='scroll'>
+  <block wx:for='{{array}}'>
 
     <view class='item'>
-      <view class='photo'>
-        <image src='../../images/photos/酒店.jpg' />
+
+      <view class='{{item.style}}'>
+        <image src='{{item.photo}}' />
       </view>
 
       <view class='text'>
-        <text class='name'>我是酒店名称</text>
-        <text class='location'>我是酒店地点</text>
+        <text class='name'>{{item.name}}</text>
+        <text class='location'>{{item.location}}</text>
       </view>
 
-      <view class='choose'>
-        <image src='../../images/icon-png/确认.png' />
-      </view>
-    </view>
-
-     <view class='item'>
-      <view class='nophoto'>
-        <image src='../../images/icon-png/酒店搜索+添加餐厅(无图片).png'/>
-      </view>
-
-      <view class='text'>
-        <text class='name'>我是酒店名称</text>
-        <text class='location'>我是酒店地点</text>
-      </view>
-
-      <view class='choose'>
-        <image src='../../images/icon-png/确认.png' />
+      <view class='choose' id='{{index}}' bindtap='choose'>
+        <image src='{{item.choose}}' />
       </view>
     </view>
 
-     <view class='item'>
-      <view class='photo'>
-        <image src='../../images/photos/酒店.jpg' />
-      </view>
-
-      <view class='text'>
-        <text class='name'>我是酒店名称</text>
-        <text class='location'>我是酒店地点</text>
-      </view>
-
-      <view class='choose'>
-        <image src='../../images/icon-png/确认.png' />
-      </view>
-    </view>
-
+  </block>
   </scroll-view>
 
 </view>
