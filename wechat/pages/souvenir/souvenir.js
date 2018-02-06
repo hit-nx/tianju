@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"我是纪念品的名字"
+    array:[{
+      name: '我是纪念品的名字',
+      photo:'../../images/photos/souvenir.jpg'
+    }, {
+      name: '我是纪念品的名字',
+      photo: '../../images/photos/souvenir.jpg'
+    }, {
+      name: '我是纪念品的名字',
+      photo: '../../images/photos/souvenir.jpg'
+    }, {
+      name: '我是纪念品的名字',
+      photo: '../../images/photos/souvenir.jpg'
+    }],
   },
 
   /**
@@ -63,10 +75,25 @@ Page({
   onShareAppMessage: function () {
   
   },
-
+  /**
+   * 点击添加按钮
+   */
   add: function(){
-      wx.navigateTo({
-          url: '../addsouvenir/addsouvenir',
-      })
+    wx.navigateTo({
+      url: '../addsouvenir/addsouvenir',
+    })
+  },
+  /**
+   * 点击垃圾桶
+   */
+  Delete:function(e){
+    var index=e.currentTarget.id
+    //通过`index`识别要删除第几条数据，第二个数据为要删除的项目数量，通常为1
+    this.data.array.splice(index, 1);
+
+    //渲染数据
+    this.setData({
+      array: this.data.array
+    });
   }
 })
