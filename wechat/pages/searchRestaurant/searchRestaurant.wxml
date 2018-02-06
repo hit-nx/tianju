@@ -1,38 +1,21 @@
 <!--pages/searchRestaurant/searchRestaurant.wxml-->
-    <view style='height:10px;'></view>
-    <view class='search'>
-        <view class='border'>
-            <input class="searchBar" placeholder="请输入餐厅名称"></input>
-            <icon type='search' size="21" color='#09b2f0' class='icon-search' bindtap='search'></icon>
-        </view>
+<view style='height:26rpx;'></view>
+
+<view class='search'>
+  <view class='border'>
+    <input class="searchBar" placeholder="请输入餐厅名称" placeholder-class='place'></input>
+    <icon type='search' size="18" color='#09b2f0' class='icon-search' bindtap='search'></icon>
+  </view>
+</view>
+
+<block wx:for='{{array}}'>
+
+  <view class='searchItems'>
+    <image src="{{item.item}}" class='restaurantItems'></image>
+    <view class='details'>
+      <text class='title'>{{item.title}}\n</text>
+      <text class='address'>{{item.address}}</text>
     </view>
-    <view class='searchItems'>
-        <image src="{{items}}" class='restaurantItems'></image>
-        <view class='details'>
-            <text class='title'>{{title}}\n</text>
-            <text class='address'>{{address}}</text>
-        </view>
-    </view>
-    <view class='searchItems'>
-        <image src="{{items}}" class='restaurantItems'></image>
-        <view class='details'>
-            <text class='title'>{{title}}\n</text>
-            <text class='address'>{{address}}</text>
-        </view>
-    </view>
-    <view class='searchItems'>
-        <image src="{{items}}" class='restaurantItems'></image>
-        <view class='details'>
-            <text class='title'>{{title}}\n</text>
-            <text class='address'>{{address}}</text>
-        </view>
-    </view>
-    <view class='searchItems'>
-        <view class='restaurantItems'>
-            <image src='{{items2}}' class='icon-restaurant'></image>
-        </view>
-        <view class='details'>
-            <text class='title'>{{title}}\n</text>
-            <text class='address'>{{address}}</text>
-        </view>
-    </view>
+  </view>
+
+</block>
