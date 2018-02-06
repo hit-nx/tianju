@@ -1,28 +1,30 @@
-<image src="../../images/photos/餐厅.jpg" style="height:300rpx;width:100%" mode='scaleToFill'></image>
+<image src="{{photo}}" style="height:25%;width:100%" mode='scaleToFill' />
 
 <view class='model'>
     <view class='title'>餐厅名称</view>
-    <text>我是餐厅名称</text>
+    <text>{{name}}</text>
 </view>
 
 <view class='model'>
     <view class='title'>用餐日期</view>
-    <text>2017-9-10</text>
+    <picker mode='date' bindchange='chooseDay'>
+      <text>{{date}}</text>
+    </picker>
 </view>
 
 <view class='time'>
-    <view class='title'>用餐时间</view>
-    <view class='model'>
+    <view class='title' style='height:30%'>用餐时间</view>
+    <view class='timemodel' style='height:38%'>
         <view class='container'>
-          <view class='lunch'>午餐</view>
-          <view class='dinner'>晚餐</view>
+          <view class='lunch' style='color:{{lunchText}};background:{{lunchbck}}' bindtap='lunch'>午餐</view>
+          <view class='dinner' style='color:{{dinnerText}};background:{{dinnerbck}}' bindtap='dinner'>晚餐</view>
         </view>
     </view>
 </view>
 
 <view class='model'>
     <view class='title'>餐厅地点</view>
-    <text>我是餐厅地点</text>
+    <text>{{location}}</text>
 </view>
 
 <view class='GPS'>

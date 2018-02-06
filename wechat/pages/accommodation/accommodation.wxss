@@ -16,7 +16,6 @@ page{
 .scroll{
   height: 100%;
   width: 100%;
-
 }
 
 .photo{
@@ -44,7 +43,7 @@ page{
 
 .title{
   width: 32%;
-  border-radius: 20px;
+  border-radius: 30rpx;
   height: 70%;
   background-color: #7ad5f7;
   margin: 3%;
@@ -56,7 +55,7 @@ page{
 
 .title text{
   color: #ffffff;
-  font-size: 10px;
+  font-size: 25rpx;
 }
 
 .content{
@@ -121,7 +120,7 @@ page{
 
 .pulldisplay view text{
   color: #959595;
-  font-size: 10px;
+  font-size: 25rpx;
 }
 
 .btn{
@@ -129,7 +128,7 @@ page{
   height: 7%;
   background-color: #09b2f0;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 30rpx;
 
   margin-top: 4%;
 }
