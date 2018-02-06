@@ -1,34 +1,22 @@
 <!--pages/addsouvenir/addsouvenir.wxml-->
-    <view style='width:90%;margin:0 auto;'>
-        <view style='height:5px;'></view>
-        <view class='souvenir'>
-            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
-            <view class='name'></view>
-            <view class='name'>
-                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
-            </view>
-            <view class='add' bindtap='addSouvenir1'>
-                <image class='addImg' src='{{souvenir1}}'></image>
-            </view>
-        </view>
-        <view class='souvenir'>
-            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
-            <view class='name'></view>
-            <view class='name'>
-                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
-            </view>
-            <view class='add' bindtap='addSouvenir2'>
-                <image class='addImg' src='{{souvenir2}}'></image>
-            </view>
-        </view>
-        <view class='souvenir'>
-            <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
-            <view class='name'></view>
-            <view class='name'>
-                <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
-            </view>
-            <view class='add' bindtap='addSouvenir3'>
-                <image class='addImg' src='{{souvenir3}}'></image>
-            </view>
-        </view>
+<view style='width:90%;margin:0 auto;'>
+
+  <view style='height:15rpx;'></view>
+
+  <block wx:for='{{array}}'>
+  <view class='souvenir'>
+
+    <image class='souvenirImage' src='{{item.photo}}'></image>
+            
+    <view class='name'>
+      <text style='color:#fff;padding:0 20rpx;font-size:27rpx;'>{{item.name}}</text>
     </view>
+
+    <view class='add' bindtap='addSouvenir1' id='{{index}}' bindtap='choose'>
+      <image class='addImg' src='{{item.choose}}'></image>
+    </view>
+        
+  </view>
+  </block>
+        
+</view>

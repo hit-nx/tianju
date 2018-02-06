@@ -5,10 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:'我是纪念品的名字',
-    souvenir1:'../../images/icon-png/选择(未选中).png',
-    souvenir2: '../../images/icon-png/选择(未选中).png',
-    souvenir3: '../../images/icon-png/选择(未选中).png'
+    array:[{
+      photo:'../../images/photos/souvenir.jpg',
+      name:'我是纪念品的名字',
+      choose:'../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }]
   },
 
   /**
@@ -70,40 +83,11 @@ Page({
   /**
    * 用户点击选择
    */
-  addSouvenir1: function(){
-      if (this.data.souvenir1 =='../../images/icon-png/选择(未选中).png'){
-          this.setData({
-              souvenir1:'../../images/icon-png/选择(选中).png'
-          })
-      }
-      else{
-          this.setData({
-              souvenir1:'../../images/icon-png/选择(未选中).png'
-          })
-      }
-  },
-  addSouvenir2: function () {
-      if (this.data.souvenir2 == '../../images/icon-png/选择(未选中).png') {
-          this.setData({
-              souvenir2: '../../images/icon-png/选择(选中).png'
-          })
-      }
-      else {
-          this.setData({
-              souvenir2: '../../images/icon-png/选择(未选中).png'
-          })
-      }
-  },
-  addSouvenir3: function () {
-      if (this.data.souvenir3== '../../images/icon-png/选择(未选中).png') {
-          this.setData({
-              souvenir3: '../../images/icon-png/选择(选中).png'
-          })
-      }
-      else {
-          this.setData({
-              souvenir3: '../../images/icon-png/选择(未选中).png'
-          })
-      }
+  choose:function(e){
+    var choose = this.data.array[e.currentTarget.id].choose == '../../images/icon-png/选择(未选中).png' ? '../../images/icon-png/选择(选中).png' : '../../images/icon-png/选择(未选中).png'
+    var up='array['+e.currentTarget.id+'].choose'
+    this.setData({
+      [up]:choose
+    })
   }
 })
