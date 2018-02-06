@@ -9,7 +9,7 @@
     <view class='title'>
       <text>酒店名称</text>
     </view>
-    <text class='content'>我是酒店名称</text>
+    <text class='content'>{{name}}</text>
   </view>
 
   <view class='display'>
@@ -18,13 +18,13 @@
       <text>酒店简介</text>
     </view>
     
-     <view class='pulldown' bindtap='pullDown'>
+    <view class='pulldown' bindtap='pullDown'>
       <image src='{{pullDown}}' />
     </view> 
 
   </view>
 
-  <view class='pulldisplay' style='display:{{showView}}'>
+  <view class='pulldisplay' style='display:{{showView}};height:{{height}}'>
     <view >
       <text>{{introduce}}</text>
     </view>
@@ -34,7 +34,7 @@
     <view class='title'>
       <text>酒店地点</text>
     </view>
-    <text class='content'>我是酒店地点</text>
+    <text class='content'>{{location}}</text>
   </view>
 
   <view class='location'>
