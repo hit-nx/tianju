@@ -7,8 +7,8 @@
             <view class='name'>
                 <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
-            <view class='add'>
-                <image class='addImg' src='../../images/icon-png/选择(选中).png'></image>
+            <view class='add' bindtap='addSouvenir1'>
+                <image class='addImg' src='{{souvenir1}}'></image>
             </view>
         </view>
         <view class='souvenir'>
@@ -17,8 +17,8 @@
             <view class='name'>
                 <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
-            <view class='add'>
-                <image class='addImg' src='../../images/icon-png/选择(未选中).png'></image>
+            <view class='add' bindtap='addSouvenir2'>
+                <image class='addImg' src='{{souvenir2}}'></image>
             </view>
         </view>
         <view class='souvenir'>
@@ -27,8 +27,8 @@
             <view class='name'>
                 <text style='color:#fff;padding:0 10px;font-size:0.8em;'>{{name}}</text>
             </view>
-            <view class='add'>
-                <image class='addImg' src='../../images/icon-png/选择(选中).png'></image>
+            <view class='add' bindtap='addSouvenir3'>
+                <image class='addImg' src='{{souvenir3}}'></image>
             </view>
         </view>
     </view>
