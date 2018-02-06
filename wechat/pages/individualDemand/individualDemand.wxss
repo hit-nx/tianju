@@ -16,7 +16,7 @@ page{
 
 .title{
   width: 32%;
-  border-radius: 20px;
+  border-radius: 30rpx;
   height: 5%;
   background-color: #7ad5f7;
   margin: 3%;
@@ -29,7 +29,7 @@ page{
 
 .title text{
   color: #ffffff;
-  font-size: 10px;
+  font-size: 25rpx;
   margin-top: 6%;
 }
 
@@ -47,9 +47,9 @@ page{
 .switch-need{
   height: 50%;
   width: 30%;
-  border: 2px solid #09b2f0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border: 5rpx solid #09b2f0;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
   margin-top: 2%;
 
   display: flex;
@@ -58,16 +58,16 @@ page{
 }
 
 .switch-need text{
-  font-size: 10px;
+  font-size: 25rpx;
   margin-top: 1%;
 }
 
 .switch-ineed{
   height: 50%;
   width: 30%;
-  border: 2px solid #09b2f0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border: 5rpx solid #09b2f0;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
   margin-top: 2%;
 
   display: flex;
@@ -76,7 +76,7 @@ page{
 }
 
 .switch-ineed text{
-  font-size: 10px;  
+  font-size: 25rpx;  
   margin-top: 1% 
 }
 
@@ -92,14 +92,23 @@ page{
 }
 
 .content{
+  width: 20%;
+  height: 100%;
+  margin-left: 15%;
+}
+
+.content view{
+  width: 100%;
+  height: 100%;
   color: #959595;
-  font-size: 10px;
-  margin-left: 15%
+  font-size: 25rpx;
+  margin-left: 15%;
+  margin-top: 15%;
 }
 
 .secondtitle{
   width: 32%;
-  border-radius: 20px;
+  border-radius: 40rpx;
   height: 70%;
   background-color: #7ad5f7;
   margin: 3%;
@@ -112,7 +121,7 @@ page{
 
 .secondtitle text{
   color: #ffffff;
-  font-size: 10px;
+  font-size: 25rpx;
   margin-top: 6%;
 }
 
@@ -133,7 +142,6 @@ page{
 }
 
 .pulldisplay{
-  height: 30%;
   width: 86%;
   background-color: #ffffff;
   margin-left: 7%;
@@ -150,7 +158,7 @@ page{
   height: 23%;
   width: 80%;
   margin-left: 10%;
-  border-bottom: 2px solid #e3e0e0;
+  border-bottom: 5rpx solid #e3e0e0;
 
   display: flex;
   align-items: center;
@@ -168,7 +176,7 @@ page{
 
 .housesize text{
   color: #303030;
-  font-size: 12px;
+  font-size: 30rpx;
 }
 
 .choose{
@@ -190,5 +198,5 @@ page{
   height: 7%;
   background-color: #09b2f0;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 30rpx;
 }

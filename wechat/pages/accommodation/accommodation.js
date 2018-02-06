@@ -10,6 +10,7 @@ Page({
     name:'我是酒店名称',
     location:'我是酒店地点',
     height:'0%',
+    photo:'../../images/photos/酒店.jpg'
   },
   /**
    * onLoad
