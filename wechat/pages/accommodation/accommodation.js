@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
 
   /**
@@ -10,7 +11,9 @@ Page({
     name:'我是酒店名称',
     location:'我是酒店地点',
     height:'0%',
-    photo:'../../images/photos/酒店.jpg'
+    photo:'../../images/photos/酒店.jpg',
+    hotelId: null,
+    planId: null
   },
   /**
    * onLoad
@@ -21,6 +24,62 @@ Page({
     this.setData({
       height:height
     })
+
+    var that = this
+    //调用user接口得到该用户的plan_id
+    wx.request({
+      url: 'http://47.94.99.203:5000/user/' + app.globalData.userInfo.nickName,
+      method: 'GET',
+      header: {
+        'content-type': 'json' // 默认值
+      },
+      success: function (res) {
+        //console.log(res.data.plan_id)
+        that.setData({
+          planId: res.data.plan_id
+        })
+        //console.log(that.data.planId)
+
+        //调用plan接口得到该plan_id的hotel
+        wx.request({
+          url: 'http://47.94.99.203:5000/plan',
+          method: 'GET',
+          data: {
+            //wechat: app.globalData.userInfo.nickName
+            id: that.data.planId
+          },
+          header: {
+            'content-type': 'json' // 默认值
+          },
+          success: function (res) {
+            //console.log(res.data)
+            that.setData({
+              hotelId: res.data.hotel
+            })
+            //console.log(that.data.hotelId)
+
+            //调用hotel接口得到该hotel的全部信息
+            wx.request({
+              url: 'http://47.94.99.203:5000/hotel/' + that.data.hotelId,
+              method: 'GET',
+              header: {
+                'content-type': 'json' // 默认值
+              },
+              success: function (res) {
+                //console.log(res.data)
+                that.setData({
+                  name: res.data.name,
+                  introduce: res.data.introduce,
+                  location: res.data.address,
+                  //photo: res.data.picture
+                })
+              }
+            })
+          }
+        })
+      }
+    })
+    //console.log(this.data.planId)
   },
   /**
    * 点击下拉箭头
