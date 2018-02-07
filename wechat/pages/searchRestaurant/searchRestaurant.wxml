@@ -1,13 +1,6 @@
 <!--pages/searchRestaurant/searchRestaurant.wxml-->
 <view style='height:26rpx;'></view>
 
-<view class='search'>
-  <view class='border'>
-    <input class="searchBar" placeholder="请输入餐厅名称" placeholder-class='place'></input>
-    <icon type='search' size="18" color='#09b2f0' class='icon-search' bindtap='search'></icon>
-  </view>
-</view>
-
 <block wx:for='{{array}}'>
 
   <view class='searchItems'>

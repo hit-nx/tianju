@@ -9,7 +9,6 @@
         </swiper-item>
       </block>
     </swiper>
-    <!-- <image src='../../images/photos/首页.jpg' /> -->
   </view>
 
   <view class='selection'>
@@ -18,17 +17,17 @@
 
       <view class='item' bindtap='activity'>
         <image src='../../images/icon-png/活动流程.png' />
-        <text class='four'>活动流程</text>
+        <text>活动流程</text>
       </view>
 
       <view class='item' bindtap='participants'>
         <image src='../../images/icon-png/活动参与人.png' />
-        <text class='five'>活动参与人</text>
+        <text>活动参与人</text>
       </view>
 
       <view class='item' bindtap='individualDemand'>
         <image src='../../images/icon-png/主页-个人需求.png' />
-        <text class='four'>个人需求</text>
+        <text>个人需求</text>
       </view>
 
     </view>
@@ -36,17 +35,17 @@
     <view class='content'>
       <view class='item' bindtap='accommodation'>
         <image src='../../images/icon-png/住宿.png' />
-        <text class='two'>住宿</text>
+        <text>住宿</text>
       </view>
 
       <view class='item' bindtap='selectRestaurant'>
         <image src='../../images/icon-png/用餐.png' />
-        <text class='two'>用餐</text>
+        <text>用餐</text>
       </view>
 
       <view class='item' bindtap='souvenir'>
         <image src='../../images/icon-png/纪念品.png' />
-        <text class='three'>纪念品</text>
+        <text>纪念品</text>
       </view>
 
     </view>

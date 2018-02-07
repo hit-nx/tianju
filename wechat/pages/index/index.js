@@ -30,6 +30,9 @@ Page({
     });
   },
   onCancel: function () {
+    wx.navigateTo({
+      url: '../joinActivity/joinActivity',
+    })
     this.hideModal();
   },
   onConfirm: function () {

@@ -1,0 +1,32 @@
+<view class='container'>
+
+  <view class='search'>
+  <view>
+    <input class="searchBar" placeholder="请输入活动ID" placeholder-class='place' type='number'></input>
+    <icon type='search' size="18" color='#09b2f0' bindtap='search'></icon>
+  </view>
+  </view>
+
+  <scroll-view class='scroll' scroll-y='true'>
+  <block wx:for='{{array}}'>
+    
+    <view class='item'>
+
+      <view class='photo'>
+        <image src='../../images/icon-png/活动.png' />
+      </view>
+
+      <view class='content'>
+        <text style='font-size:30rpx;color:#303030'>{{item.name}}</text>
+        <text style='font-size:25rpx;color:#959595'>{{item.id}}</text>
+      </view>
+
+      <view class='choose' id='{{index}}' bindtap='choose'>
+        <image src='{{item.choose}}' />
+      </view>
+
+    </view>
+  </block>
+  </scroll-view>
+
+</view>
