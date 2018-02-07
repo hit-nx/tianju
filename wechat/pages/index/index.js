@@ -24,6 +24,17 @@ Page({
     key:null
   },
   /**
+   * onShare
+   */
+  onShareAppMessage:function(){
+    var title='我创建了一个活动方案，快来加入吧！'
+    var path='/pages/index/index'
+    return{
+      title:title,
+      path:path,
+    }
+  },
+  /**
    * onLoad
    */
   onLoad:function(){
@@ -65,7 +76,7 @@ Page({
     })
     var that = this
     wx.request({
-      url: 'http://47.94.99.203:5000/user/' + this.data.userInfo.nickName,
+      url: 'http://47.94.99.203:5000/user/'+this.data.userInfo.nickName,
       method: 'GET',
       header: {
         'content-type': 'application/json'
@@ -156,6 +167,8 @@ Page({
       })
     }
     else{
+      var that=this
+     var nickName = this.data.userInfo.nickName
       wx.request({
         url: 'http://47.94.99.203:5000/plan?key='+this.data.key,
         method: 'GET',
@@ -163,7 +176,7 @@ Page({
           'content-type': 'json'
         },
         success: function (res) {
-          if(res.statusCode==404){
+          if(res.statusCode!=200){
             wx.showToast({
               title: '激活码不存在',
               icon: 'none',
@@ -173,16 +186,17 @@ Page({
           }else{
             var id=res.data.id
             wx.request({
-              url: 'http://47.94.99.203:5000/user',
-              method:'PUT',
+              url: 'http://47.94.99.203:5000/plan/participant',
+              method:'POST',
               data:{
-                wechat:this.data.userInfo.nickName,
-                plan_id:id,
+                participant_wechat:nickName,
+                plan:id,
               },
               header: {
                 'content-type': 'application/json'
               },
               success:function(res){
+                console.log(res)
                 if(res.statusCode==200){
                   wx.showToast({
                     title: '成功加入活动',
@@ -190,11 +204,14 @@ Page({
                     duration: 1500,
                     mask: true,
                   })
+                  that.setData({
+                    joinActivity:false
+                  })
                 }
                 else{
                   wx.showToast({
                     title: '加入活动失败，请稍后再试',
-                    icon: 'success',
+                    icon: 'none',
                     duration: 1500,
                     mask: true,
                   })
@@ -235,7 +252,8 @@ Page({
    * 点击分享给好友
    */
   share:function(){
-
+    console.log('share')
+    this.onShareAppMessage()
   },
   /**
    * 输入活动激活码
