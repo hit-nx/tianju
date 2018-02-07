@@ -5,29 +5,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[{
-      photo:'../../images/photos/souvenir.jpg',
-      name:'我是纪念品的名字',
-      choose:'../../images/icon-png/选择(未选中).png'
-    }, {
-      photo: '../../images/photos/souvenir.jpg',
-      name: '我是纪念品的名字',
-      choose: '../../images/icon-png/选择(未选中).png'
-    }, {
-      photo: '../../images/photos/souvenir.jpg',
-      name: '我是纪念品的名字',
-      choose: '../../images/icon-png/选择(未选中).png'
-    }, {
-      photo: '../../images/photos/souvenir.jpg',
-      name: '我是纪念品的名字',
-      choose: '../../images/icon-png/选择(未选中).png'
-    }]
+    array:[]
+    // array:[{
+    //   photo:'../../images/photos/souvenir.jpg',
+    //   name:'我是纪念品的名字',
+    //   choose:'../../images/icon-png/选择(未选中).png'
+    // }, {
+    //   photo: '../../images/photos/souvenir.jpg',
+    //   name: '我是纪念品的名字',
+    //   choose: '../../images/icon-png/选择(未选中).png'
+    // }, {
+    //   photo: '../../images/photos/souvenir.jpg',
+    //   name: '我是纪念品的名字',
+    //   choose: '../../images/icon-png/选择(未选中).png'
+    // }, {
+    //   photo: '../../images/photos/souvenir.jpg',
+    //   name: '我是纪念品的名字',
+    //   choose: '../../images/icon-png/选择(未选中).png'
+    // }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var that = this;
+
+    wx.request({
+      url: 'http://47.94.99.203:5000/souvenir/0',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({array: res.data.list})
+      },
+      fail: function () {
+        console.log('error')
+      }
+    })
   
   },
 
