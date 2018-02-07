@@ -5,45 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[{
-      name: '我是纪念品的名字',
-      photo:'../../images/photos/souvenir.jpg'
-    }, {
-      name: '我是纪念品的名字',
-      photo: '../../images/photos/souvenir.jpg'
-    }, {
-      name: '我是纪念品的名字',
-      photo: '../../images/photos/souvenir.jpg'
-    }, {
-      name: '我是纪念品的名字',
-      photo: '../../images/photos/souvenir.jpg'
-    }],
+    // array:[{
+    //   name: '我是纪念品的名字',
+    //   photo:'../../images/photos/souvenir.jpg'
+    // }, {
+    //   name: '我是纪念品的名字',
+    //   photo: '../../images/photos/souvenir.jpg'
+    // }, {
+    //   name: '我是纪念品的名字',
+    //   photo: '../../images/photos/souvenir.jpg'
+    // }, {
+    //   name: '我是纪念品的名字',
+    //   photo: '../../images/photos/souvenir.jpg'
+    // }],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // var that = this;
-    // wx.request({
-    //     url:'http://47.94.99.203/souvenir/0',
-    //     header: {
-    //         'content-type': 'application/json'
-    //     },
-    //     method: 'GET',
-    //     success: function(res){
-    //         console.log(res);
-    //         // that.setData({
-    //         //     array:res.data
-    //         // })
-    //     },
-    //     fail: function(){
-    //         console.log('---fail---');
-    //     },
-    //     complete: function(){
-    //         console.log('---complete---');
-    //     }
-    // })
+    var that = this;
+    wx.request({
+        url:'http://47.94.99.203:5000/souvenir/0',
+        header: {
+            'content-type': 'application/json'
+        },
+        method: 'GET',
+        success: function(res){
+            console.log(res);
+            that.setData({
+                array:res.data.list
+            })
+        },
+        fail: function(){
+            console.log('---fail---');
+        },
+        complete: function(){
+            console.log('---complete---');
+        }
+    })
   },
 
   /**
