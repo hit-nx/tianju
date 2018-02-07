@@ -5,51 +5,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[]
-    // array:[{
-    //   photo:'../../images/photos/souvenir.jpg',
-    //   name:'我是纪念品的名字',
-    //   choose:'../../images/icon-png/选择(未选中).png'
-    // }, {
-    //   photo: '../../images/photos/souvenir.jpg',
-    //   name: '我是纪念品的名字',
-    //   choose: '../../images/icon-png/选择(未选中).png'
-    // }, {
-    //   photo: '../../images/photos/souvenir.jpg',
-    //   name: '我是纪念品的名字',
-    //   choose: '../../images/icon-png/选择(未选中).png'
-    // }, {
-    //   photo: '../../images/photos/souvenir.jpg',
-    //   name: '我是纪念品的名字',
-    //   choose: '../../images/icon-png/选择(未选中).png'
-    // }]
+    array:[{
+      photo:'../../images/photos/souvenir.jpg',
+      name:'我是纪念品的名字',
+      choose:'../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }, {
+      photo: '../../images/photos/souvenir.jpg',
+      name: '我是纪念品的名字',
+      choose: '../../images/icon-png/选择(未选中).png'
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-// HEAD
-    // var that = this;
-    // wx.request({
-    //     url:'http://47.94.99.203/souvenir/0',
-    //     header: {
-    //         'content-type': 'application/json'
-    //     },
-    //     method: 'GET',
-    //     success: function(res){
-    //         console.log(res);
-    //         // that.setData({
-    //         //     array:res.data
-    //         // })
-    //     },
-    //     fail: function(){
-    //         console.log('---fail---');
-    //     },
-    //     complete: function(){
-    //         console.log('---complete---');
-    //     }
-    // })
+
+     var that = this;
+     wx.request({
+        url:'http://47.94.99.203/souvenir/0',
+        header: {
+             'content-type': 'application/json'
+         },
+         method: 'GET',
+         success: function(res){
+             console.log(res);
+              that.setData({
+                array:res.data
+              })
+         },
+         fail: function(){
+             console.log('---fail---');
+         },
+         complete: function(){
+             console.log('---complete---');
+         }
+     })
+
 
 
     var that = this;
@@ -69,7 +69,7 @@ Page({
       }
     })
   
-// 264413c9206956af93d4a4b2a6bc17c0e753cc8a
+
   },
 
   /**
