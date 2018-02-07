@@ -65,6 +65,14 @@ class planParticipant(Resource):
             planParticipant.id = id
             planParticipant.plan = args.plan
             planParticipant.participant_wechat = args.participant_wechat
+            # 更改该用户的plan_id
+            user = models.user.query.get(args.participant_wechat)
+            if user:
+                user.plan_id = args.plan;
+            else:
+                return {
+                    abort(400, message="user {} doesn't exist".format(args.participant_wechat))
+                }
             # 将条目存入数据库
             try:
                 db.session.add(planParticipant)

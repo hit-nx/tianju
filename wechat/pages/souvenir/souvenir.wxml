@@ -6,7 +6,7 @@
   <block wx:for='{{array}}'>
   <view class='souvenir'>
   
-    <image class='souvenirImage' src='{{item.photo}}'></image>
+    <image class='souvenirImage' src='../../images/photos/souvenir.jpg'></image>
             
     <view class='name'>
       <text style='color:#fff;padding:0 10px;font-size:27rpx;'>{{item.name}}</text>
