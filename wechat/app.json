@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/joinActivity/joinActivity",
         "pages/person/person",
         "pages/activityDisplay/activityDisplay",
         "pages/newActivity/newActivity",
@@ -11,9 +12,9 @@
         "pages/hotelShow/hotelShow",
         "pages/addsouvenir/addsouvenir",
         "pages/souvenir/souvenir",
-        "pages/accommodation/accommodation",
-        "pages/individualDemand/individualDemand",
         "pages/restaurant/restaurant",
+        "pages/individualDemand/individualDemand",
+        "pages/accommodation/accommodation",
         "pages/logs/logs"   
     ],
     "window": {
