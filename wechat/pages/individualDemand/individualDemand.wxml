@@ -18,14 +18,18 @@
     <view class='secondtitle'>
       <text>酒店入住时间</text>
     </view>
-    <text class='content'>2017-1-29</text>
+    <picker mode='date' class='content' bindchange='firstDay'>
+      <view>{{firstDay}}</view>
+    </picker>
   </view>
 
   <view class='seconddisplay'>
     <view class='secondtitle'>
       <text>酒店离店时间</text>
     </view>
-    <text class='content'>2017-2-1</text>
+    <picker mode='date' class='content' bindchange='secondDay'>
+      <view>{{secondDay}}</view>
+    </picker>
   </view>
 
   <view class='seconddisplay'>
@@ -34,51 +38,23 @@
     </view>
     <view class='pulldown' bindtap='pullDown'>
       <image src='{{pullDown}}' />
-    </view>
+    </view> 
   </view>
-
-  <view class="pulldisplay" style='display:{{showView}}' >
-
-    <view class='house'>
-      <view class='housesize'>
-        <text>标准间26平方米</text>
-      </view>
-
-      <view class='choose'>
-        <image src='{{firstchoose}}' />
-      </view>
-    </view>
+ 
+  <view class="pulldisplay" style='display:{{showView}};height:{{height}}' >
+  <block wx:for='{{array}}'>
 
     <view class='house'>
       <view class='housesize'>
-        <text>大床房26平方米</text>
+        <text>{{item.content}}</text>
       </view>
 
-      <view class='choose'>
-        <image src='{{secondchoose}}' />
-      </view>
-    </view>
-
-    <view class='house'>
-      <view class='housesize'>
-        <text>家庭房26平方米</text>
-      </view>
-
-      <view class='choose'>
-        <image src='{{threechoose}}' />
+      <view class='choose' id='{{index}}' bindtap='choose'>
+        <image src='{{item.choose}}' />
       </view>
     </view>
 
-    <view class='house'>
-      <view class='housesize'>
-        <text>单人房18平方米</text>
-      </view>
-
-      <view class='choose'>
-        <image src='{{fourchoose}}' />
-      </view>
-    </view>
-
+  </block>
   </view>
 
   <button class='btn'>保存</button>

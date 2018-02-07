@@ -2,101 +2,88 @@ page{
   height: 100%;
   width: 100%;
   background-color: #E3E0E0;
-  font-size: 31rpx;
+  font-size: 30rpx;
 }
 
-
 .model{
-  margin-top: 30rpx;
-  height: 80rpx;
+  margin-top: 4%;
+  height: 7%;
   width: 100%;
   background-color: #fff;
-  padding: 5rpx;
 }
 
 .title{
   text-align: center;
-  width: 250rpx;
-  height: 70rpx;
+  width: 32%;
+  height: 70%;
   background-color: #7ad5f7;
   line-height: 70rpx;
   position: relative;
   left: 50rpx;
-  top: 7rpx;
+  top: 15%;
   color: #fff;
-  border-radius:20px;
-  
+  border-radius:30rpx;
+  font-size: 25rpx;
 }
 
 text{
   height: 80rpx;
-  line-height: 80rpx;
+  line-height: 120rpx;
   position: relative;
   left: 350rpx;
   top: -68rpx;
   color: #8B8B8B;
+  font-size: 25rpx;
 }
 
 .time{
-  margin-top: 30rpx;
+  height: 18%;
+}
+
+.timemodel{
+  margin-top: 8%;
+  height: 7%;
+  width: 100%;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container{
   width: 60%;
-  height: 70rpx;
-  margin: 0 auto;
-  border: 2px solid #09B2F0;
-  border-radius:10px;
+  height: 70%;
+  border: 5rpx solid #09B2F0;
+  border-radius:30rpx;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 0;
-  margin-top: 5rpx;
 }
 
 .lunch{
   width: 50%;
-  height: 60rpx;
-  line-height: 60rpx;
+  height: 100%;
   text-align: center;
-  background-color: #fff;
-  border-radius:10px;
-  color: #09B2F0;
+  line-height: 50rpx;
+  border-radius:30rpx 0 0 30rpx;
+  font-size: 25rpx;
 }
 
- .lunch_{
-  width: 50%;
-  height: 60rpx;
-  line-height: 60rpx;
-  text-align: center;
-  background-color: #09B2F0;
-  border-radius:10px;
-  color: #fff;
-} 
 
 .dinner{
   width: 50%;
-  background-color: #09B2F0;
-  height: 65rpx;
-  line-height: 60rpx;
+  height: 100%;
+  line-height: 50rpx;
   text-align: center;
-  border-radius:5px;
-  color: #fff;
-}
-
-.dinner_{
-  width: 50%;
-  background-color: #fff;
-  height: 65rpx;
-  line-height: 60rpx;
-  text-align: center;
-  border-radius:5px;
-  color: #09B2F0;
+  border-radius:0 30rpx 30rpx 0;
+  font-size: 25rpx;
 }
 
 .GPS{
   text-align: center;
-  margin: 50rpx;
+  margin: 40rpx;
   border-radius: 20rpx;
 }
 
@@ -106,7 +93,7 @@ text{
 
 
 .sure{
-  margin-top: 50rpx;
+  margin-top: 0rpx;
   margin-bottom: 50rpx;
   width: 90%;
   background-color: #09B2F0;

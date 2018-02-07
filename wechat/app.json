@@ -13,8 +13,8 @@
         "pages/souvenir/souvenir",
         "pages/accommodation/accommodation",
         "pages/individualDemand/individualDemand",
-        "pages/logs/logs",
-        "pages/restaurant/restaurant"
+        "pages/restaurant/restaurant",
+        "pages/logs/logs"   
     ],
     "window": {
         "backgroundTextStyle": "light",

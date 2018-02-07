@@ -2,7 +2,7 @@
 <scroll-view scroll-y='true' class='scroll'>
   
   <view class='photo'>
-    <image src='../../images/photos/酒店.jpg' />
+    <image src='{{photo}}' />
   </view>
 
   <view class='display'>
