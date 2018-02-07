@@ -29,7 +29,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
     // var that = this;
     // wx.request({
     //     url:'http://47.94.99.203/souvenir/0',
@@ -51,8 +50,6 @@ Page({
     //     }
     // })
 
-=======
->>>>>>> a8528ae5fc3314f70dc14c8e2a886a5a70f4de96
     var that = this;
 
     wx.request({
@@ -69,10 +66,6 @@ Page({
         console.log('error')
       }
     })
-<<<<<<< HEAD
-  
-=======
->>>>>>> a8528ae5fc3314f70dc14c8e2a886a5a70f4de96
   },
 
   /**
