@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    newname:"",
     array:[{
       name:'匆匆那年',
       choose:'../../images/icon-png/选择(未选中).png',
@@ -35,6 +36,23 @@ Page({
     this.setData({
       height:up
     })
+    var that = this;
+    wx.request({
+      url: 'http://47.94.99.203:5000/activityTemplet/0', //仅为示例，并非真实的接口地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+         that.setData({
+           array: res.data.activityTemplet
+         })
+      },
+      fail: function () {
+        console.log("error")
+      }
+    })
   },
   /**
    * 弹窗
@@ -63,11 +81,22 @@ Page({
   onCancel: function () {
     this.hideModal();
   },
+   /**
+   *对话框输入事件
+   */
+  inputChange:function(e){
+    this.setData({
+      newname: e.detail.value
+    })
+  },
   /**
    * 对话框确认按钮点击事件
    */
   onConfirm: function () {
     this.hideModal();
+    wx: wx.navigateTo({
+      url: '../activity/activity?name={{newname}}',
+    })
   },
   /**
    * 活动方案右箭头
@@ -101,7 +130,10 @@ Page({
    * 查看活动方案
    */
   look:function (e) {
-    console.log(e.currentTarget.id)
+    console.log(e.currentTarget.id);
+    wx:wx.navigateTo({
+      url: '../activity/activity?id = e.currentTarget.id',
+    })
   },
   /**
    * 点击住宿地点
