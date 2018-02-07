@@ -81,8 +81,4 @@ Page({
   onShareAppMessage: function () {
   
   },
-
-  search: function(){
-      
-  }
 })
