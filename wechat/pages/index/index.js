@@ -78,7 +78,7 @@ Page({
    */
   selectRestaurant: function () {
     wx.navigateTo({
-      url: '../selectRestaurant/selectRestaurant',
+      url: '../restaurant/restaurant',
     })
   },
   /**
