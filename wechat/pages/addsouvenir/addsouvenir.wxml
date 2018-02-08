@@ -12,7 +12,7 @@
       <text style='color:#fff;padding:0 20rpx;font-size:27rpx;'>{{item.name}}</text>
     </view>
 
-    <view class='add' bindtap='addSouvenir1' id='{{index}}' bindtap='choose'>
+    <view class='add' bindtap='addSouvenir' id='{{index}}' bindtap='choose'>
       <image class='addImg' src='{{item.choose}}'></image>
     </view>
         

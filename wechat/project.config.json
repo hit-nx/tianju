@@ -27,7 +27,20 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "添加餐厅",
+					"pathName": "pages/selectRestaurant/selectRestaurant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "餐厅搜索",
+					"pathName": "pages/searchRestaurant/searchRestaurant",
+					"query": ""
+				}
+			]
 		}
 	}
 }

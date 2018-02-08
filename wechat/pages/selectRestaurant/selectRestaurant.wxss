@@ -24,7 +24,7 @@ page{
     margin: 7px 0;
     float: right;
 }
-.lunchImg{
+.restaurantImg{
     width: 30%;
     height: 90px;
     float: left;
