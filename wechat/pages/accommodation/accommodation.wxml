@@ -41,7 +41,7 @@
     <image src='../../images/photos/地图.png' /> 
   </view>
 
-  <button class='btn'>确认</button>
+  <button class='btn' bindtap='back'>确认</button>
 
 </scroll-view>
 </view>
