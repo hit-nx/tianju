@@ -1,6 +1,8 @@
 {
     "pages": [
+        
         "pages/index/index",
+        "pages/shareActivity/shareActivity",
         "pages/joinActivity/joinActivity",
         "pages/person/person",
         "pages/activityDisplay/activityDisplay",

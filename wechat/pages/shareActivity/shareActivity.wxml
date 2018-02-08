@@ -1,0 +1,243 @@
+<scroll-view scroll-y='true' class='container' >
+
+  <view class='title'>
+    <text>活动流程</text>
+  </view>
+
+  <!--垂直滚动，这里必须设置高度-->
+  <scroll-view scroll-y="true" class='display'>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+    <view class='item-activity'>
+      <view class='date'>
+        <text class='date-day'>2017-02-08</text>
+        <text class='date-time'>上午</text>
+      </view>
+
+      <view class='content'>
+        <text class='activity-name'>我是活动名称</text>
+        <text class='activity-location'>我是活动地点</text>
+        <text class='activity-else'>我是活动备注</text>
+      </view>
+      
+    </view>
+
+  </scroll-view>
+
+  <view class='title'>
+    <text>住宿</text>
+  </view>
+
+  <view class='display'>
+    <!-- <view class='item-activity'>
+       <image src='../../images/photos/酒店.jpg' /> 
+      <view class='hotel'>
+        <view class='hotel-hotel'> 
+          <text class='date-day'>住宿</text>
+        </view>
+        <view class='hotel-content'>
+          <text class='activity-name'>我是酒店名称</text>
+          <text class='activity-location'>我是酒店地点</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+
+  <view class='title'>
+    <text>用餐</text>
+  </view>
+
+  <scroll-view scroll-y='true' class='display'>
+
+    <view class='item-hotel'>
+      <image src='../../images/photos/餐厅.jpg' />
+      <view class='hotel'>
+        <view class='hotel-hotel'> 
+          <text class='date-day'>2018-02-08</text>
+          <text class='date-day'>午餐</text>
+        </view>
+        <view class='hotel-content'>
+          <text class='activity-name'>我是餐厅名称</text>
+          <text class='activity-location'>我是餐厅地点</text>
+        </view>
+      </view>
+    </view>
+
+     <view class='item-hotel'>
+      <image src='../../images/photos/餐厅.jpg' />
+      <view class='hotel'>
+        <view class='hotel-hotel'> 
+          <text class='date-day'>2018-02-08</text>
+          <text class='date-day'>午餐</text>
+        </view>
+        <view class='hotel-content'>
+          <text class='activity-name'>我是餐厅名称</text>
+          <text class='activity-location'>我是餐厅地点</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+
+   <view class='title'>
+    <text>用餐</text>
+  </view>
+
+  <scroll-view scroll-y='true' class='display'>
+
+    <view class='item-hotel'>
+      <image src='../../images/photos/餐厅.jpg' />
+      <view class='hotel'>
+        <view class='hotel-hotel'> 
+          <text class='date-day'>2018-02-08</text>
+          <text class='date-day'>午餐</text>
+        </view>
+        <view class='hotel-content'>
+          <text class='activity-name'>我是餐厅名称</text>
+          <text class='activity-location'>我是餐厅地点</text>
+        </view>
+      </view>
+    </view>
+
+     <view class='item-hotel'>
+      <image src='../../images/photos/餐厅.jpg' />
+      <view class='hotel'>
+        <view class='hotel-hotel'> 
+          <text class='date-day'>2018-02-08</text>
+          <text class='date-day'>午餐</text>
+        </view>
+        <view class='hotel-content'>
+          <text class='activity-name'>我是餐厅名称</text>
+          <text class='activity-location'>我是餐厅地点</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+
+</scroll-view>
