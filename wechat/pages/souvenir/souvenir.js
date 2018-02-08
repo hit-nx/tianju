@@ -101,18 +101,5 @@ Page({
     wx.navigateTo({
       url: '../addsouvenir/addsouvenir',
     })
-  },
-  /**
-   * 点击垃圾桶
-   */
-  Delete:function(e){
-    var index=e.currentTarget.id
-    //通过`index`识别要删除第几条数据，第二个数据为要删除的项目数量，通常为1
-    this.data.array.splice(index, 1);
-
-    //渲染数据
-    this.setData({
-      array: this.data.array
-    });
   }
 })

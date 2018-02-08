@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{},
+    userInfo:null,
+    hasUserInfo:false,
     isuser:false,
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
@@ -44,7 +45,8 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse) {
+      console.log('now')
+    } else{
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -52,26 +54,15 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        console.log('callback')
+        
+        setTimeout(function () {
+          wx.hideLoading()
+        }, 2000)
+        this.checkUser()
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
     }
-    while(this.data.userInfo==null){
-      wx.showLoading({
-        title: '正在加载个人信息',
-        mask:true
-      })
-    }
-    wx.hideLoading()
+   
   },
   /**
    * onShow
@@ -82,17 +73,39 @@ Page({
       enterPerson: false,
       joinActivity: false,
     })
-
-    if(this.data.isuser==false){
-      var that=this
+    if (this.data.hasUserInfo == false) {
+      wx.showLoading({
+        title: '加载个人信息',
+        mask: true,
+        success:function(){
+          console.log('success')
+        },
+        complete:function(){
+          console.log('complete')
+        }
+      })
+      console.log('load结束')
+    }else{
+      this.checkUser()
+    }   
+  },
+  /**
+   * 检查用户信息
+   */
+  checkUser:function(){
+    if (this.data.isuser == false) {
+      console.log('请求')
+      console.log('请求'+this.data.userInfo.nickName)
+      var that = this
       wx.request({
-        url: 'http://47.94.99.203:5000/user/' + this.data.userInfo.nickName,
+        url: 'http://47.94.99.203:5000/user/' + that.data.userInfo.nickName,
         method: 'GET',
         header: {
           'content-type': 'application/json'
         },
         success: function (res) {
-          if (res.statusCode == 404) {
+          console.log(res)
+          if (res.statusCode != 200) {
             that.setData({
               enterPerson: true
             })
@@ -113,13 +126,13 @@ Page({
           }
         },
       })
-    }else{
-      if(this.data.planId==null){
+    } else {
+      if (this.data.planId == null) {
         this.setData({
-          showModal:true
+          showModal: true
         })
       }
-    } 
+    }
   },
   /**
    * 获取用户信息
@@ -225,7 +238,8 @@ Page({
                     mask: true,
                   })
                   that.setData({
-                    joinActivity:false
+                    joinActivity:false,
+                    planId:id
                   })
                 }
                 else{
@@ -271,10 +285,30 @@ Page({
       },
       success: function (res) {
         console.log(res)
+        if(res.statusCode==200){
+          wx.showToast({
+            title: '成功取消参加本次活动',
+            icon: 'success',
+            duration: 1500,
+            mask: true,
+          })
+          that.setData({
+            unjoin:false,
+            showModal:true
+          })
+        }
+        else{
+          wx.showToast({
+            title: '操作失败，请稍后重试！',
+            icon: 'none',
+            duration: 1500,
+            mask: true,
+          })
+          that.setData({
+            unjoin: false,
+          })
+        }
       }
-    })
-    this.setData({
-      unjoin:false,
     })
   },
   /**

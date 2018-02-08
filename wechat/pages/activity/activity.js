@@ -71,10 +71,10 @@ Page({
       url: 'http://47.94.99.203:5000/plan?id=1',
       header:{
         'Content-Type': 'json'
-      },
-      method:'GET',
+      }d:'GET',
       success:function(res){
-        
+        that.setData{
+          post:res.data[0]
       },
       fail:function(){
         console.log("qwert")

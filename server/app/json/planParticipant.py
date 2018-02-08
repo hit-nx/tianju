@@ -17,6 +17,14 @@ def deleteInfoByWechatAndPlan(plan, participant_wechat):
                                                               participant_wechat=participant_wechat).first()
 
     if planParticipant:
+        # 将该用户的plan_id置0
+        user = models.user.query.get(participant_wechat)
+        if user:
+            user.plan_id = 0
+        else:
+            return {
+                abort(400, message="user {} doesn't exist".format(participant_wechat))
+            }
         try:
             if personalChoose:
                 # 循环删除个人需求
@@ -68,7 +76,7 @@ class planParticipant(Resource):
             # 更改该用户的plan_id
             user = models.user.query.get(args.participant_wechat)
             if user:
-                user.plan_id = args.plan;
+                user.plan_id = args.plan
             else:
                 return {
                     abort(400, message="user {} doesn't exist".format(args.participant_wechat))
@@ -85,8 +93,6 @@ class planParticipant(Resource):
 
     # 删除方案参与人员接口（包括与该参与者相关的所有信息）
     def delete(self):
-
         args = parse.parse_args()
-
         result = deleteInfoByWechatAndPlan(args.plan, args.participant_wechat)
         return result
