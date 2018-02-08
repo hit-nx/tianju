@@ -65,11 +65,15 @@ Page({
         }
       })
     }
-    while(this.data.userInfo==null){
+    console.log(this.data.userInfo)
+  
+    if(this.data.userInfo==null){
       wx.showLoading({
-        title: '正在加载个人信息',
+        title: '加载个人信息',
         mask:true
       })
+    }
+    while(this.data.userInfo==null){
     }
     wx.hideLoading()
   },
