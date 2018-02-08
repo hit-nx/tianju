@@ -12,7 +12,7 @@
       <text style='color:#fff;padding:0 10px;font-size:27rpx;'>{{item.name}}</text>
     </view>
 
-    <view class='delete' id='{{index}}' bindtap='Delete'>
+    <view class='delete'>
       <image class='deleteImg' src='../../images/icon-png/删除-垃圾桶.png'></image>
     </view>
   

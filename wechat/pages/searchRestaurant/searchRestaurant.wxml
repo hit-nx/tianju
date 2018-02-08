@@ -4,9 +4,9 @@
 <block wx:for='{{array}}'>
 
   <view class='searchItems'>
-    <image src="{{item.item}}" class='restaurantItems'></image>
+    <image src='../../images/photos/餐厅.jpg' class='restaurantItems'></image>
     <view class='details'>
-      <text class='title'>{{item.title}}\n</text>
+      <text class='title'>{{item.name}}\n</text>
       <text class='address'>{{item.address}}</text>
     </view>
   </view>
