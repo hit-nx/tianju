@@ -26,8 +26,21 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "participant",
+					"pathName": "pages/accommodation/accommodation",
+					"query": "wechat=cyy"
+				},
+				{
+					"id": 1,
+					"name": "newactivity",
+					"pathName": "pages/activity/activity",
+					"query": "wechat=cyy"
+				}
+			]
 		}
 	}
 }
