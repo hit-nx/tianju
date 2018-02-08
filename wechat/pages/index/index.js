@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{},
+    userInfo:null,
     isuser:false,
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
@@ -65,17 +65,16 @@ Page({
         }
       })
     }
-    console.log(this.data.userInfo)
-  
+    console.log(this.data.userInfo) 
     if(this.data.userInfo==null){
       wx.showLoading({
         title: '加载个人信息',
         mask:true
       })
     }
-    while(this.data.userInfo==null){
-    }
-    wx.hideLoading()
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
   },
   /**
    * onShow
@@ -90,7 +89,7 @@ Page({
     if(this.data.isuser==false){
       var that=this
       wx.request({
-        url: 'http://47.94.99.203:5000/user/' + this.data.userInfo.nickName,
+        url: 'http://47.94.99.203:5000/user/' + that.data.userInfo.nickName,
         method: 'GET',
         header: {
           'content-type': 'application/json'
@@ -275,10 +274,30 @@ Page({
       },
       success: function (res) {
         console.log(res)
+        if(res.statusCode==200){
+          wx.showToast({
+            title: '成功取消参加本次活动',
+            icon: 'success',
+            duration: 1500,
+            mask: true,
+          })
+          that.setData({
+            unjoin:false,
+            showModal:true
+          })
+        }
+        else{
+          wx.showToast({
+            title: '操作失败，请稍后重试！',
+            icon: 'none',
+            duration: 1500,
+            mask: true,
+          })
+          that.setData({
+            unjoin: false,
+          })
+        }
       }
-    })
-    this.setData({
-      unjoin:false,
     })
   },
   /**
