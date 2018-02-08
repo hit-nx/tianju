@@ -1,9 +1,9 @@
 <view class="container">
     <view class='header'>
         <view class='image'>
-       <image src='../../images/photos/timg.jpg' style='height:200rpx;width:200rpx;'></image>
+       <image src='{{userInfo.avatarUrl}}' style='height:200rpx;width:200rpx;'></image>
        </view>
-       <text class='wx'>我的微信昵称</text>
+       <text class='wx'>{{userInfo.nickName}}</text>
     </view>
 
     <view class='model'>
@@ -13,19 +13,19 @@
     </view>
 
     <view class='model'>
-      <text class='text'>姓别</text>
-      <text class='text_' style='display:{{showText}}'>{{sex}}</text>
-      <input class="input" value='{{sex}}' style='display:{{showInput}}' maxlength='3' bindinput='sexInput'></input>
+      <text class='text'>专业</text>
+      <text class='text_' style='display:{{showText}}'>{{major}}</text>
+      <input class="input" value='{{major}}' style='display:{{showInput}}' maxlength='10' bindinput='majorInput'></input>
     </view>
 
     <view class='model'>
       <text class='text'>班级</text>
-      <text class='text_' style='display:{{showText}}'>{{Class}}</text>
-      <input class="input" value='{{Class}}' style='display:{{showInput}}' type='number' maxlength='7' bindinput='classInput'></input>
+      <text class='text_' style='display:{{showText}}'>{{classnum}}</text>
+      <input class="input" value='{{classnum}}' style='display:{{showInput}}' type='number' maxlength='7' bindinput='classInput'></input>
     </view>
 
     <view class='model'>
-      <text class='text'>工作单位</text>
+      <text class='text'>学校</text>
       <text class='text_' style='display:{{showText}}'>{{location}}</text>
       <input class="input" value='{{location}}' style='display:{{showInput}}' bindinput='locationInput'></input>
     </view>

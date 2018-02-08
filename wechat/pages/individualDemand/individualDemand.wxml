@@ -42,21 +42,22 @@
   </view>
  
   <view class="pulldisplay" style='display:{{showView}};height:{{height}}' >
-  <block wx:for='{{array}}'>
+  <block wx:for='{{roomInfo}}'>
 
     <view class='house'>
       <view class='housesize'>
-        <text>{{item.content}}</text>
+        <text>{{item.name}}</text>
+        <text>{{item.introduce}}</text>
       </view>
 
       <view class='choose' id='{{index}}' bindtap='choose'>
-        <image src='{{item.choose}}' />
+        <image src='{{array[index].choose}}' />
       </view>
     </view>
 
   </block>
   </view>
 
-  <button class='btn'>保存</button>
+  <button class='btn' bindtap='save'>保存</button>
 
 </view>
