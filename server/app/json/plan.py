@@ -87,6 +87,7 @@ class plan(Resource):
 						"participantPersonal" : participantPersonalList,
 						})
 			return {
+				"id": id,
 				"name": plan.name,
 				"key": plan.key,
 				"date": plan.date,

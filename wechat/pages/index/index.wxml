@@ -53,7 +53,7 @@
     <view class='btn'>
 
       <view class='firstbtn'>
-        <button> {{firstbtn}} </button>
+        <button open-type='share'> {{firstbtn}} </button>
       </view>
 
       <view class='secondbtn' bindtap='noActivity'>
@@ -75,4 +75,45 @@
       <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">创建一个活动</view>
     </view>
   </view>
+
+  <view class="modal-mask" wx:if="{{enterPerson}}"></view>
+  <view class="modal-dialog" wx:if="{{enterPerson}}">
+    <view class="modal-title">提示</view>
+    <view class="person-content">
+      <text class='tips'>用户不存在\n</text>
+      <text class='tips'>请前往个人中心完善个人信息</text>
+    </view>
+    <view class="modal-footer">
+      <view class="person-cancel" bindtap="enter" data-status="cancel">前往个人中心</view>
+    </view>
+  </view>
+
+   <!--弹窗-->
+    <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{joinActivity}}"></view>
+    <view class="modal-dialog" wx:if="{{joinActivity}}">
+      <view class="modal-title">加入活动</view>
+      <view class="join-content">
+        <view class="modal-input">
+          <input placeholder-class="input-holder" bindinput="inputChange" class="input" placeholder="请输入活动方案的激活码"></input>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <view class="join-cancel" data-status="cancel" bindtap='unjoin'>取消</view>
+        <view class="btn-confirm" data-status="confirm" bindtap='join'>确定</view>
+      </view>
+    </view>
+
+    <!--弹窗-->
+    <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{unjoin}}"></view>
+    <view class="modal-dialog" wx:if="{{unjoin}}">
+      <view class="modal-title">提示</view>
+       <view class="person-content">
+          <text class='tips'>确定要取消参与本活动吗</text>
+       </view>
+      <view class="modal-footer">
+        <view class="join-cancel" data-status="cancel" bindtap='unexit'>取消</view>
+        <view class="btn-confirm" data-status="confirm" bindtap='exit'>确定</view>
+      </view>
+    </view>
+
 </view>

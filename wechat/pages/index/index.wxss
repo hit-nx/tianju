@@ -133,7 +133,7 @@ page{
   background: #f9f9f9;
   margin: -215rpx 85rpx;
   border-radius: 20rpx;
-  background-color: #e3e0e0;
+  background-color: #f3f0f0;
 }
 
 .modal-title {
@@ -150,8 +150,8 @@ page{
 
 .tips{
     color: #303030;
-    font-size: 25rpx;
-    margin: 20rpx 0;
+    font-size: 30rpx;
+    height: 40%;
 }
 
 .modal-footer {
@@ -174,4 +174,51 @@ page{
   width: 50%;
   color: #09b2f0;
   text-align: center;
+}
+
+.person-cancel {
+  width: 100%;
+  color: #f35a5a;
+  text-align: center;
+}
+
+.person-content {
+  height: 80rpx;
+  padding: 40rpx 50rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.join-content {
+  height: 100rpx;
+  padding: 50rpx 0rpx;
+}
+
+.join-cancel {
+  width: 50%;
+  color: #f35a5a;
+  text-align: center;
+  border-right: 1px solid #a5a5a5;
 }
