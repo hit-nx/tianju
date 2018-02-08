@@ -55,12 +55,11 @@ Page({
           hasUserInfo: true
         })
         console.log('callback')
-        console.log(this.data.userInfo.nickName)
-        this.checkUser()
+        
         setTimeout(function () {
           wx.hideLoading()
         }, 2000)
-
+        this.checkUser()
       }
     }
    
@@ -95,6 +94,7 @@ Page({
    */
   checkUser:function(){
     if (this.data.isuser == false) {
+      console.log('请求')
       console.log('请求'+this.data.userInfo.nickName)
       var that = this
       wx.request({
