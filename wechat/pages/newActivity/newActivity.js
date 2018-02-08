@@ -95,7 +95,7 @@ Page({
   onConfirm: function () {
     this.hideModal();
     wx: wx.navigateTo({
-      url: '../activity/activity?name={{newname}}',
+      url: '../activity/activity?name='+this.data.newname,
     })
   },
   /**
@@ -132,7 +132,7 @@ Page({
   look:function (e) {
     console.log(e.currentTarget.id);
     wx:wx.navigateTo({
-      url: '../activity/activity?id = e.currentTarget.id',
+      url: '../activity/activity?plan_id =' + e.currentTarget.id,
     })
   },
   /**
