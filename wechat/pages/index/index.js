@@ -9,6 +9,7 @@ Page({
    */
   data: {
     userInfo:{},
+    isuser:false,
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -64,6 +65,13 @@ Page({
         }
       })
     }
+    while(this.data.userInfo==null){
+      wx.showLoading({
+        title: '正在加载个人信息',
+        mask:true
+      })
+    }
+    wx.hideLoading()
   },
   /**
    * onShow
@@ -74,32 +82,44 @@ Page({
       enterPerson: false,
       joinActivity: false,
     })
-    var that = this
-    wx.request({
-      url: 'http://47.94.99.203:5000/user/'+this.data.userInfo.nickName,
-      method: 'GET',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        if (res.statusCode == 404) {
-          that.setData({
-            enterPerson: true
-          })
-        }
-        else {
-          if (res.data.plan_id == null) {
+
+    if(this.data.isuser==false){
+      var that=this
+      wx.request({
+        url: 'http://47.94.99.203:5000/user/' + this.data.userInfo.nickName,
+        method: 'GET',
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function (res) {
+          if (res.statusCode == 404) {
             that.setData({
-              showModal: true
-            })
-          } else {
-            that.setData({
-              planId: res.data.plan_id
+              enterPerson: true
             })
           }
-        }
-      },
-    })
+          else {
+            that.setData({
+              isuser: true,
+            })
+            if (res.data.plan_id == null || res.data.plan_id == 0) {
+              that.setData({
+                showModal: true
+              })
+            } else {
+              that.setData({
+                planId: res.data.plan_id
+              })
+            }
+          }
+        },
+      })
+    }else{
+      if(this.data.planId==null){
+        this.setData({
+          showModal:true
+        })
+      }
+    } 
   },
   /**
    * 获取用户信息
@@ -236,6 +256,23 @@ Page({
    * 点击确认取消参加活动
    */
   exit:function(){
+    var that=this
+    console.log(that.data.userInfo.nickName)
+    console.log(that.data.planId)
+    wx.request({
+      url: 'http://47.94.99.203:5000/plan/participant',
+      data:{
+        participant_wechat:that.data.userInfo.nickName,
+        plan:that.data.planId
+      },
+      method: 'DELETE',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res)
+      }
+    })
     this.setData({
       unjoin:false,
     })
@@ -247,13 +284,6 @@ Page({
     this.setData({
       unjoin:false,
     })
-  },
-  /**
-   * 点击分享给好友
-   */
-  share:function(){
-    console.log('share')
-    this.onShareAppMessage()
   },
   /**
    * 输入活动激活码
@@ -276,7 +306,7 @@ Page({
    */
   participants: function () {
     wx.navigateTo({
-      url: '../participants/participants',
+      url: '../participants/participants?id='+this.data.planId,
     })
   },
   /**

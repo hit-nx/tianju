@@ -52,8 +52,8 @@
 
     <view class='btn'>
 
-      <view class='firstbtn' bindtap='share'>
-        <button> {{firstbtn}} </button>
+      <view class='firstbtn'>
+        <button open-type='share'> {{firstbtn}} </button>
       </view>
 
       <view class='secondbtn' bindtap='noActivity'>
