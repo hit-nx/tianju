@@ -1,0 +1,157 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #e3e0e0;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.scroll{
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  width: 32%;
+  height: 5%;
+  background-color: #7ad5f7;
+  margin-top: 4%;
+  margin-left: 4%;
+  border-radius: 30rpx;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title text{
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.display{
+  width: 100%;
+  height: 20%;
+  margin-top: 3%;
+}
+
+.item{
+  width: 90%;
+  height: 90%;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  background-color: #fff;
+  border-radius: 20rpx;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.photo{
+  width: 35%;
+  height: 100%;
+  border-radius: 20rpx 0 0 20rpx;
+  background-color: #7ad5f7;
+}
+
+.hotel-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx 0 0 20rpx;
+}
+
+.activity-image{
+  width: 60%;
+  height: 60%;
+  margin: 20%;
+}
+
+.content{
+  width: 65%;
+  height: 100%;
+  border-radius: 0 20rpx 20rpx 0;
+}
+
+.date{
+  width: 100%;
+  height: 25%;
+  background-color: #09b2f0;
+  border-top-right-radius: 20rpx;
+}
+
+.date text{
+  font-size: 25rpx;
+  color: #fff;
+  margin-left: 10%;
+}
+
+.introduce{
+  height: 75%;
+  width: 100%;
+  border-bottom-right-radius: 20rpx;
+
+  display: flex;flex-direction: column;
+  justify-content: space-around;
+}
+
+.name{
+  font-size: 35rpx;
+  color: #303030;
+  margin-left: 10%;
+}
+
+.location{
+  font-size: 30rpx;
+  color: #959595;
+  margin-left: 10%;
+}
+
+.else{
+  font-size: 25rpx;
+  color: #959595;
+  margin-left: 10%;
+}
+
+.demand{
+  height: 8%;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 4%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.demand-title{
+  height: 60%;
+  background-color: #7ad5f7;
+  border-radius: 30rpx;
+  margin-left: 4%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demand-content{
+  font-size: 30rpx;
+  color: #959595;
+}
+
+.demand-title text{
+  font-size: 30rpx;
+  color: #fff;
+}
+
+button{
+  width: 80%;
+  height: 8%;
+  background-color: #09b2f0;
+  color: #fff;
+  font-size: 35rpx;
+  margin-bottom: 5%;
+}

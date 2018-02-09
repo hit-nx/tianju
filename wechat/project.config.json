@@ -42,6 +42,7 @@
 				},
 				{
 					"id": 2,
+<<<<<<< HEAD
 					"name": "餐厅",
 					"pathName": "pages/restaurant/restaurant",
 					"query": ""
@@ -51,6 +52,15 @@
 					"name": "酒店展示",
 					"pathName": "pages/hotelShow/hotelShow",
 					"query": ""
+=======
+					"name": "分享页面",
+					"pathName": "pages/shareActivity/shareActivity",
+					"query": "id=4",
+					"scene": "1036",
+					"referrerInfo": {
+						"appId": "wxb9f8eaa4f90d029c"
+					}
+>>>>>>> 587e894dbb16061e1a283a7bceb74c0dd350a87a
 				}
 			]
 		}

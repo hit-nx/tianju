@@ -38,7 +38,7 @@
   </view>
 
   <view class='location'>
-    <image src='../../images/photos/地图.png' /> 
+    <image src='../../images/photos/location.png' /> 
   </view>
 
   <button class='btn' bindtap='back'>确认</button>

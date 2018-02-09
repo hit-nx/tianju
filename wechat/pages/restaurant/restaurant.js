@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photo: '../../images/photos/餐厅.jpg',
+    photo: '../../images/photos/restaurant.jpg',
     name: '我是餐厅名称',
     location: '我是餐厅地点',
 

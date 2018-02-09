@@ -13,14 +13,14 @@
     </view>
 
     <view class='delete'>
-      <image class='deleteImg' src='../../images/icon-png/删除-垃圾桶.png'></image>
+      <image class='deleteImg' src='../../images/icon-png/delete.png'></image>
     </view>
   
   </view>
   </block>
         
   <view class='add' bindtap='add'>
-    <image class='addImg' src='../../images/icon-png/添加.png'></image>
+    <image class='addImg' src='../../images/icon-png/add.png'></image>
   </view>
 
 </view>
