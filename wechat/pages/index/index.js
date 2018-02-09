@@ -9,6 +9,7 @@ Page({
    */
   data: {
     userInfo:null,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hasUserInfo:false,
     isuser:false,
     imgUrls: [
@@ -30,7 +31,7 @@ Page({
    */
   onShareAppMessage:function(){
     var title='我创建了一个活动方案，快来加入吧！'
-    var path='/pages/index/index'
+    var path='/pages/shareActivity/shareActivity?id='+this.data.planId
     return{
       title:title,
       path:path,
@@ -39,14 +40,15 @@ Page({
   /**
    * onLoad
    */
-  onLoad:function(){
+  onLoad:function(options){
+    console.log(options)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
       console.log('now')
-    } else{
+    } else if(this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -61,8 +63,24 @@ Page({
         }, 2000)
         this.checkUser()
       }
+    }else{
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+          console.log('canIUse')
+
+          setTimeout(function () {
+            wx.hideLoading()
+          }, 2000)
+          this.checkUser()
+        }
+      })
     }
-   
   },
   /**
    * onShow
