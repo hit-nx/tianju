@@ -105,7 +105,8 @@ Page({
       console.log('load结束')
     }else{
       this.checkUser()
-    }   
+    }
+
   },
   /**
    * 检查用户信息
@@ -116,7 +117,7 @@ Page({
       console.log('请求'+this.data.userInfo.nickName)
       var that = this
       wx.request({
-        url: 'http://47.94.99.203:5000/user/' + that.data.userInfo.nickName,
+        url: 'http://47.94.99.203:5000/user/'+encodeURI(that.data.userInfo.nickName),
         method: 'GET',
         header: {
           'content-type': 'application/json'
@@ -312,7 +313,8 @@ Page({
           })
           that.setData({
             unjoin:false,
-            showModal:true
+            showModal:true,
+            planId:null
           })
         }
         else{

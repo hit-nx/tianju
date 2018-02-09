@@ -155,3 +155,62 @@ button{
   font-size: 35rpx;
   margin-bottom: 5%;
 }
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 580rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -215rpx 85rpx;
+  border-radius: 20rpx;
+  background-color: #f3f0f0;
+}
+
+.modal-title {
+  padding: 15rpx 30rpx;
+  font-size: 27rpx;
+  color: #fff;
+  background-color: #09b2f0;
+}
+
+.tips{
+    color: #303030;
+    font-size: 30rpx;
+    height: 40%;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  border-top: 1px solid #a5a5a5;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+
+.person-cancel {
+  width: 100%;
+  color: #f35a5a;
+  text-align: center;
+}
+
+.person-content {
+  height: 80rpx;
+  padding: 40rpx 50rpx;
+}
