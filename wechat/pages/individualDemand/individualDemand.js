@@ -12,18 +12,18 @@ Page({
     needText: '#ffffff',
     switchIneed: '#ffffff',
     ineedText: '#09b2f0',
-    pullDown:'../../images/icon-png/右箭头.png',
+    pullDown:'../../images/icon-png/right.png',
     showView:'none',
     height:'0%',
     roomInfo:[],
     array:[{
-      choose:'../../images/icon-png/选择(未选中).png'
+      choose:'../../images/icon-png/unselected.png'
     }, {
-      choose: '../../images/icon-png/选择(未选中).png'
+      choose: '../../images/icon-png/unselected.png'
     }, {
-      choose: '../../images/icon-png/选择(未选中).png'
+      choose: '../../images/icon-png/unselected.png'
     }, {
-      choose: '../../images/icon-png/选择(未选中).png'
+      choose: '../../images/icon-png/unselected.png'
     },],
     plan_id:null,
     needCar: true,
@@ -93,14 +93,14 @@ Page({
    * 点击下箭头
    */
   pullDown: function () {
-    var photoUrl = this.data.pullDown == '../../images/icon-png/右箭头.png' ? '../../images/icon-png/下箭头.png' : '../../images/icon-png/右箭头.png'
-    var show = this.data.pullDown == '../../images/icon-png/右箭头.png' ? 'block' : 'none'
+    var photoUrl = this.data.pullDown == '../../images/icon-png/right.png' ? '../../images/icon-png/down.png' : '../../images/icon-png/right.png'
+    var show = this.data.pullDown == '../../images/icon-png/right.png' ? 'block' : 'none'
     this.setData({
       pullDown: photoUrl,
       showView: show
     });
     var that = this;
-    if (this.data.pullDown == '../../images/icon-png/下箭头.png'){
+    if (this.data.pullDown == '../../images/icon-png/down.png'){
       wx.request({
         url: 'http://47.94.99.203:5000/hotelRoom/0',
         header: {
@@ -131,12 +131,12 @@ Page({
     for (; num >= 0; num--) {
       var up = 'array[' + num + '].choose'
       this.setData({
-        [up]: '../../images/icon-png/选择(未选中).png'
+        [up]: '../../images/icon-png/unselected.png'
       })
     }
     var up = 'array[' + e.currentTarget.id + '].choose'
     this.setData({
-      [up]: '../../images/icon-png/选择(选中).png',
+      [up]: '../../images/icon-png/selected.png',
       choose_room: parseInt(e.currentTarget.id)+1,
     })
     console.log(this.data.choose_room)

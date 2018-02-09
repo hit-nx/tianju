@@ -69,12 +69,14 @@ Page({
     var that=this;
     wx.request({
       url: 'http://47.94.99.203:5000/plan?id=1',
+      method: 'GET',
       header:{
-        'Content-Type': 'json'
-      }d:'GET',
+        'Content-Type': 'json',
+      },
       success:function(res){
-        that.setData{
+        that.setData({
           post:res.data[0]
+        })
       },
       fail:function(){
         console.log("qwert")
