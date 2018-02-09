@@ -69,6 +69,7 @@ Page({
     var that=this;
     wx.request({
       url: 'http://47.94.99.203:5000/plan?id=1',
+      method: 'GET',
       header:{
         'Content-Type': 'json'
       },

@@ -100,4 +100,20 @@ Page({
   onShareAppMessage: function () {
   
   },
+
+  // 用户点击具体酒店
+  details:function(){
+    wx.navigateTo({
+      url: '../restaurant/restaurant',
+      success: function(res) {
+        console.log('--success--')
+      },
+      fail: function(res) {
+        console.log('--fail--')
+      },
+      complete: function(res) {
+        console.log('--complete--')
+      },
+    })
+  }
 })

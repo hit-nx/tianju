@@ -4,7 +4,7 @@
 
   <view class="init">
 
-    <image src='../../images/photos/头像.png' />
+    <image src='../../images/photos/head.png' />
     <text class='user'>{{item.user}}</text>
     <text class='small'>{{item.small}}</text>
 
