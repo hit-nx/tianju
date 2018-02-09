@@ -39,16 +39,6 @@
 					"name": "餐厅搜索",
 					"pathName": "pages/searchRestaurant/searchRestaurant",
 					"query": ""
-				},
-				{
-					"id": 2,
-					"name": "分享页面",
-					"pathName": "pages/shareActivity/shareActivity",
-					"query": "id=4",
-					"scene": "1036",
-					"referrerInfo": {
-						"appId": "wxb9f8eaa4f90d029c"
-					}
 				}
 			]
 		}
