@@ -45,7 +45,7 @@ Page({
       // url: 'http://47.94.99.203:5000/user/'+nickName,
       url: 'http://47.94.99.203:5000/user/1',
       header: {
-        'content-type': 'application/json'
+        'content-type': 'json'
       },
       method: 'GET',
       success: function(res){
@@ -74,7 +74,7 @@ Page({
                   // url: 'http://47.94.99.203:5000/restaurant/'+restaurant_one,
                   url: 'http://47.94.99.203:5000/restaurant/1',
                   header: {
-                    'content-type': 'application/json'
+                    'content-type': 'json'
                   },
                   method: 'GET',
                   success: function(res){
@@ -99,7 +99,7 @@ Page({
                     // url: 'http://47.94.99.203:5000/restaurant/'+restaurant_two,
                     url: 'http://47.94.99.203:5000/restaurant/1',
                     header: {
-                      'content-type': 'application/json'
+                      'content-type': 'json'
                     },
                     method: 'GET',
                     success: function (res) {
@@ -124,7 +124,7 @@ Page({
                   // url: 'http://47.94.99.203:5000/restaurant/'+restaurant_three,
                   url: 'http://47.94.99.203:5000/restaurant/1',
                     header: {
-                      'content-type': 'application/json'
+                      'content-type': 'json'
                     },
                     method: 'GET',
                     success: function (res) {
@@ -149,7 +149,7 @@ Page({
                   // url: 'http://47.94.99.203:5000/restaurant/'+restaurant_four,
                   url: 'http://47.94.99.203:5000/restaurant/1',
                     header: {
-                      'content-type': 'application/json'
+                      'content-type': 'json'
                     },
                     method: 'GET',
                     success: function (res) {
@@ -236,4 +236,17 @@ Page({
   onShareAppMessage: function () {
   
   },
+
+  // 用户点击修改
+  change: function(){
+    wx.navigateTo({
+      url: '../searchRestaurant/searchRestaurant',
+      success: function(res) {
+        console.log(res);
+        console.log('----success----')
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  }
 })

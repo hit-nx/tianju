@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
@@ -38,6 +38,18 @@
 					"id": -1,
 					"name": "餐厅搜索",
 					"pathName": "pages/searchRestaurant/searchRestaurant",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "餐厅",
+					"pathName": "pages/restaurant/restaurant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "酒店展示",
+					"pathName": "pages/hotelShow/hotelShow",
 					"query": ""
 				}
 			]
