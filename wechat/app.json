@@ -1,6 +1,8 @@
 {
     "pages": [
+        
         "pages/index/index",
+        "pages/shareActivity/shareActivity",
         "pages/joinActivity/joinActivity",
         "pages/person/person",
         "pages/activityDisplay/activityDisplay",
@@ -24,6 +26,7 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
+      "selectedColor": "#09b2f0",
         "list": [
             {
                 "pagePath": "pages/index/index",

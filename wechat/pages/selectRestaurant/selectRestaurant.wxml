@@ -10,14 +10,12 @@
   <view style='overflow: auto'>
     <block wx:for='{{firstDay}}'>
 
-      <image class='lunchImg' src='{{item.lunchImg}}'></image>
+      <image class='restaurantImg' src='{{item.restaurantImg}}'></image>
       <view class='restaurant'>
         <view class='meal'>
-          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.lunch}}</text>
+          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.meal}}</text>
         </view>
-        <view class='delete'>
-          <image class="trashCan" src='../../images/icon-png/删除-垃圾桶.png'></image>
-        </view>
+        <button class='change' bindtap='change'>修改</button>
         <view class='details'>
           <text class='title'>{{item.title}}\n</text>
           <text class='address'>{{item.address}}</text>
@@ -33,20 +31,18 @@
   <view style='overflow: auto;'>
     <block wx:for='{{secondDay}}'>
 
-      <image class='lunchImg' src='{{item.lunchImg}}'></image>
+      <image class='restaurantImg' src='{{item.restaurantImg}}'></image>
       <view class='restaurant'>
         <view class='meal'>
-          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.lunch}}</text>
+          <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.meal}}</text>
         </view>
-        <view class='delete'>
-          <image class="trashCan" src='../../images/icon-png/删除-垃圾桶.png'></image>
-        </view>
+        <button class='change' bindtap='change'>修改</button>
         <view class='details'>
           <text class='title'>{{item.title}}\n</text>
           <text class='address'>{{item.address}}</text>
         </view>
       </view>
-
+      
     </block>
   </view>
 

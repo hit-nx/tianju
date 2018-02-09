@@ -24,7 +24,7 @@ page{
     margin: 7px 0;
     float: right;
 }
-.lunchImg{
+.restaurantImg{
     width: 30%;
     height: 90px;
     float: left;
@@ -33,23 +33,22 @@ page{
     background-color: #82d8f7;
 }
 .meal{
-    width: 85%;
+     width: 75%; 
+     /* width: 100%; 
+    border-radius: 0 20rpx 0 0; */
     height: 30px;
     float: left;
     background-color: #09b2f0;
 }
-.delete{
-    width: 15%;
+.change{
+    width: 25%;
     height: 30px;
     float: right;
     background-color: #f35a5a;
     border-radius: 0 20rpx 0 0;
-}
-.trashCan{
-    width: 60%;
-    height: 60%;
-    margin-top: 20%;
-    margin-left: 15%;
+    font-size: 30rpx;
+    text-align: center;
+    color: #fff;
 }
 .details{
     border-radius: 0 20rpx 20rpx 0;

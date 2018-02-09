@@ -5,30 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[{
-      item:'../../images/photos/餐厅.jpg',
-      title: "我是餐厅名称",
-      address: "我是餐厅地址",
-    }, {
-      item: '../../images/photos/餐厅.jpg',
-      title: "我是餐厅名称",
-      address: "我是餐厅地址",
-    }, {
-      item: '../../images/photos/餐厅.jpg',
-      title: "我是餐厅名称",
-      address: "我是餐厅地址",
-    }, {
-      item: '../../images/icon-png/餐厅-餐厅搜索.png',
-      title: "我是餐厅名称",
-      address: "我是餐厅地址",
-    },]
+    // array:[{
+    //   item:'../../images/photos/餐厅.jpg',
+    //   title: "我是餐厅名称",
+    //   address: "我是餐厅地址",
+    // }, {
+    //   item: '../../images/photos/餐厅.jpg',
+    //   title: "我是餐厅名称",
+    //   address: "我是餐厅地址",
+    // }, {
+    //   item: '../../images/photos/餐厅.jpg',
+    //   title: "我是餐厅名称",
+    //   address: "我是餐厅地址",
+    // }, {
+    //   item: '../../images/icon-png/餐厅-餐厅搜索.png',
+    //   title: "我是餐厅名称",
+    //   address: "我是餐厅地址",
+    // },]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+        url: 'http://47.94.99.203:5000/restaurant/0',
+        header: {
+            'content-type': 'application/json'
+        },
+        method:'GET',
+        success: function(res){
+            console.log(res);
+            that.setData({
+                array : res.data.restaurant
+            })
+        },
+        fail: function(){
+            console.log('----error----')
+        },
+        complete: function(){
+            console.log('----complete----')
+            }
+    })
   },
 
   /**
@@ -81,4 +100,20 @@ Page({
   onShareAppMessage: function () {
   
   },
+
+  // 用户点击具体酒店
+  details:function(){
+    wx.navigateTo({
+      url: '../restaurant/restaurant',
+      success: function(res) {
+        console.log('--success--')
+      },
+      fail: function(res) {
+        console.log('--fail--')
+      },
+      complete: function(res) {
+        console.log('--complete--')
+      },
+    })
+  }
 })

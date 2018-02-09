@@ -166,7 +166,7 @@ page{
 }
 
 .housesize{
-  width: 70%;
+  width: 80%;
   height: 100%;
 
   display: flex;
@@ -177,6 +177,7 @@ page{
 .housesize text{
   color: #303030;
   font-size: 30rpx;
+  margin-right: 30rpx;
 }
 
 .choose{
