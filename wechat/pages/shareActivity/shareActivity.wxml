@@ -12,7 +12,7 @@
           <block wx:for='{{activity}}' wx:key='activity'>
             <view class='item'>
               <view class='photo'>
-                <image src='../../images/icon-png/活动.png' class='activity-image' />
+                <image src='../../images/icon-png/activityIcon.png' class='activity-image' />
               </view>
 
               <view class='content'>
@@ -44,7 +44,7 @@
 
           <view class='item'>
             <view class='photo'>
-              <image src='../../images/photos/酒店.jpg' class='hotel-image' />
+              <image src='../../images/photos/hotel.jpg' class='hotel-image' />
             </view>
 
             <view class='content'>
@@ -73,7 +73,7 @@
           <block wx:for='{{eat}}' wx:key='eat'>
             <view class='item'>
               <view class='photo'>
-                <image src='../../images/photos/餐厅.jpg' class='hotel-image' />
+                <image src='../../images/photos/restaurant.jpg' class='hotel-image' />
               </view>
 
               <view class='content'>
@@ -103,7 +103,7 @@
           <block wx:for='{{souvenir}}' wx:key='souvenir'>
             <view class='item'>
               <view class='photo'>
-                <image src='../../images/photos/纪念品.jpg' class='hotel-image' />
+                <image src='../../images/photos/souvenir.jpg' class='hotel-image' />
               </view>
 
               <view class='content'>

@@ -373,8 +373,8 @@ Page({
             duration: 1500,
             mask: true,
             complete:function(){
-              wx.switchTab({
-                url: '../index/index',
+              wx.redirectTo({
+                url: '../individualDemand/individualDemand',
               })
             }
           })
