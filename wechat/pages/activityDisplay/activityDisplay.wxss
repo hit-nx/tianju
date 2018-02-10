@@ -7,11 +7,11 @@ page {
 }
 
 .activity {
-  height: 17%;
+  height: 18%;
   width: 100%;
   background-color: #fff;
-  border-radius: 20rpx;
-  margin: 4% 0%;
+  border-radius: 17rpx;
+  margin: 5% 0%;
 }
 
 .activityIcon {
@@ -24,7 +24,7 @@ page {
 }
 
 .activityIconImg {
-  height: 45%;
+  height: 38%;
   width: 50%;
   position: absolute;
   top: 28%;
@@ -33,7 +33,7 @@ page {
 
 .details {
   height: 100%;
-  width: 67%;
+  width: 60%;
   float: left;
 
   display: flex;
@@ -60,7 +60,7 @@ page {
 }
 
 .decide {
-  width: 10%;
+  width: 14%;
   height: 100%;
   float: right;
   border-radius: 0 20rpx 20rpx 0;
@@ -91,4 +91,7 @@ page {
   background-color: #09b2f0;
   font-size: 30rpx;
   color: #fff;
+}
+.tianchong{
+  height: 100rpx;
 }

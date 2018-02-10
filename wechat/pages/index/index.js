@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
 const app=getApp()
+const util = require('../../utils/util.js')
+
 
 Page({
 
@@ -105,7 +107,8 @@ Page({
       console.log('load结束')
     }else{
       this.checkUser()
-    }   
+    }
+
   },
   /**
    * 检查用户信息
@@ -116,7 +119,7 @@ Page({
       console.log('请求'+this.data.userInfo.nickName)
       var that = this
       wx.request({
-        url: 'http://47.94.99.203:5000/user/' + that.data.userInfo.nickName,
+        url: 'http://47.94.99.203:5000/user/'+encodeURI(that.data.userInfo.nickName),
         method: 'GET',
         header: {
           'content-type': 'application/json'
@@ -137,9 +140,7 @@ Page({
                 showModal: true
               })
             } else {
-              that.setData({
-                planId: res.data.plan_id
-              })
+              that.checkPlanDate(res.data.plan_id)
             }
           }
         },
@@ -151,6 +152,43 @@ Page({
         })
       }
     }
+  },
+  /**
+   * 检测活动是否过期
+   */
+  checkPlanDate:function(id){
+    var that = this
+    wx.request({
+      url: 'http://47.94.99.203:5000/plan?id=' + id,
+      method: 'GET',
+      header: {
+        'content-type': 'json'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          var a=(Date.parse(new Date()))/1000
+          var b=res.data.date+86400
+          if(a>b){
+            wx.showToast({
+              title: '活动已过期',
+              mask:true,
+              icon:'none'
+            })
+            that.setData({
+              showModal:true
+            })
+          }else{
+            that.setData({
+              planId:id
+            })
+          }
+        } else if (res.statusCode == 400) {
+          
+        } else {
+         
+        }
+      }
+    })
   },
   /**
    * 获取用户信息
@@ -236,6 +274,7 @@ Page({
             })
           }else{
             var id=res.data.id
+            that.checkPlanDate(id)
             wx.request({
               url: 'http://47.94.99.203:5000/plan/participant',
               method:'POST',
@@ -312,7 +351,8 @@ Page({
           })
           that.setData({
             unjoin:false,
-            showModal:true
+            showModal:true,
+            planId:null
           })
         }
         else{

@@ -9,25 +9,25 @@
 
       <view class='display'>
         <scroll-view scroll-y='true' class='scroll'>
-          <block wx:for='{{activity}}'>
-          <view class='item'>
-            <view class='photo'>
-              <image src='../../images/icon-png/活动.png' class='activity-image'/>
-            </view>
-
-            <view class='content'>
-              <view class='date'>
-                <text>{{item.day}}</text>
-                <text>{{item.time}}</text>
+          <block wx:for='{{activity}}' wx:key='activity'>
+            <view class='item'>
+              <view class='photo'>
+                <image src='../../images/icon-png/activityIcon.png' class='activity-image' />
               </view>
 
-              <view class='introduce'>
-                <text class='name'>{{item.name}}</text>
-                <text class='location'>{{item.location}}</text>
-                <text class='else'>{{item.Else}}</text>
+              <view class='content'>
+                <view class='date'>
+                  <text>{{item.day}}</text>
+                  <text>{{item.time}}</text>
+                </view>
+
+                <view class='introduce'>
+                  <text class='name'>{{item.name}}</text>
+                  <text class='location'>{{item.location}}</text>
+                  <text class='else'>{{item.Else}}</text>
+                </view>
               </view>
             </view>
-          </view>
           </block>
 
         </scroll-view>
@@ -44,7 +44,7 @@
 
           <view class='item'>
             <view class='photo'>
-              <image src='../../images/photos/酒店.jpg' class='hotel-image'/>
+              <image src='../../images/photos/hotel.jpg' class='hotel-image' />
             </view>
 
             <view class='content'>
@@ -53,8 +53,8 @@
               </view>
 
               <view class='introduce'>
-                <text class='name'>我是酒店名称</text>
-                <text class='location'>我是酒店地点</text>
+                <text class='name'>{{hotelName}}</text>
+                <text class='location'>{{hotelLocation}}</text>
               </view>
             </view>
           </view>
@@ -70,24 +70,24 @@
 
       <view class='display'>
         <scroll-view scroll-y='true' class='scroll'>
-          <block wx:for='{{eat}}'>
-          <view class='item'>
-            <view class='photo'>
-              <image src='../../images/photos/餐厅.jpg' class='hotel-image'/>
-            </view>
-
-            <view class='content'>
-              <view class='date'>
-                <text>{{item.day}}</text>
-                <text>{{item.time}}</text>
+          <block wx:for='{{eat}}' wx:key='eat'>
+            <view class='item'>
+              <view class='photo'>
+                <image src='../../images/photos/restaurant.jpg' class='hotel-image' />
               </view>
 
-              <view class='introduce'>
-                <text class='name'>{{item.name}}</text>
-                <text class='location'>{{item.location}}</text>
+              <view class='content'>
+                <view class='date'>
+                  <text>{{item.day}}</text>
+                  <text>{{item.time}}</text>
+                </view>
+
+                <view class='introduce'>
+                  <text class='name'>{{item.name}}</text>
+                  <text class='location'>{{item.location}}</text>
+                </view>
               </view>
             </view>
-          </view>
           </block>
         </scroll-view>
       </view>
@@ -100,42 +100,51 @@
 
       <view class='display'>
         <scroll-view scroll-y='true' class='scroll'>
-          <block wx:for='{{souvenir}}'>
-          <view class='item'>
-            <view class='photo'>
-              <image src='../../images/photos/纪念品.jpg' class='hotel-image'/>
-            </view>
-
-            <view class='content'>
-              <view class='date'>
-                <text>纪念品</text>
+          <block wx:for='{{souvenir}}' wx:key='souvenir'>
+            <view class='item'>
+              <view class='photo'>
+                <image src='../../images/photos/souvenir.jpg' class='hotel-image' />
               </view>
 
-              <view class='introduce'>
-                <text class='name'>{{item.name}}</text>
+              <view class='content'>
+                <view class='date'>
+                  <text>纪念品</text>
+                </view>
+
+                <view class='introduce'>
+                  <text class='name'>{{item.name}}</text>
+                </view>
               </view>
             </view>
-          </view>
           </block>
         </scroll-view>
       </view>
     </block>
 
-    <view class='demand'>
-      <view class='demand-title' style='width:32%'>
-        <text>航拍需求</text>
-      </view>
-      <text class='demand-content' style='margin-left:30%'>不需要</text>
-    </view> 
+   <block wx:for='{{demand}}'>
 
     <view class='demand'>
       <view class='demand-title' style='width:40%'>
-        <text>集体定制服装需求</text>
+        <text>{{item.name}}</text>
       </view>
-      <text class='demand-content' style='margin-left:22%'>需要</text>
+      <text class='demand-content' style='margin-left:22%'>{{item.need}}</text>
     </view>
 
-    <button>加入活动</button>
+    </block>
+
+    <button bindtap='join'>加入活动</button>
+
+    <view class="modal-mask" wx:if="{{enterPerson}}"></view>
+    <view class="modal-dialog" wx:if="{{enterPerson}}">
+      <view class="modal-title">提示</view>
+      <view class="person-content">
+        <text class='tips'>用户不存在\n</text>
+        <text class='tips'>请前往个人中心完善个人信息</text>
+      </view>
+      <view class="modal-footer">
+        <view class="person-cancel" bindtap="enter" data-status="cancel">前往个人中心</view>
+      </view>
+    </view>
 
   </scroll-view>
 
