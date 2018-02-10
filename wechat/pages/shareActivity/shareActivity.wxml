@@ -121,19 +121,16 @@
       </view>
     </block>
 
-    <view class='demand'>
-      <view class='demand-title' style='width:32%'>
-        <text>航拍需求</text>
-      </view>
-      <text class='demand-content' style='margin-left:30%'>不需要</text>
-    </view>
+   <block wx:for='{{demand}}'>
 
     <view class='demand'>
       <view class='demand-title' style='width:40%'>
-        <text>集体定制服装需求</text>
+        <text>{{item.name}}</text>
       </view>
-      <text class='demand-content' style='margin-left:22%'>需要</text>
+      <text class='demand-content' style='margin-left:22%'>{{item.need}}</text>
     </view>
+
+    </block>
 
     <button bindtap='join'>加入活动</button>
 

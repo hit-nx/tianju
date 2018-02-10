@@ -22,16 +22,19 @@ Page({
     souvenir:[],
 
     hotelName:'酒店名称',
-    hotelLocation:'酒店地址'
-  },
+    hotelLocation:'酒店地址',
 
+    demand:[]
+  },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({
-      planId:options.id
+      planId: options.id
     })
+    this.checkPlanDate(options.id)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -70,6 +73,35 @@ Page({
       this.checkUser()
     }
     this.planRequest()
+  },
+  /**
+   * 检测活动是否过期
+   */
+  checkPlanDate: function (id) {
+    var that = this
+    wx.request({
+      url: 'http://47.94.99.203:5000/plan?id=' + id,
+      method: 'GET',
+      header: {
+        'content-type': 'json'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          var a = (Date.parse(new Date())) / 1000
+          var b = res.data.date + 86400
+          if (a > b) {
+            wx.showToast({
+              title: '活动已过期',
+              mask: true,
+              icon: 'none'
+            })
+            wx.switchTab({
+              url: '../index/index',
+            })
+          } 
+        }
+      }
+    })
   },
   /**
    * 获取用户信息
@@ -203,6 +235,7 @@ Page({
         this.souvenirRequest(this.data.plan.souvenir[num].souvenir)
       }
     }
+    this.demandRequest()
   },
   /**
    * 请求活动信息
@@ -337,6 +370,59 @@ Page({
         } else if (res.statusCode == 400) {
           wx.showToast({
             title: '纪念品不存在',
+            icon: 'none',
+            duration: 1500
+          })
+        } else {
+          wx.showToast({
+            title: '网络请求失败',
+            icon: 'none',
+            duration: 1500
+          })
+        }
+      }
+    })
+  },
+  /**
+   * 请求其他需求
+   */
+  demandRequest:function(){
+    var that=this
+    wx.request({
+      url: 'http://47.94.99.203:5000/extend/0',
+      method:'GET',
+      header:{
+        'content-type': 'json'
+      },
+      success:function(res){
+        console.log(res)
+        if (res.statusCode == 200) {
+          var num=res.data.list.length-1
+          for(;num>=0;num--){
+            var m=that.data.plan.extend.length-1
+            for(;m>=0;m--){
+              console.log(that.data.plan.extend[m].extend)
+              console.log(res.data.list[num].id)
+              if(that.data.plan.extend[m].extend==res.data.list[num].id){
+                var need='需要'
+                break
+              }else{
+                var need='不需要'
+                console.log(need)
+              }
+            }
+            var array = [{
+              id:res.data.list[num].id,
+              name: res.data.list[num].name,
+              need:need
+            }]
+            that.setData({
+              demand: that.data.demand.concat(array)
+            })
+          }  
+        } else if (res.statusCode == 400) {
+          wx.showToast({
+            title: '需求不存在',
             icon: 'none',
             duration: 1500
           })
