@@ -104,7 +104,7 @@ Page({
       wx.request({
         url: 'http://47.94.99.203:5000/hotelRoom/0',
         header: {
-          'content-type': 'application/json'
+          'content-type': 'json'
         },
         method: 'GET',
         success: function (res) {
@@ -199,7 +199,7 @@ Page({
       wx.request({
         url: 'http://47.94.99.203:5000/plan/personal',
         header: {
-          'content-type': 'application/x-www-form-urlencoded'
+          'content-type': 'json'
         },
         data: {
           plan: that.data.plan_id,
