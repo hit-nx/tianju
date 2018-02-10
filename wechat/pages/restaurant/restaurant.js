@@ -33,14 +33,17 @@ Page({
     restaurantFourPhoto: null,
     planFirstDay: null,
     planSecondDay: null,
-    showModal: false
+    showModal: false,
+    restaurant_id:null,
   },
   /**
    * onLoad
    */
-  onLoad: function () {
+  onLoad: function (option) {
     var that = this
-
+    that.setData({
+      restaurant_id:option.restaurant_id
+    }),
 
 
     //调用user接口得到该用户的plan_id
@@ -255,8 +258,16 @@ Page({
   },
 
   ok: function(){
-    this.setData({
-      showModal: false
+    wx.request({
+      url: ',
+      data: ,
+      header: {},
+      method: GET,
+      dataType: json,
+      responseType: text,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
 

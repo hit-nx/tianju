@@ -3,8 +3,8 @@
 
 <block wx:for='{{array}}'>
 
-  <view class='searchItems' bindtap='details'>
-    <image src='../../images/photos/餐厅.jpg' class='restaurantItems'></image>
+  <view class='searchItems' bindtap='details' id="{{index}}">
+    <image src='../../images/photos/restaurant.jpg' class='restaurantItems'></image>
     <view class='details'>
       <text class='title'>{{item.name}}\n</text>
       <text class='address'>{{item.address}}</text>

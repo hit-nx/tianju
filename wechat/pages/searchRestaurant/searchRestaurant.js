@@ -1,10 +1,11 @@
 // pages/searchRestaurant/searchRestaurant.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    day:null,
+    index:null,
     // array:[{
     //   item:'../../images/photos/餐厅.jpg',
     //   title: "我是餐厅名称",
@@ -32,7 +33,7 @@ Page({
     wx.request({
         url: 'http://47.94.99.203:5000/restaurant/0',
         header: {
-            'content-type': 'application/json'
+            'content-type': 'json'
         },
         method:'GET',
         success: function(res){
@@ -102,9 +103,14 @@ Page({
   },
 
   // 用户点击具体酒店
-  details:function(){
+  details:function(id){
+    var up="array["+id+"].id"
     wx.navigateTo({
       url: '../restaurant/restaurant',
+      data:{
+        restaurant_id:[up],
+        day:
+      },
       success: function(res) {
         console.log('--success--')
       },

@@ -15,7 +15,7 @@
         <view class='meal'>
           <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.meal}}</text>
         </view>
-        <button class='change' bindtap='change'>修改</button>
+        <button class='change' bindtap='changeday1' id="{{index}}">修改</button>
         <view class='details'>
           <text class='title'>{{item.title}}\n</text>
           <text class='address'>{{item.address}}</text>
@@ -36,7 +36,7 @@
         <view class='meal'>
           <text style='font-size:30rpx;color:#fff;padding:5px;'>{{item.meal}}</text>
         </view>
-        <button class='change' bindtap='change'>修改</button>
+        <button class='change' bindtap='changeday2' id="{{index}}">修改</button>
         <view class='details'>
           <text class='title'>{{item.title}}\n</text>
           <text class='address'>{{item.address}}</text>
