@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    plan_id:"1",
     array:[{
       user:'发起人',
       small:'发起人'
@@ -23,7 +24,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this;
+    this.setData({
+      plan_id:option.plan_id
+    })
+    wx.request({
+      url: 'http://47.94.99.203:5000/plan/'+plan_id, //仅为示例，并非真实的接口地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        // that.setData({
+        //   array: res.data.activity,
+        // })
+      },
+      fail: function () {
+        console.log("error")
+      }
+    })
   },
 
   /**
