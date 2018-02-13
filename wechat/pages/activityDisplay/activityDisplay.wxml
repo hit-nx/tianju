@@ -2,7 +2,7 @@
 <view style='width:90%;margin:10px auto;height:100%'>
 <scroll-view scroll-y='true' style='width:100%;height:100%'>
 
-<block wx:for='{{array}}'>
+<block wx:for='{{post}}'>
   <view class='activity'>
 
     <view class='activityIcon'>
@@ -11,19 +11,19 @@
 
     <view class='details'>
       <text class='name'>{{item.name}}\n</text>
-      <text class='address'>{{item.address}}\n</text>
+      <text class='address'>{{item.introduce}}\n</text>
       <text class='remarks'>{{item.remarks}}</text>
     </view>
 
-    <view class='decide' bindtap='choose' id='{{index}}'>
-      <image class='decideIcon' src='{{item.decideIcon}}'></image>
+    <view class='decide' bindtap='choose' id='{{item.decideId}}'>
+      <image class='decideIcon' src='{{item.decideIcon}}' id='{{item.id}}'></image>
     </view>
 
   </view>
 </block>
 
 </scroll-view>
-<view class='decideAdd'>
-  <button bindtap='decideAdd'>确认添加</button>
+<view class='decideAdd' id='decideadd'>
+  <button bindtap='choose' id='add'>确认添加</button>
 </view>
 </view>

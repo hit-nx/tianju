@@ -1,12 +1,12 @@
 <view class='head'>
   <view class='ID'>活动ID</view>
-  <text class='text'>2018</text>
+  <text class='text'>{{plan_id}}</text>
 </view>
 
 <view class='time'>{{firstTime}}</view>
 <block wx:for='{{firstDay}}'>
 
-  <view class='model'>
+  <view class='model' id='{{index}}' bindtap='onclick'>
 
     <view class='act'>{{item.act}}</view>
     <view class='title'>{{item.title}}</view>
@@ -20,7 +20,7 @@
 <view class='time'>{{secondTime}}</view>
 <block wx:for='{{secondDay}}'>
 
-  <view class='model'>
+  <view class='model' id='{{index+5}}' bindtap='onclick'>
 
     <view class='act'>{{item.act}}</view>
     <view class='title'>{{item.title}}</view>
@@ -31,4 +31,4 @@
 
 </block>
 
-<button class='save'>保存</button>
+<button class='save' bindtap='save'>保存</button>
