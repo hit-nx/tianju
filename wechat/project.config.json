@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "wxb9f8eaa4f90d029c",
-	"projectname": "%E5%A4%A9%E8%81%9A",
+	"projectname": "111",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -26,22 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": 1,
-			"list": [
-				{
-					"id": 0,
-					"name": "participant",
-					"pathName": "pages/accommodation/accommodation",
-					"query": "wechat=cyy"
-				},
-				{
-					"id": 1,
-					"name": "newactivity",
-					"pathName": "pages/activity/activity",
-					"query": "wechat=cyy"
-=======
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -54,7 +39,34 @@
 					"name": "餐厅搜索",
 					"pathName": "pages/searchRestaurant/searchRestaurant",
 					"query": ""
->>>>>>> 111d125948d289ff32d7fe6f960b77d34dc55a3d
+				},
+				{
+					"id": 2,
+					"name": "餐厅",
+					"pathName": "pages/restaurant/restaurant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "酒店展示",
+					"pathName": "pages/hotelShow/hotelShow",
+					"query": ""
+<<<<<<< HEAD
+        },
+        {
+					"name": "分享页面",
+=======
+				},
+				{
+					"id": 4,
+					"name": "分享",
+>>>>>>> 802055c8f64b1faf5ba8747b297e373c9d30bfbf
+					"pathName": "pages/shareActivity/shareActivity",
+					"query": "id=3",
+					"scene": "1036",
+					"referrerInfo": {
+						"appId": "wxb9f8eaa4f90d029c"
+					}
 				}
 			]
 		}

@@ -16,17 +16,17 @@
     <view class='content'>
 
       <view class='item' bindtap='activity'>
-        <image src='../../images/icon-png/活动流程.png' />
+        <image src='../../images/icon-png/activity.png' />
         <text>活动流程</text>
       </view>
 
       <view class='item' bindtap='participants'>
-        <image src='../../images/icon-png/活动参与人.png' />
+        <image src='../../images/icon-png/participants.png' />
         <text>活动参与人</text>
       </view>
 
       <view class='item' bindtap='individualDemand'>
-        <image src='../../images/icon-png/主页-个人需求.png' />
+        <image src='../../images/icon-png/individualDemand.png' />
         <text>个人需求</text>
       </view>
 
@@ -34,17 +34,17 @@
 
     <view class='content'>
       <view class='item' bindtap='accommodation'>
-        <image src='../../images/icon-png/住宿.png' />
+        <image src='../../images/icon-png/accommodation.png' />
         <text>住宿</text>
       </view>
 
       <view class='item' bindtap='selectRestaurant'>
-        <image src='../../images/icon-png/用餐.png' />
+        <image src='../../images/icon-png/selectRestaurant.png' />
         <text>用餐</text>
       </view>
 
       <view class='item' bindtap='souvenir'>
-        <image src='../../images/icon-png/纪念品.png' />
+        <image src='../../images/icon-png/souvenir.png' />
         <text>纪念品</text>
       </view>
 

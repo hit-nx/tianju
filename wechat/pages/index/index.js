@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
 const app=getApp()
+const util = require('../../utils/util.js')
+
 
 Page({
 
@@ -9,6 +11,7 @@ Page({
    */
   data: {
     userInfo:null,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hasUserInfo:false,
     isuser:false,
     imgUrls: [
@@ -30,7 +33,7 @@ Page({
    */
   onShareAppMessage:function(){
     var title='我创建了一个活动方案，快来加入吧！'
-    var path='/pages/index/index'
+    var path='/pages/shareActivity/shareActivity?id='+this.data.planId
     return{
       title:title,
       path:path,
@@ -39,14 +42,15 @@ Page({
   /**
    * onLoad
    */
-  onLoad:function(){
+  onLoad:function(options){
+    console.log(options)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
       console.log('now')
-    } else{
+    } else if(this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -61,8 +65,24 @@ Page({
         }, 2000)
         this.checkUser()
       }
+    }else{
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+          console.log('canIUse')
+
+          setTimeout(function () {
+            wx.hideLoading()
+          }, 2000)
+          this.checkUser()
+        }
+      })
     }
-   
   },
   /**
    * onShow
@@ -87,7 +107,8 @@ Page({
       console.log('load结束')
     }else{
       this.checkUser()
-    }   
+    }
+
   },
   /**
    * 检查用户信息
@@ -98,7 +119,7 @@ Page({
       console.log('请求'+this.data.userInfo.nickName)
       var that = this
       wx.request({
-        url: 'http://47.94.99.203:5000/user/' + that.data.userInfo.nickName,
+        url: 'http://47.94.99.203:5000/user/'+encodeURI(that.data.userInfo.nickName),
         method: 'GET',
         header: {
           'content-type': 'application/json'
@@ -119,9 +140,7 @@ Page({
                 showModal: true
               })
             } else {
-              that.setData({
-                planId: res.data.plan_id
-              })
+              that.checkPlanDate(res.data.plan_id)
             }
           }
         },
@@ -133,6 +152,43 @@ Page({
         })
       }
     }
+  },
+  /**
+   * 检测活动是否过期
+   */
+  checkPlanDate:function(id){
+    var that = this
+    wx.request({
+      url: 'http://47.94.99.203:5000/plan?id=' + id,
+      method: 'GET',
+      header: {
+        'content-type': 'json'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          var a=(Date.parse(new Date()))/1000
+          var b=res.data.date+86400
+          if(a>b){
+            wx.showToast({
+              title: '活动已过期',
+              mask:true,
+              icon:'none'
+            })
+            that.setData({
+              showModal:true
+            })
+          }else{
+            that.setData({
+              planId:id
+            })
+          }
+        } else if (res.statusCode == 400) {
+          
+        } else {
+         
+        }
+      }
+    })
   },
   /**
    * 获取用户信息
@@ -218,6 +274,7 @@ Page({
             })
           }else{
             var id=res.data.id
+            that.checkPlanDate(id)
             wx.request({
               url: 'http://47.94.99.203:5000/plan/participant',
               method:'POST',
@@ -294,7 +351,8 @@ Page({
           })
           that.setData({
             unjoin:false,
-            showModal:true
+            showModal:true,
+            planId:null
           })
         }
         else{

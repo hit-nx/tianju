@@ -8,37 +8,37 @@ Page({
     array:[{
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }, {
       name: "我是活动名称",
       address: "我是活动地址",
-      remarks: "我是活动备注",
+      introduce: "我是活动备注",
       decideIcon: '../../images/icon-png/选择(未选中).png'
     }],
     decideadd:''   
@@ -48,6 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+<<<<<<< HEAD
     var activityList=[];
     var that = this;
     var ta=options.click;
@@ -107,6 +108,25 @@ Page({
       })
     }
     
+=======
+    var that = this;
+    wx.request({
+      url: 'http://47.94.99.203:5000/activity/0', //仅为示例，并非真实的接口地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          array:res.data.activity,
+        })
+      },
+      fail: function () {
+        console.log("error")
+      }
+    })
+>>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
   },
 
   /**
@@ -133,9 +153,7 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
-  },
+
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -207,6 +225,30 @@ Page({
         })
       }
     }
+<<<<<<< HEAD
     
+=======
+  },
+  decideAdd:function(){
+    var that = this;
+    wx.request({
+      url: 'http://47.94.99.203:5000/activity/0', //仅为示例，并非真实的接口地址
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      data:{
+        "name":this.data.array.name,
+        "introduce": this.data.array.introduce,
+        "pic": this.data.array.decideIcon
+      },
+      success: function () {
+        console.log("ojbk");
+      },
+      fail: function () {
+        console.log("error")
+      }
+    })
+>>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
   }
 })

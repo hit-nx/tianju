@@ -28,7 +28,7 @@
 </view>
 
 <view class='GPS'>
-  <image src='../../images/photos/地图.png'  style='width:100%;height:400rpx;'></image> 
+  <image src='../../images/photos/location.png'  style='width:100%;height:400rpx;'></image> 
 </view>
 
 <button class='sure' bindtap="back">确认</button>
