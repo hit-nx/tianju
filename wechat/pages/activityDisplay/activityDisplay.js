@@ -48,7 +48,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
     var activityList=[];
     var that = this;
     var ta=options.click;
@@ -66,7 +65,7 @@ Page({
     if(ta=='0'||ta=='2'||ta=='3'||ta=='5'||ta=='7'||ta=='8'){
       //console.log("activity")
       wx.request({
-        url: 'http://127.0.0.1:5000/activity/0',
+        url: 'http://47.94.99.203:5000/activity/0',
         header: {
           'Content-Type': 'json'
         },
@@ -88,7 +87,7 @@ Page({
     else{
       //console.log("restaurant")
       wx.request({
-        url: 'http://127.0.0.1:5000/restaurant/0',
+        url: 'http://47.94.99.203:5000/restaurant/0',
         header: {
           'Content-Type': 'json'
         },
@@ -107,26 +106,6 @@ Page({
         }
       })
     }
-    
-=======
-    var that = this;
-    wx.request({
-      url: 'http://47.94.99.203:5000/activity/0', //仅为示例，并非真实的接口地址
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data);
-        that.setData({
-          array:res.data.activity,
-        })
-      },
-      fail: function () {
-        console.log("error")
-      }
-    })
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
   },
 
   /**
@@ -225,30 +204,5 @@ Page({
         })
       }
     }
-<<<<<<< HEAD
-    
-=======
-  },
-  decideAdd:function(){
-    var that = this;
-    wx.request({
-      url: 'http://47.94.99.203:5000/activity/0', //仅为示例，并非真实的接口地址
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      data:{
-        "name":this.data.array.name,
-        "introduce": this.data.array.introduce,
-        "pic": this.data.array.decideIcon
-      },
-      success: function () {
-        console.log("ojbk");
-      },
-      fail: function () {
-        console.log("error")
-      }
-    })
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
   }
 })

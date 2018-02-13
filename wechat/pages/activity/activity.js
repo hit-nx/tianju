@@ -96,18 +96,12 @@ Page({
       return Y + M + D;
     }
     wx.request({
-<<<<<<< HEAD
-      url: 'http://127.0.0.1:5000/plan?id='+options.plan_id,
-=======
-      url: 'http://47.94.99.203:5000/plan?id=1',
-      method: 'GET',
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
+      url: 'http://47.94.99.203:5000/plan?id='+options.plan_id,
       header:{
         'Content-Type': 'json'
       },
       method:'GET',
       success:function(res){
-<<<<<<< HEAD
         wx.setNavigationBarTitle({
           title: res.data.name
         })
@@ -259,12 +253,6 @@ Page({
             }
           }
         })
-        
-=======
-        that.setData({
-          post: res.data[0]
-        })   
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
       },
       fail:function(){
         //fail

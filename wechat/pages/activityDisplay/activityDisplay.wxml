@@ -11,13 +11,8 @@
 
     <view class='details'>
       <text class='name'>{{item.name}}\n</text>
-<<<<<<< HEAD
-      <text class='address'>{{item.introduce}}\n</text>
-      <text class='remarks'>{{item.remarks}}</text>
-=======
       <text class='address'>{{item.address}}\n</text>
       <text class='remarks'>{{item.introduce}}</text>
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
     </view>
 
     <view class='decide' bindtap='choose' id='{{item.decideId}}'>
@@ -26,18 +21,10 @@
 
   </view>
 </block>
-<<<<<<< HEAD
-
-</scroll-view>
-<view class='decideAdd' id='decideadd'>
-  <button bindtap='choose' id='add'>确认添加</button>
-=======
-<!-- 在按钮与内容中间填充一个view是按钮不会遮挡最后一项活动 -->
-<view class="tianchong">
-</view>
-<!-- </scroll-view> -->
-<view class='decideAdd'>
-  <button bindtap='decideAdd'>确认添加</button>
->>>>>>> 6457d4ce5261a189570c53a5e8d9ca34fc466933
-</view>
+  <view class="tianchong">
+  </view>
+  <!-- </scroll-view> -->
+  <view class='decideAdd'>
+    <button bindtap='choose' id='add'>确认添加</button>
+  </view>
 </view>
